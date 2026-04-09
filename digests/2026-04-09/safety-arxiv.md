@@ -2,30 +2,40 @@
 
 ## Key Papers
 
-Several significant papers emerge from this collection that advance AI safety, alignment, and interpretability research:
+### [TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories](https://arxiv.org/abs/2604.07223v1)
+This paper introduces TraceSafe-Bench, the first comprehensive benchmark for evaluating safety guardrails during multi-step AI agent execution rather than just final outputs. As LLMs evolve into autonomous agents, the vulnerability surface shifts from static responses to dynamic execution traces, making this work crucial for understanding how safety mechanisms perform in real-world agentic scenarios.
 
-[**TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories**](https://arxiv.org/abs/2604.07223v1) introduces TraceSafe-Bench, the first comprehensive benchmark for evaluating safety guardrails during intermediate execution steps of autonomous LLM agents. This addresses a critical gap as AI systems evolve from static chatbots to autonomous agents, where the primary vulnerability shifts from final outputs to execution traces.
+### [AgentCity: Constitutional Governance for Autonomous Agent Economies via Separation of Power](https://arxiv.org/abs/2604.07007v1)
+Addresses the "Logic Monopoly" problem where autonomous AI agents operating across organizational boundaries create opaque collective behavior that no single human can govern. The paper proposes a constitutional framework with separation of powers to ensure democratic oversight of agent societies, representing a significant contribution to AI governance at scale.
 
-[**How to sketch a learning algorithm**](https://arxiv.org/abs/2604.07328v1) tackles the fundamental data deletion problem in machine learning - predicting how models would behave if specific training data were excluded. This work has direct implications for interpretability, privacy, and understanding data influence on AI model behavior, with applications in deep learning contexts.
+### [How to sketch a learning algorithm](https://arxiv.org/abs/2604.07328v1)
+Presents a novel data deletion scheme that can predict how AI models would behave if certain training data had been excluded. This work has major implications for AI safety, privacy, and interpretability by enabling efficient analysis of training data influence without full model retraining.
 
-[**AgentCity: Constitutional Governance for Autonomous Agent Economies via Separation of Power**](https://arxiv.org/abs/2604.07007v1) addresses the "Logic Monopoly" problem where autonomous AI agents operating across organizational boundaries create opaque collective behavior that no single human can govern. The paper proposes a constitutional framework based on separation of powers to maintain human oversight in multi-agent systems.
+### [CSA-Graphs: A Privacy-Preserving Structural Dataset for Child Sexual Abuse Research](https://arxiv.org/abs/2604.07132v1)
+Introduces a privacy-preserving approach to CSAI detection research by providing structural graph representations instead of raw images. This addresses the critical challenge of advancing AI safety in sensitive domains while maintaining strict ethical and legal compliance.
 
-[**A comparative analysis of machine learning models in SHAP analysis**](https://arxiv.org/abs/2604.07258v1) examines explainable AI methods, specifically SHAP analysis, across different machine learning models. This research is crucial for understanding how to make black-box AI systems more interpretable and trustworthy, especially in high-stakes applications.
+### [Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education](https://arxiv.org/abs/2604.07253v1)
+Examines the unique safety and privacy requirements for GenAI systems supporting women's education in restrictive and surveilled contexts. This research highlights critical considerations for AI deployment in high-risk environments where user safety depends on system design choices.
 
-[**Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education**](https://arxiv.org/abs/2604.07253v1) explores AI safety and accountability in surveillance contexts, examining how generative AI can safely support education while protecting vulnerable populations from privacy and safety risks.
+### [Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization](https://arxiv.org/abs/2604.07343v1)
+Introduces the first benchmark specifically designed to assess reward models' ability to capture individual user preferences rather than general response quality. This work is essential for pluralistic AI alignment, addressing how well reward models can accommodate diverse human values and preferences.
 
-[**DINO-QPM: Adapting Visual Foundation Models for Globally Interpretable Image Classification**](https://arxiv.org/abs/2604.07166v1) converts complex, high-dimensional representations from visual foundation models into interpretable, class-independent features. This work bridges the gap between powerful but opaque foundation models and the need for human-interpretable AI systems.
+### [A comparative analysis of machine learning models in SHAP analysis](https://arxiv.org/abs/2604.07258v1)
+Provides systematic analysis of SHAP (SHapley Additive exPlanations) performance across different ML models, addressing the critical need for explainable AI in high-stakes applications. Understanding when and how SHAP explanations remain reliable is crucial for safe AI deployment.
 
-[**ConceptTracer: Interactive Analysis of Concept Saliency and Selectivity in Neural Representations**](https://arxiv.org/abs/2604.07019v1) provides tools for systematically exploring neural network representations through human-interpretable concepts, addressing the critical need for mechanistic interpretability in AI systems.
+### [Information as Structural Alignment: A Dynamical Theory of Continual Learning](https://arxiv.org/abs/2604.07108v1)
+Proposes the Informational Buildup Framework (IBF) as an alternative to traditional approaches for continual learning that avoid catastrophic forgetting. Rather than adding external mechanisms, this approach derives retention from learning dynamics themselves, offering a more principled foundation for safe, adaptive AI systems.
 
 ## Trends
 
-**Interpretability and Explainability Renaissance**: Multiple papers focus on making AI systems more transparent and interpretable ([DINO-QPM](https://arxiv.org/abs/2604.07166v1), [ConceptTracer](https://arxiv.org/abs/2604.07019v1), [SHAP analysis](https://arxiv.org/abs/2604.07258v1)). This reflects growing recognition that as AI systems become more powerful, understanding their decision-making processes becomes increasingly critical for safety and trust.
+**Multi-Step Safety Assessment**: The emergence of benchmarks like TraceSafe-Bench reflects growing recognition that AI safety evaluation must extend beyond static outputs to dynamic execution trajectories, especially as LLMs become autonomous agents.
 
-**Multi-Step and Trajectory-Level Safety**: There's a clear shift from evaluating AI safety at the output level to examining entire execution trajectories ([TraceSafe](https://arxiv.org/abs/2604.07223v1), [AgentCity](https://arxiv.org/abs/2604.07007v1)). This trend reflects the evolution of AI from static systems to autonomous agents that require safety monitoring throughout their execution processes.
+**Governance at Scale**: Research on constitutional frameworks for AI agent societies (AgentCity) indicates increasing focus on systematic governance mechanisms for multi-agent AI systems operating without centralized oversight.
 
-**Context-Aware AI Governance**: Papers are increasingly addressing how AI systems should be governed in complex, multi-stakeholder environments ([AgentCity](https://arxiv.org/abs/2604.07007v1), [Mixed-Initiative Context](https://arxiv.org/abs/2604.07121v1)). This includes developing frameworks for maintaining human oversight as AI systems become more autonomous and operate across organizational boundaries.
+**Privacy-Preserving Research Methods**: The development of structural datasets (CSA-Graphs) and data deletion schemes demonstrates growing sophistication in enabling AI safety research while maintaining privacy and ethical constraints.
 
-**Privacy-Preserving and Socially Responsible AI**: Several works focus on developing AI systems that protect user privacy and support vulnerable populations ([Designing Safe GenAI](https://arxiv.org/abs/2604.07253v1), [CSA-Graphs](https://arxiv.org/abs/2604.07132v1)). This trend emphasizes the importance of considering social impact and ethical implications in AI development.
+**Contextual Safety Design**: Work on GenAI for education in restrictive contexts highlights the need for safety frameworks that account for specific deployment environments and user vulnerabilities.
 
-**Foundation Model Adaptation for Safety**: Research is focusing on how to safely adapt and deploy large foundation models ([DINO-QPM](https://arxiv.org/abs/2604.07166v1), [data deletion](https://arxiv.org/abs/2604.07328v1)). This includes developing methods to understand, control, and modify these powerful but complex systems while maintaining their capabilities.
+**Interpretability Beyond Explanation**: Research is moving beyond simple explainability toward understanding fundamental mechanisms of learning, retention, and decision-making in AI systems, as seen in work on continual learning dynamics and reward model personalization.
+
+**Robustness Under Real-World Conditions**: Multiple papers address challenges like temporal distribution shift, partial observability, and noisy data, indicating maturation from idealized benchmarks toward practical deployment considerations.

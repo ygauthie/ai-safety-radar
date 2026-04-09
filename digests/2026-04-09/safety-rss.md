@@ -2,28 +2,34 @@
 
 ## Top Stories
 
-**[Have we already lost? Part 1: The Plan in 2024](https://www.lesswrong.com/posts/tjZWbmuCE9tjYQsrf/have-we-already-lost-part-1-the-plan-in-2024)** - A critical reflection on AI safety progress written at the Inkhaven Residency examines whether the safety community has passed a point of no return where AGI becomes both likely and outside their control. Despite the ominous title, the author concludes the answer is no, but finds the question's salience itself noteworthy for understanding current safety efforts.
+**Claude Mythos Sparks Security Concerns Across AI Community**
 
-**[Do not be surprised if LessWrong gets hacked](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked)** - A LessWrong admin warns about cybersecurity vulnerabilities following Anthropic's announcement of Claude Mythos, which reportedly discovered numerous zero-day exploits. The post serves as both a PSA about LessWrong's security posture and an attempt to establish common knowledge about the deteriorating security landscape as AI capabilities advance.
+The release of Anthropic's [Claude Mythos](https://www.lesswrong.com/posts/ZfbChZBXgje8T6Geu/excerpts-and-notes-on-mythos-model-card) has generated significant discussion, particularly around cybersecurity implications. A LessWrong admin issued a stark warning that users should [not be surprised if LessWrong gets hacked](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked), citing Anthropic's Frontier Red Team discovery of numerous zero-day vulnerabilities by the new model. This development highlights the growing tension between AI capabilities advancement and digital security infrastructure that wasn't designed for AI-scale threats.
 
-**[Excerpts and Notes on Mythos Model Card](https://www.lesswrong.com/posts/ZfbChZBXgje8T6Geu/excerpts-and-notes-on-mythos-model-card)** - A detailed breakdown of Anthropic's model card for Claude Mythos, highlighting concerning capabilities and safety considerations. The analysis intentionally emphasizes concerning findings above their rate of occurrence in the original document, providing insight into the community's interpretation of this new frontier model.
+**AI Safety Community Questions Progress and Strategy**
 
-**[My unsupervised elicitation challenge](https://www.alignmentforum.org/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge)** - A researcher studying Ancient Greek with Claude Opus 4.6 has identified what they claim are systematic mistakes in the model's language tutoring capabilities. They've issued a challenge to test whether others can identify these errors without prior knowledge of Greek, relating to broader questions of unsupervised capability elicitation.
+A reflective piece asks ["Have we already lost? Part 1: The Plan in 2024"](https://www.lesswrong.com/posts/tjZWbmuCE9tjYQsrf/have-we-already-lost-part-1-the-plan-in-2024), examining whether the AI safety community has passed a point of no return where AGI becomes both likely and effectively outside their control. While the author concludes "no" per Betteridge's Law, the salience of this question reflects growing anxiety about the field's trajectory and effectiveness in 2026.
 
-**[AI as a Trojan horse race](https://www.lesswrong.com/posts/z3xbNMk9R2fP3aqYf/ai-as-a-trojan-horse-race)** - An argument challenging the characterization of AI development as an "arms race," suggesting that going fast is not clearly beneficial even from a selfish perspective. The author attempts to reframe the competitive dynamics in AI development beyond simple racing metaphors.
+**New Book Aims to Build Broader AI Reform Movement**
+
+[Obsolete: The AI Industry's Trillion-Dollar Race to Replace You—and How to Stop It](https://www.lesswrong.com/posts/2HfuvYzRZgHpLAgpe/help-me-launch-obsolete-a-book-aimed-at-building-a-new) represents an attempt to bridge technical AI safety concerns with broader public engagement. The book specifically targets skeptics and left-leaning audiences while aiming to provide value to those already working in AI safety—a notable shift toward mass movement building beyond traditional technical circles.
+
+**Persuasion Capabilities Draw Strategic Attention**
+
+A discussion on ["Slightly-Super Persuasion Will Do"](https://www.lesswrong.com/posts/JcavsPku6RR9hcujz/slightly-super-persuasion-will-do) examines whether human societies can effectively adapt to AI persuasion capabilities the way they adapt to other exploits. The debate centers on whether historical examples of powerful persuasive figures provide adequate models for understanding ASI persuasion risks, challenging assumptions about societal resilience to novel influence tactics.
 
 ## Key Arguments
 
-**Progress vs. Safety Trade-offs**: [We can prevent progress! Conceptual clarity, and inspiration from the FDA](https://www.lesswrong.com/posts/aYfTyppBMgyZQAQrv/we-can-prevent-progress-conceptual-clarity-and-inspiration) argues against the notion that technological advancement is inevitable or necessarily beneficial, drawing parallels to FDA drug approval processes as evidence that society can and should regulate potentially harmful technologies.
+**Cybersecurity Infrastructure Inadequacy**: The Mythos release has crystallized concerns that existing digital infrastructure is fundamentally unprepared for AI systems capable of discovering zero-day vulnerabilities at scale. This represents a shift from theoretical risk to immediate operational concern for AI safety platforms and research infrastructure.
 
-**Public Perception Research**: [101 Humans of New York on the Risks of AI](https://www.lesswrong.com/posts/BCiDwMbvq5JRNAwwt/101-humans-of-new-york-on-the-risks-of-AI) presents findings from what appears to be the first door-to-door survey about AI risks, revealing a gap between academic polling and genuine public sentiment about AI development and safety.
+**Elicitation Challenge Methodology**: An [unsupervised elicitation challenge](https://www.alignmentforum.org/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge) involving Claude Opus 4.6's claimed mistakes in Ancient Greek study highlights ongoing questions about how to properly evaluate AI capabilities and limitations, particularly in domains where human oversight may be imperfect.
 
-**Research Quality and Action**: [The hard part isn't noticing when papers are bad, it's deciding what to do afterwards](https://www.lesswrong.com/posts/qcJ7eWQtREyKwwGEk/the-hard-part-isn-t-noticing-when-papers-are-bad-it-s) explores the challenge of moving from problem identification to solution implementation in AI safety research, drawing lessons from management theory about the value of solution-oriented thinking.
+**Movement Building Strategy**: The dual approach in "Obsolete"—serving both newcomers and domain experts—reflects strategic thinking about expanding AI safety beyond technical communities while maintaining rigor and relevance for practitioners.
 
 ## Community Discussion
 
-The release of Claude Mythos appears to be generating significant discussion across multiple dimensions. The cybersecurity implications, detailed in the LessWrong admin warning, suggest the community is grappling with AI systems' potential for discovering and exploiting vulnerabilities at scale.
+**Security vs. Capability Tensions**: The Mythos release has sparked debate about the wisdom of developing and deploying AI systems with significant cybersecurity capabilities, even with safety measures. The community appears divided between those viewing this as necessary capability research and those concerned about near-term risks.
 
-There's an ongoing debate about competitive dynamics in AI development, with posts challenging traditional "arms race" framing and arguing for more nuanced understanding of the incentive structures driving rapid AI advancement.
+**Public Engagement Effectiveness**: A [door-to-door survey of 101 New Yorkers](https://www.lesswrong.com/posts/BCiDwMbvq5JRNAwwt/101-humans-of-new-york-on-the-risks-of-ai) about AI risks represents novel community effort to understand genuine public opinion beyond traditional polling, suggesting growing interest in understanding and bridging gaps between expert and public perspectives.
 
-The community also appears to be engaging in more structured reflection on the state of AI safety, with residency programs producing critical assessments of progress and strategy. Personal narratives from newcomers to rationalist spaces suggest continued growth and engagement with AI safety concerns among broader audiences.
+**Research Quality and Action**: A post on [identifying versus solving problems in research](https://www.lesswrong.com/posts/qcJ7eWQtREyKwwGEk/the-hard-part-isn-t-noticing-when-papers-are-bad-it-s) reflects ongoing community discussions about the balance between critique and constructive contribution in AI safety research, particularly as the field matures and faces increasing time pressure.
