@@ -1,4 +1,4 @@
-import { readdirSync, existsSync, writeFileSync } from "fs";
+import { readdirSync, readFileSync, existsSync, writeFileSync } from "fs";
 import { join } from "path";
 
 interface ManifestEntry {
@@ -35,14 +35,27 @@ function main() {
   writeFileSync(join(process.cwd(), "manifest.json"), JSON.stringify(manifest, null, 2));
   console.log(`Manifest: ${entries.length} dates, written to manifest.json`);
 
-  // Write RSS feed
+  // Write RSS feed with actual digest content
   const feedItems = entries.slice(0, 30).map((e) => {
     const dailyFile = e.files.find((f) => f.includes("daily")) || e.files[0];
+    let description = `AI Safety daily digest for ${e.date}`;
+    const filePath = join(digestsDir, dailyFile);
+    if (existsSync(filePath)) {
+      const content = readFileSync(filePath, "utf-8");
+      // Strip markdown heading, truncate, and XML-escape
+      const plain = content
+        .replace(/^#[^\n]*\n/, "")
+        .slice(0, 2000)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+      description = plain;
+    }
     return `    <item>
       <title>AI Safety Digest - ${e.date}</title>
       <link>https://ygauthie.github.io/ai-safety-radar/#${dailyFile}</link>
       <pubDate>${new Date(e.date).toUTCString()}</pubDate>
-      <description>AI Safety daily digest for ${e.date}</description>
+      <description>${description}</description>
     </item>`;
   });
 
