@@ -98,20 +98,21 @@
       bottom: 0;
       width: 260px;
       border-right: 1px solid var(--border);
-      overflow-y: auto;
-      padding: 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
       background: var(--bg);
     }
 
     .search-box {
-      position: sticky;
-      top: 0;
-      background: var(--bg);
-      padding: 1rem 0 0.75rem;
-      margin: -1rem -1rem 0.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      z-index: 10;
+      flex-shrink: 0;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-entries {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem 1rem 1rem;
     }
 
     .search-box input {
@@ -345,7 +346,7 @@
       }
 
       let html = '<div class="search-box"><input type="text" id="searchInput" placeholder="Search digests..."></div>';
-      html += '<div id="sidebarEntries">';
+      html += '<div class="sidebar-entries" id="sidebarEntries">';
       for (const entry of manifest.entries) {
         const sorted = sortFiles(entry.files);
         html += `<div class="date-group" data-date="${entry.date}">`;
