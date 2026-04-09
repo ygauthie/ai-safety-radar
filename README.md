@@ -1,10 +1,10 @@
-# 📡 AI Safety Radar
+# 🛡️ AI Safety Daily Brief
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
 Runs every morning at 5 AM ET via GitHub Actions, pulls from seven sources, summarizes with Claude, and publishes to GitHub Pages as a clean, searchable static site with an RSS feed.
 
-Live site: [ygauthie.github.io/ai-safety-radar](https://ygauthie.github.io/ai-safety-radar)
+Live site: [ygauthie.github.io/ai-safety-daily-brief](https://ygauthie.github.io/ai-safety-daily-brief)
 
 ---
 
@@ -102,7 +102,7 @@ Fork this repo, then add one repository secret:
 
 **Actions → Daily Digest → Run workflow**
 
-The site will be live at `https://<your-username>.github.io/ai-safety-radar` after the first successful run.
+The site will be live at `https://<your-username>.github.io/ai-safety-daily-brief` after the first successful run.
 
 ### 4. Run locally (optional)
 

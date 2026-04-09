@@ -85,7 +85,7 @@ async function fetchRss(
   const items: AisiItem[] = [];
   try {
     const res = await fetch(rssUrl, {
-      headers: { "User-Agent": "AI-Safety-Radar/1.0" },
+      headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
     });
     if (!res.ok) return [];
     const xml = await res.text();
@@ -123,7 +123,7 @@ async function scrapePageLinks(url: string, institute: string): Promise<AisiItem
   const items: AisiItem[] = [];
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": "AI-Safety-Radar/1.0" },
+      headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
     });
     if (!res.ok) return [];
     const html = await res.text();

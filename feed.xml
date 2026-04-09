@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>AI Safety Radar</title>
-    <link>https://ygauthie.github.io/ai-safety-radar/</link>
+    <title>AI Safety Daily Brief</title>
+    <link>https://ygauthie.github.io/ai-safety-daily-brief/</link>
     <description>Daily AI safety research, policy, and development digest</description>
     <language>en</language>
     <lastBuildDate>Thu, 09 Apr 2026 19:37:15 GMT</lastBuildDate>
     <item>
-      <title>AI Safety Radar: Daily Summary — 2026-04-09</title>
-      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-daily.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-daily.md</guid>
+      <title>AI Safety Daily Brief: Daily Summary — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-daily.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-daily.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Top 3 Developments
@@ -25,9 +25,9 @@
 **ArXiv Papers**: Seven key papers advanced AI safety research, with [TraceSafe](https://arxiv.org/abs/2604.07223v1) introducing the first multi-step agent safety benchmark, [AgentCity](https://arxiv.org/abs/2604.07007v1) proposing constitutional governance for autonomous agent economies, and multiple interpretability works including [ConceptTracer](https://arxiv.org/abs/2604.07019v1) for neural representation ana</description>
     </item>
     <item>
-      <title>AI Safety Radar: ArXiv Papers — 2026-04-09</title>
-      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-arxiv.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-arxiv.md</guid>
+      <title>AI Safety Daily Brief: ArXiv Papers — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-arxiv.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-arxiv.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Key Papers
@@ -45,9 +45,9 @@ Several significant papers emerge from this collection that advance AI safety, a
 [**Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education**](https://arxiv.org/abs/2604.07253v1) explores AI safety and accountability in surveillance contexts</description>
     </item>
     <item>
-      <title>AI Safety Radar: GitHub Activity — 2026-04-09</title>
-      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-github.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-github.md</guid>
+      <title>AI Safety Daily Brief: GitHub Activity — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-github.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-github.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Key Discussions
@@ -69,9 +69,9 @@ Several critical evaluation bugs were identified and fixed. **[GPQA preprocessin
 **[Falcon](https://github.com/TransformerLensOrg/TransformerLens/pull/1241)** and **[DeepSeek V3](https://github.com/TransformerLensOrg/TransformerLens/pull/1240)** architecture adapters were added to TransformerLens, expanding interpretab</description>
     </item>
     <item>
-      <title>AI Safety Radar: Hacker News — 2026-04-09</title>
-      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-hn.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-hn.md</guid>
+      <title>AI Safety Daily Brief: Hacker News — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-hn.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-hn.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Hot Topics
@@ -89,9 +89,9 @@ The Hacker News community has been intensely focused on Anthropic this week, wit
 5. **Anthro</description>
     </item>
     <item>
-      <title>AI Safety Radar: Blog Posts — 2026-04-09</title>
-      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-rss.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-rss.md</guid>
+      <title>AI Safety Daily Brief: Blog Posts — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-rss.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-09/safety-rss.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Top Stories

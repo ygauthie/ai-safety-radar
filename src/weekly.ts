@@ -13,7 +13,7 @@ async function main() {
   const startDate = formatDate(daysAgo(7));
   const dateRange = `${startDate} to ${date}`;
 
-  console.log(`\n=== AI Safety Radar - Weekly Digest (${dateRange}) ===\n`);
+  console.log(`\n=== AI Safety Daily Brief - Weekly Digest (${dateRange}) ===\n`);
 
   for (const lang of config.languages as Lang[]) {
     const suffix = lang === "en" ? "" : `-${lang}`;

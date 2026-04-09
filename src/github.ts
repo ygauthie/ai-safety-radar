@@ -12,7 +12,7 @@ export interface GithubActivity {
 
 const headers: Record<string, string> = {
   Accept: "application/vnd.github+json",
-  "User-Agent": "AI-Safety-Radar/1.0",
+  "User-Agent": "AI-Safety-Daily-Brief/1.0",
 };
 
 export async function fetchGithub(): Promise<GithubActivity[]> {

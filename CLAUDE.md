@@ -1,4 +1,4 @@
-# AI Safety Radar
+# AI Safety Daily Brief
 
 ## Architecture
 - TypeScript + Node.js 22, pnpm, GitHub Actions + GitHub Pages

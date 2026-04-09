@@ -17,7 +17,7 @@ export async function fetchRssFeeds(): Promise<RssItem[]> {
   for (const feed of config.rss_feeds) {
     try {
       const res = await fetch(feed.url, {
-        headers: { "User-Agent": "AI-Safety-Radar/1.0" },
+        headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
       });
       if (!res.ok) {
         console.error(`RSS fetch failed for ${feed.name}: ${res.status}`);

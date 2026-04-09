@@ -62,7 +62,7 @@ export async function fetchWebsites(): Promise<WebArticle[]> {
 
 async function fetchSitemap(url: string, includePatterns: string[]): Promise<string[]> {
   const res = await fetch(url, {
-    headers: { "User-Agent": "AI-Safety-Radar/1.0" },
+    headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
   });
   if (!res.ok) return [];
   const xml = await res.text();
@@ -91,7 +91,7 @@ async function fetchSitemap(url: string, includePatterns: string[]): Promise<str
 
 async function fetchArticleContent(url: string, source: string): Promise<WebArticle | null> {
   const res = await fetch(url, {
-    headers: { "User-Agent": "AI-Safety-Radar/1.0" },
+    headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
   });
   if (!res.ok) return null;
   const html = await res.text();
