@@ -305,7 +305,8 @@
     "https://www.anthropic.com/research/transformer-circuits",
     "https://www.anthropic.com/research/values-wild",
     "https://www.anthropic.com/research/vibe-physics",
-    "https://www.anthropic.com/research/visible-extended-thinking"
+    "https://www.anthropic.com/research/visible-extended-thinking",
+    "https://www.anthropic.com/research/trustworthy-agents"
   ],
   "OpenAI Blog": [
     "https://openai.com/sitemap.xml/research/"

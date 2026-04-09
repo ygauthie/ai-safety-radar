@@ -1,38 +1,38 @@
 # AI Safety Daily Digest - 2026-04-09
 
-# AI Safety Executive Summary - April 9, 2026
-
 ## Top 3 Developments
 
-1. **Anthropic Restricts Release of Claude Mythos Model** - For the first time, Anthropic has significantly restricted a model release, describing Claude Mythos as "too dangerous" for public deployment due to its ability to discover "a large number of zero-days and other security vulnerabilities." This marks a paradigm shift where AI systems can now find novel exploits at unprecedented scale.
+1. **Anthropic's Claude Mythos Restricted Release** - Anthropic released [Claude Mythos Preview](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) but deemed it ["too dangerous to release publicly"](https://www.nbcnews.com/tech/security/anthropic-project-glasswing-mythos-preview-claude-gets-limited-release-rcna267234) due to cybersecurity risks, including discovery of multiple zero-days and security vulnerabilities, marking a significant precedent for capability-based release restrictions.
 
-2. **First Comprehensive Agent Safety Benchmarks Released** - New research introduces TraceSafe-Bench, the first systematic evaluation framework for AI safety during multi-step tool-use trajectories rather than just final outputs, addressing critical gaps as LLMs evolve into autonomous agents.
+2. **Breakthrough in Multi-Agent Safety Evaluation** - The release of [TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories](https://arxiv.org/abs/2604.07223v1) introduces the first comprehensive benchmark for evaluating safety guardrails in multi-step tool-use scenarios, addressing critical evaluation gaps as AI systems evolve toward autonomous agents.
 
-3. **Constitutional Governance Framework for AI Agent Economies** - AgentCity research proposes separation-of-powers principles to address the "Logic Monopoly" problem where collective autonomous agent behavior becomes opaque and ungovernable, offering new approaches to maintaining human oversight in decentralized AI systems.
+3. **AI Safety Institute Infrastructure Expansion** - The [US AISI launched Research Test Beds](https://www.nist.gov/research-test-beds) while the [UK AISI deepened partnership with Google DeepMind](https://www.aisi.gov.uk/blog/deepening-our-partnership-with-google-deepmind), signaling rapid institutionalization of AI safety evaluation capabilities and public-private safety collaboration.
 
 ## Section Summaries
 
-- **ArXiv Papers**: Strong focus on agent safety governance, interpretability advances, and human-AI collaboration frameworks, with particular emphasis on evaluation methods for autonomous systems and privacy-preserving techniques.
+**ArXiv Papers**: Seven key papers advanced AI safety research across governance frameworks, evaluation methods, interpretability tools, and machine unlearning approaches, with particular focus on multi-agent systems and real-world deployment scenarios.
 
-- **Blog Posts & Articles**: Community grappling with accelerating capabilities while questioning viability of existing safety approaches, featuring sobering assessments of whether AI safety has reached a "point of no return" and new public engagement initiatives.
+**Blog Posts & Articles**: Community discussions centered on Claude Mythos security implications, progress assessments of AI safety efforts, and novel public engagement methods including the first door-to-door AI risk survey.
 
-- **GitHub Activity**: Increased development of agent verification systems, evaluation integrity fixes, and standardized protocols for AI-tool interaction, reflecting practical implementation of safety measures.
+**GitHub Activity**: Development focused on agent output verification, multi-agent safety patterns, mathematical hallucination prevention, and evaluation framework improvements, with enhanced MCP integration and new tensor parallelism capabilities.
 
-- **Hacker News**: Cautious community response to Anthropic's restricted model release, with measured support for safety-first approaches mixed with skepticism about whether safety concerns are genuine or competitive positioning.
+**Hacker News**: Dominated by Anthropic developments including Mythos restrictions, Pentagon blacklisting legal battles, and business success, alongside broader industry discussions about responsible AI deployment practices.
 
-- **Organization Updates**: Anthropic's activation of ASL-3 protections and third-party evaluation initiatives demonstrate operational implementation of responsible scaling policies, while both Anthropic and DeepMind invest heavily in evaluation infrastructure development.
+**Organization Updates**: Anthropic published research on [trustworthy agents in practice](https://www.anthropic.com/research/trustworthy-agents), examining governance challenges as AI systems evolve from chatbots to code-executing agents.
+
+**AI Safety Institutes**: Global coordination accelerated with research infrastructure expansion, empirical safety studies like [AI-enabled persuasion research](https://www.aisi.gov.uk/blog/how-do-ai-models-persuade-exploring-the-levers-of-ai-enabled-persuasion-through-large-scale-experiments), and international cooperation initiatives.
 
 ## Risk Watch
 
-**Increased Risks:**
-- AI systems now capable of discovering zero-day exploits autonomously, fundamentally shifting cybersecurity threat models
-- Growing autonomy in AI agents creating new governance challenges that existing frameworks may not address
-- Potential acceleration of research timelines through AI-for-science applications with unclear risk implications
+**Increased Risk Signals**:
+- **Concrete Cybersecurity Threats**: Mythos discovering "a large number of zero-days and other security vulnerabilities" demonstrates AI systems finding novel attack vectors with immediate infrastructure implications
+- **Governance Lag**: Multiple papers and discussions highlight that current oversight frameworks are inadequate for increasingly autonomous AI agents operating across organizational boundaries
+- **Evaluation Blindspots**: TraceSafe research reveals significant gaps in current safety evaluation methods for multi-step agent behaviors
 
-**Decreased Risks:**
-- Industry movement toward more conservative deployment practices, with both Anthropic and OpenAI considering restricted releases
-- Development of comprehensive evaluation frameworks specifically designed for agent safety and multi-step reasoning
-- Proactive implementation of capability-dependent safety measures (ASL-3 protections) setting precedent for responsible scaling
+**Decreased Risk Signals**:
+- **Responsible Deployment Precedent**: Anthropic's decision to restrict Mythos release based on capability risks establishes important industry precedent for safety-first deployment
+- **Safety Infrastructure Scaling**: Rapid expansion of government AI safety testing capabilities and public-private partnerships indicates strengthening institutional capacity
+- **Transparency Improvements**: Publication of detailed 244-page safety assessments and systematic benchmarking efforts signal increased transparency in AI safety evaluation
 
 ---
-*Generated by [AI Safety Radar](https://github.com/yvan/ai-safety-radar)*
+*Generated by [AI Safety Radar](https://github.com/ygauthie/ai-safety-radar)*
