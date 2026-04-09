@@ -115,11 +115,11 @@ export function dailyRollupPrompt(sections: string, date: string, lang: Lang = "
 Today is ${date}. Below are the individual section digests for today. Create a unified daily executive summary in ${lang === "fr" ? "French" : "English"}.
 
 Structure:
-1. **Top 3 Developments**: The single most important things that happened today in AI safety.
-2. **Section Summaries**: A 1-2 sentence summary of each section.
-3. **Risk Watch**: Any developments that signal increased or decreased AI risk.
+1. **Top 3 Developments**: The single most important things that happened today in AI safety. Each item must include at least one inline markdown link to the original source.
+2. **Section Summaries**: A 1-2 sentence summary of each section. Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links.
+3. **Risk Watch**: Any developments that signal increased or decreased AI risk. Every claim or development cited must link to its source.
 
-Keep it concise - this is an executive summary. Format as clean Markdown.
+Keep it concise - this is an executive summary. Format as clean Markdown. Do not omit links to save space — links are essential.
 
 SECTIONS:
 ${sections}`;
