@@ -2,26 +2,38 @@
 
 ## Key Discussions
 
-The most significant safety-related discussions center around agent control and verification mechanisms. Anthropic's cookbook repository shows active development of safety patterns for their Managed Agents architecture, with a new [issue requesting automated verification gates](https://github.com/anthropics/claude-cookbooks/issues/518) before agent actions execute. This builds on existing human-in-the-loop approval systems, representing a layered approach to agent oversight.
+### Agent Safety and Verification
 
-Several pull requests demonstrate evolving agent safety patterns, including [structured reflection for self-improving agents](https://github.com/anthropics/claude-cookbooks/pull/469) that incorporates systematic evaluation cycles, and [multi-agent pipeline controls](https://github.com/anthropics/claude-cookbooks/pull/517) with state handoffs and retry mechanisms.
+**[Output verification before agent actions](https://github.com/anthropics/claude-cookbooks/issues/518)** was raised as a key safety gap in Anthropic's new Managed Agents architecture. While human-in-the-loop approval gates exist, there's no cookbook example for automated verification gates that could check agent outputs before execution. This represents an important safety consideration for autonomous agent deployments.
 
-OpenAI's cookbook shows complementary safety work with a [mathematical hallucination elimination guide](https://github.com/openai/openai-cookbook/pull/2599) that demonstrates routing computation to deterministic tools like SymPy rather than relying on token prediction for mathematical operations.
+The community has been actively contributing multi-agent safety patterns, with pull requests adding **[self-improving agents with structured reflection](https://github.com/anthropics/claude-cookbooks/pull/469)** and **[multi-agent pipeline with state handoffs](https://github.com/anthropics/claude-cookbooks/pull/517)**. These patterns demonstrate systematic approaches to agent improvement cycles and error handling in multi-agent systems.
+
+### LLM Evaluation Reliability
+
+Several critical evaluation bugs were identified and fixed. **[GPQA preprocessing corruption](https://github.com/EleutherAI/lm-evaluation-harness/pull/3691)** was removing legitimate scientific notation and chemical nomenclature from answer choices via an overly broad regex. **[MMLU Pro fewshot contamination](https://github.com/EleutherAI/lm-evaluation-harness/pull/3693)** was leaking answer content into user prompts when chat templates were applied, potentially inflating scores.
+
+**[Median aggregation function bug](https://github.com/EleutherAI/lm-evaluation-harness/pull/3668)** was returning incorrect results by not sorting inputs before finding the median. While no current tasks use this function, it could have silently corrupted results if deployed.
+
+### Model Safety Implementation Issues
+
+**[Falcon](https://github.com/TransformerLensOrg/TransformerLens/pull/1241)** and **[DeepSeek V3](https://github.com/TransformerLensOrg/TransformerLens/pull/1240)** architecture adapters were added to TransformerLens, expanding interpretability tooling coverage to newer model architectures. This is important for safety researchers analyzing attention patterns and internal representations.
 
 ## Emerging Tools
 
-**Agent Safety Frameworks**: Anthropic has introduced new MCP (Model Context Protocol) integration patterns with both [native Python client support](https://github.com/anthropics/claude-cookbooks/pull/499) and [FastMCP framework documentation](https://github.com/anthropics/claude-cookbooks/pull/510). These provide structured approaches to tool use that could enable better safety controls.
+### Mathematical Reliability
 
-**Multi-Agent Orchestration**: The [AI Portal system](https://github.com/anthropics/claude-cookbooks/pull/515) offers a comprehensive multi-agent framework with Browser Hands extension for accessibility-first automation, potentially relevant for researchers studying agent coordination and control.
+OpenAI Cookbook added a **[deterministic tool use example](https://github.com/openai/openai-cookbook/pull/2599)** demonstrating how to eliminate LLM mathematical hallucinations by routing computations to SymPy. This addresses a critical reliability issue where language models generate plausible but incorrect mathematical reasoning.
 
-**Evaluation Infrastructure**: Multiple improvements to evaluation harnesses include [TyDiQA multilingual evaluation](https://github.com/EleutherAI/lm-evaluation-harness/pull/3677), [tensor parallelism support for HF models](https://github.com/EleutherAI/lm-evaluation-harness/pull/3692), and various bug fixes that improve evaluation reliability.
+### Agent Development Frameworks
 
-**Model Analysis Tools**: TransformerLens has added [Falcon architecture support](https://github.com/TransformerLensOrg/TransformerLens/pull/1241) and [DeepSeek v3 adapters](https://github.com/TransformerLensOrg/TransformerLens/pull/1240), expanding mechanistic interpretability capabilities for newer model architectures.
+New MCP (Model Control Protocol) integration examples were added, including **[native Python MCP client](https://github.com/anthropics/claude-cookbooks/pull/499)** and **[FastMCP primitives](https://github.com/anthropics/claude-cookbooks/pull/510)** cookbooks. These provide standardized approaches for connecting Claude to external tools and services.
 
-## Notable Releases
+**[AI Portal multi-agent system](https://github.com/anthropics/claude-cookbooks/pull/515)** with Browser Hands extension demonstrates autonomous browser automation with accessibility-first design principles.
 
-**Model Architecture Updates**: Google DeepMind released [Gemma 4 documentation updates](https://github.com/google-deepmind/gemma/pull/619) and [multiturn sampling support](https://github.com/google-deepmind/gemma/pull/612), along with critical [sampler bug fixes](https://github.com/google-deepmind/gemma/pull/618) addressing f-string formatting and XOR logic errors.
+### Development Workflow Improvements
 
-**Development Tool Enhancements**: Aider has introduced [configurable reflection limits](https://github.com/Aider-AI/aider/pull/5011) and [system prompt customization](https://github.com/Aider-AI/aider/pull/4818), providing researchers more control over AI-assisted development workflows.
+Aider added **[--max-reflections CLI option](https://github.com/Aider-AI/aider/pull/5011)** and **[--system-prompt-extras](https://github.com/Aider-AI/aider/pull/4818)** to give users more control over AI-assisted coding behavior. The **[test coverage expansion](https://github.com/Aider-AI/aider/pull/5007)** for core modules like search_replace improves reliability for safety-critical code modification workflows.
 
-The activity suggests increased focus on agent safety controls, evaluation robustness, and interpretability tool development across major AI safety research infrastructures.
+### High-Performance Evaluation
+
+**[Native Tensor Parallelism support](https://github.com/EleutherAI/lm-evaluation-harness/pull/3692)** was added to the HuggingFace backend in lm-evaluation-harness, enabling faster safety evaluations on large models through distributed computation.

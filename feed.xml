@@ -5,25 +5,106 @@
     <link>https://ygauthie.github.io/ai-safety-radar/</link>
     <description>Daily AI safety research, policy, and development digest</description>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2026 19:17:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 19:37:15 GMT</lastBuildDate>
     <item>
-      <title>AI Safety Digest - 2026-04-09</title>
+      <title>AI Safety Radar: Daily Summary — 2026-04-09</title>
       <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-daily.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-daily.md</guid>
       <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
       <description>
 ## Top 3 Developments
 
-1. **Anthropic Releases Unprecedented "Too Dangerous" Model Assessment**: Anthropic published a [244-page safety report](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) for Claude Mythos, marking the first time a major AI lab has withheld a model entirely due to safety concerns. The model demonstrated [unprecedented cybersecurity capabilities](https://www.lesswrong.com/posts/ZfbChZBXgje8T6Geu/excerpts-and-notes-on-mythos-model-card), discovering numerous zero-day vulnerabilities during testing, prompting warnings about potential security risks.
+1. **Anthropic Withholds "Mythos" Model Over Cybersecurity Risks**: Anthropic published a [244-page technical report](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) explaining their decision not to release their Claude Mythos model due to its ability to discover zero-day exploits and other cybersecurity vulnerabilities. This represents a significant precedent for AI companies withholding capable models for safety reasons, with [LessWrong warning users](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked) about potential cybersecurity implications.
 
-2. **New Safety Benchmarks for Agent Execution Emerge**: Research introduced [TraceSafe-Bench](https://arxiv.org/abs/2604.07223v1), the first comprehensive benchmark for evaluating safety guardrails during LLM tool-use execution rather than just final outputs. This addresses critical gaps as AI systems become more autonomous, with parallel work on [constitutional governance frameworks](https://arxiv.org/abs/2604.07007v1) for multi-agent systems.
+2. **First Comprehensive Multi-Step AI Agent Safety Benchmark**: Researchers released [TraceSafe](https://arxiv.org/abs/2604.07223v1), the first systematic assessment framework for evaluating safety guardrails during intermediate execution steps of autonomous AI agents. This addresses a critical gap as AI systems evolve from static chatbots to autonomous agents operating across organizational boundaries.
 
-3. **Breakthrough in Model Data Deletion Methodology**: Researchers published a [novel approach to the data deletion problem](https://arxiv.org/abs/2604.07328v1), enabling prediction of how AI models would behave if specific training data were excluded. This has major implications for interpretability, privacy rights, and understanding training data influence on model behavior.
+3. **Critical AI Evaluation Infrastructure Vulnerabilities Discovered**: Multiple severe bugs were identified in widely-used AI evaluation frameworks, including [GPQA preprocessing corruption](https://github.com/EleutherAI/lm-evaluation-harness/pull/3691) that removed legitimate scientific notation and [MMLU Pro fewshot contamination](https://github.com/EleutherAI/lm-evaluation-harness/pull/3693) that leaked answers into prompts, highlighting the fragility of current AI safety assessment tools.
 
 ## Section Summaries
 
-**ArXiv Papers**: Seven key papers focused on agent safety, interpretability, and human-AI alignment, with particular emphasis on [governance frameworks for autonomous agents](https://arxiv.org/abs/2604.07007v1) and [comprehensive safety evaluation during tool execution](https://arxiv.org/abs/2604.07223v1). Additional work addressed [personalized reward modeling](https://arxiv.org/abs/2604.07343v1) and [AI safety in high-risk surveillance contexts](https://arxiv.org/abs/2604.07253v1).
+**ArXiv Papers**: Seven key papers advanced AI safety research, with [TraceSafe](https://arxiv.org/abs/2604.07223v1) introducing the first multi-step agent safety benchmark, [AgentCity](https://arxiv.org/abs/2604.07007v1) proposing constitutional governance for autonomous agent economies, and multiple interpretability works including [ConceptTracer](https://arxiv.org/abs/2604.07019v1) for neural representation ana</description>
+    </item>
+    <item>
+      <title>AI Safety Radar: ArXiv Papers — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-arxiv.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-arxiv.md</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Key Papers
 
-**Blog Posts &amp; Articles**: The AI safety community</description>
+Several significant papers emerge from this collection that advance AI safety, alignment, and interpretability research:
+
+[**TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories**](https://arxiv.org/abs/2604.07223v1) introduces TraceSafe-Bench, the first comprehensive benchmark for evaluating safety guardrails during intermediate execution steps of autonomous LLM agents. This addresses a critical gap as AI systems evolve from static chatbots to autonomous agents, where the primary vulnerability shifts from final outputs to execution traces.
+
+[**How to sketch a learning algorithm**](https://arxiv.org/abs/2604.07328v1) tackles the fundamental data deletion problem in machine learning - predicting how models would behave if specific training data were excluded. This work has direct implications for interpretability, privacy, and understanding data influence on AI model behavior, with applications in deep learning contexts.
+
+[**AgentCity: Constitutional Governance for Autonomous Agent Economies via Separation of Power**](https://arxiv.org/abs/2604.07007v1) addresses the "Logic Monopoly" problem where autonomous AI agents operating across organizational boundaries create opaque collective behavior that no single human can govern. The paper proposes a constitutional framework based on separation of powers to maintain human oversight in multi-agent systems.
+
+[**A comparative analysis of machine learning models in SHAP analysis**](https://arxiv.org/abs/2604.07258v1) examines explainable AI methods, specifically SHAP analysis, across different machine learning models. This research is crucial for understanding how to make black-box AI systems more interpretable and trustworthy, especially in high-stakes applications.
+
+[**Designing Safe and Accountable GenAI as a Learning Companion with Women Banned from Formal Education**](https://arxiv.org/abs/2604.07253v1) explores AI safety and accountability in surveillance contexts</description>
+    </item>
+    <item>
+      <title>AI Safety Radar: GitHub Activity — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-github.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-github.md</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Key Discussions
+
+### Agent Safety and Verification
+
+**[Output verification before agent actions](https://github.com/anthropics/claude-cookbooks/issues/518)** was raised as a key safety gap in Anthropic's new Managed Agents architecture. While human-in-the-loop approval gates exist, there's no cookbook example for automated verification gates that could check agent outputs before execution. This represents an important safety consideration for autonomous agent deployments.
+
+The community has been actively contributing multi-agent safety patterns, with pull requests adding **[self-improving agents with structured reflection](https://github.com/anthropics/claude-cookbooks/pull/469)** and **[multi-agent pipeline with state handoffs](https://github.com/anthropics/claude-cookbooks/pull/517)**. These patterns demonstrate systematic approaches to agent improvement cycles and error handling in multi-agent systems.
+
+### LLM Evaluation Reliability
+
+Several critical evaluation bugs were identified and fixed. **[GPQA preprocessing corruption](https://github.com/EleutherAI/lm-evaluation-harness/pull/3691)** was removing legitimate scientific notation and chemical nomenclature from answer choices via an overly broad regex. **[MMLU Pro fewshot contamination](https://github.com/EleutherAI/lm-evaluation-harness/pull/3693)** was leaking answer content into user prompts when chat templates were applied, potentially inflating scores.
+
+**[Median aggregation function bug](https://github.com/EleutherAI/lm-evaluation-harness/pull/3668)** was returning incorrect results by not sorting inputs before finding the median. While no current tasks use this function, it could have silently corrupted results if deployed.
+
+### Model Safety Implementation Issues
+
+**[Falcon](https://github.com/TransformerLensOrg/TransformerLens/pull/1241)** and **[DeepSeek V3](https://github.com/TransformerLensOrg/TransformerLens/pull/1240)** architecture adapters were added to TransformerLens, expanding interpretab</description>
+    </item>
+    <item>
+      <title>AI Safety Radar: Hacker News — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-hn.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-hn.md</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Hot Topics
+
+The Hacker News community has been intensely focused on Anthropic this week, with five major storylines dominating AI safety discussions:
+
+1. **Anthropic's Pentagon Blacklisting Legal Battle**: Multiple stories covered the [US court's decision to decline blocking the Pentagon's blacklisting of Anthropic](https://www.reuters.com/world/us-court-declines-block-pentagons-anthropic-blacklisting-now-2026-04-08/), with the [Federal Court formally denying Anthropic's motion](https://www.nytimes.com/2026/04/08/technology/anthropic-pentagon-risk-circuit-court.html) to lift the 'supply chain risk' label.
+
+2. **Claude Mythos Model Controversy**: Anthropic's unreleased Mythos model sparked significant debate, with the company publishing a [244-page technical report](https://www-cdn.anthropic.com/8b8380204f74670be75e81c820ca8dda846ab289.pdf) explaining their decision not to release it due to cybersecurity risks. The [New York Times characterized it as a "cybersecurity reckoning"](https://www.nytimes.com/2026/04/07/technology/anthropic-claims-its-new-ai-model-mythos-is-a-cybersecurity-reckoning.html), while other outlets described it as sparking ["fears of AI doomsday"](https://nypost.com/2026/04/08/business/anthropics-claude-mythos-model-sparks-fears-of-ai-doomsday-wave-of-devastating-hacks/).
+
+3. **Anthropic's Valuation and Business Performance**: Speculation about Anthropic's market value intensified with claims that [the company is worth $100B more than last week](https://futuresearch.ai/anthropic-30b-arr-ipo-valuation/) and reports that [Anthropic has passed OpenAI in revenue while spending 4x less](https://www.the-ai-corner.com/p/anthropic-30b-arr-passed-openai-revenue-2026).
+
+4. **OpenAI's Response to Cybersecurity Concerns**: In apparent response to Anthropic's Mythos revelations, [OpenAI announced plans for a staggered rollout of their new model over cybersecurity risks](https://www.axios.com/2026/04/09/openai-new-model-cyber-mythos-anthopic).
+
+5. **Anthro</description>
+    </item>
+    <item>
+      <title>AI Safety Radar: Blog Posts — 2026-04-09</title>
+      <link>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-rss.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-radar/#2026-04-09/safety-rss.md</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Top Stories
+
+**[Have we already lost? Part 1: The Plan in 2024](https://www.lesswrong.com/posts/tjZWbmuCE9tjYQsrf/have-we-already-lost-part-1-the-plan-in-2024)** - A critical reflection on AI safety progress written at the Inkhaven Residency examines whether the safety community has passed a point of no return where AGI becomes both likely and outside their control. Despite the ominous title, the author concludes the answer is no, but finds the question's salience itself noteworthy for understanding current safety efforts.
+
+**[Do not be surprised if LessWrong gets hacked](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked)** - A LessWrong admin warns about cybersecurity vulnerabilities following Anthropic's announcement of Claude Mythos, which reportedly discovered numerous zero-day exploits. The post serves as both a PSA about LessWrong's security posture and an attempt to establish common knowledge about the deteriorating security landscape as AI capabilities advance.
+
+**[Excerpts and Notes on Mythos Model Card](https://www.lesswrong.com/posts/ZfbChZBXgje8T6Geu/excerpts-and-notes-on-mythos-model-card)** - A detailed breakdown of Anthropic's model card for Claude Mythos, highlighting concerning capabilities and safety considerations. The analysis intentionally emphasizes concerning findings above their rate of occurrence in the original document, providing insight into the community's interpretation of this new frontier model.
+
+**[My unsupervised elicitation challenge](https://www.alignmentforum.org/posts/ASoFTyk3bzBE62dyn/my-unsupervised-elicitation-challenge)** - A researcher studying Ancient Greek with Claude Opus 4.6 has identified what they claim are systematic mistakes in the model's language tutoring capabilities. They've issued a challenge to test whether others can identify these errors without prior knowledge of Greek, relating to broader questions of unsupervised capability elicitation.
+
+**[AI as a Trojan h</description>
     </item>
   </channel>
 </rss>
