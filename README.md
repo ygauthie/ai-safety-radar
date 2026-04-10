@@ -1,4 +1,4 @@
-# 🛡️ AI Safety Daily Brief
+# <img src="assets/shield.png" width="32" height="32" valign="middle"> AI Safety Daily Brief
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
