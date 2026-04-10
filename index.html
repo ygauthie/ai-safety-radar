@@ -410,9 +410,8 @@
         'safety-aisi': 'AI Safety Institutes',
         'safety-hn': 'Hacker News',
       };
-      const isFr = filename.includes('-fr.');
       for (const [key, label] of Object.entries(map)) {
-        if (filename.includes(key)) return isFr ? `${label} (FR)` : label;
+        if (filename.includes(key)) return label;
       }
       return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace('.md', '');
     }
