@@ -79,12 +79,13 @@
     }
 
     .logo { color: #11568C; }
+    [data-theme="dark"] .logo { color: var(--accent); }
     .logo span { color: var(--text); }
 
     nav { display: flex; gap: 1.25rem; align-items: center; }
 
     nav a, nav button {
-      color: var(--text-muted);
+      color: var(--text);
       text-decoration: none;
       font-size: 0.8rem;
       font-weight: 500;
@@ -193,7 +194,7 @@
     .file-link {
       display: block;
       padding: 0.3rem 0.4rem 0.3rem 0.75rem;
-      color: var(--text-muted);
+      color: var(--text);
       text-decoration: none;
       font-size: 0.95rem;
       border-radius: 3px;
