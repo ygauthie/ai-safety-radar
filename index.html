@@ -523,7 +523,10 @@
             `<a href="#${file}" class="file-link" data-hash="${file}" data-label="${fileLabel(file).toLowerCase()}" data-date="${entry.date}">${fileLabel(file)}${fileBadge(file)}</a>`
           ).join('');
           const filesHeight = sorted.length * 42;
-          const dateDisplay = entry.date.slice(5); // "MM-DD"
+          const d = new Date(entry.date + 'T12:00:00');
+          const day = d.getDate();
+          const suffix = [,'st','nd','rd'][day % 10 > 3 ? 0 : (day % 100 - day % 10 !== 10) * (day % 10)] || 'th';
+          const dateDisplay = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).replace(/\d+/, day + suffix);
           return `<div class="date-group${dayCollapsed}" data-date="${entry.date}">
             <div class="date-label"><span>${dateDisplay}</span>${chevronSvg}</div>
             <div class="date-files" style="max-height:${dayCollapsed ? 0 : filesHeight}px">${filesHtml}</div>
