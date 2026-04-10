@@ -1,0 +1,25 @@
+# AI Safety Daily Brief - 2026-04-10
+
+## Top 3 Developments
+
+1. **Anthropic Withholds "Mythos" Model Due to Cybersecurity Risks** - Anthropic made the unprecedented decision not to publicly release their new "Mythos" model after discovering it could find critical security vulnerabilities across all major operating systems and browsers. The company released a [244-page safety assessment](https://www-cdn.anthropic.com/79c2d46d997783b9d2fb3241de43218158e5f25c.pdf) explaining the decision and launched Project Glasswing to make the model available only to cybersecurity companies for coordinated patching efforts.
+
+2. **New Research Identifies Critical Gaps in AI Safety Infrastructure** - [TraceSafe research](https://arxiv.org/abs/2604.07223v1) revealed that existing safety guardrails fail during multi-step AI agent operations, introducing the first benchmark for evaluating safety controls during intermediate execution traces rather than just final outputs. This addresses a critical vulnerability as AI systems become more autonomous.
+
+3. **Constitutional Governance Framework Proposed for Autonomous AI Economies** - [New research from AgentCity](https://arxiv.org/abs/2604.07007v1) tackles the emerging "Logic Monopoly" problem where autonomous AI agents operating across organizational boundaries have unchecked control from planning through execution, proposing separation-of-powers governance mechanisms to maintain human oversight.
+
+## Section Summaries
+
+**ArXiv Papers**: Seven significant papers advanced AI safety research, with [TraceSafe](https://arxiv.org/abs/2604.07223v1) introducing the first benchmark for multi-step agent safety evaluation and [data deletion framework research](https://arxiv.org/abs/2604.07328v1) enabling rapid prediction of model behavior changes when training data is removed. [Constitutional governance research](https://arxiv.org/abs/2604.07007v1) addresses autonomous agent oversight while [educational AI safety work](https://arxiv.org/abs/2604.07253v1) examines deployment in high-surveillance contexts.
+
+**Blog Posts & Articles**: The AI safety community grappled with existential questions through posts like ["Have we already lost?"](https://www.lesswrong.com/posts/tjZWbmuCE9tjYQsrf/have-we-already-lost-part-1-the-plan-in-2024) while [LessWrong warned users about potential hacking](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked) given the scale of Mythos-discovered vulnerabilities. A new book ["Obsolete"](https://www.lesswrong.com/posts/2HfuvYzRZgHpLAgpe/help-me-launch-obsolete-a-book-aimed-at-building-a-new) aims to build broader AI reform movements beyond technical communities.
+
+**GitHub Activity**: Critical evaluation framework bugs were fixed in the [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), while [Anthropic's cookbook](https://github.com/anthropics/claude-cookbooks) expanded agent safety patterns including output verification systems and multi-agent coordination. [OpenAI's cookbook](https://github.com/openai/openai-cookbook) introduced approaches to eliminate mathematical hallucinations through deterministic tool routing.
+
+**Hacker News**: Community discussions centered on Anthropic's Mythos withholding decision, a federal court [denying Anthropic's motion to lift government risk classification](https://www.nytimes.com/2026/04/08/technology/anthropic-pentagon-risk-circuit-court.html), and reports of [OpenAI considering staggered model rollouts](https://www.axios.com/2026/04/09/openai-new-model-cyber-mythos-anthopic) due to cybersecurity concerns following the Mythos situation.
+
+## Risk Watch
+
+**Increased Risks**: The Mythos situation reveals that AI systems have reached capability levels that pose immediate cybersecurity threats to critical infrastructure, as evidenced by Anthropic's [244-page safety assessment](https://www-cdn.anthropic.com/79c2d46d997783b9d2fb3241de43218158e5f25c.pdf) and the subsequent [LessWrong security warning](https://www.lesswrong.com/posts/2wi5mCLSkZo2ky32p/do-not-be-surprised-if-lesswrong-gets-hacked). [Research on AI persuasion capabilities](https://www.lesswrong.com/posts/JcavsPku6RR9hcujz/slightly-super-persuasion-will-do) suggests even modest advances in manipulation abilities could be transformative. [TraceSafe findings](https://arxiv.org/abs/2604.07223v1) indicate existing safety guardrails fail during multi-step agent operations, creating new attack surfaces.
+
+**Risk Mitigation Efforts**: Positive developments include [constitutional governance frameworks](https://arxiv.org/abs/2604.07007v1) for autonomous agent oversight, [improved evaluation framework integrity](https://github.com/EleutherAI/lm-evaluation-harness) through bug fixes, and [mathematical hallucination elimination techniques](https://github.com/openai/openai-cookbook). Industry-wide recognition of cybersecurity risks is prompting more cautious deployment practices, with [OpenAI considering staggered rollouts](https://www.axios.com/2026/04/09/openai-new-model-cyber-mythos-anthopic) and coordinated disclosure efforts through initiatives like Project Glasswing.
