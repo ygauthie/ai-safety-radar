@@ -1,4 +1,4 @@
-# AI Safety Daily Brief - 2026-04-09
+# AI Safety Daily Brief (2026-04-09)
 
 ## Top 3 Developments
 
