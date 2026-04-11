@@ -381,7 +381,6 @@
     .month-group.hidden { display: none; }
 
     @media (max-width: 768px) {
-      .logo { font-size: 1rem; }
       .sidebar {
         position: static;
         width: 100%;
@@ -442,7 +441,7 @@
         welcomeSub: 'Daily digest of AI safety research, policy, and developments.',
         welcomeHint: 'Select a digest from the sidebar to begin reading.',
         fileLabels: {
-          'safety-daily': 'Executive Summary',
+          'safety-daily': 'Daily Brief',
           'safety-weekly': 'Weekly Summary',
           'safety-arxiv': 'ArXiv Papers',
           'safety-github': 'GitHub Activity',
@@ -468,7 +467,7 @@
         welcomeSub: 'Synthèse quotidienne de la recherche, des politiques et des développements en matière de sécurité de l\'IA.',
         welcomeHint: 'Sélectionnez un bulletin dans la barre latérale pour commencer à lire.',
         fileLabels: {
-          'safety-daily': 'Résumé exécutif',
+          'safety-daily': 'Bulletin quotidien',
           'safety-weekly': 'Résumé hebdomadaire',
           'safety-arxiv': 'Articles ArXiv',
           'safety-github': 'Activité GitHub',
@@ -586,7 +585,7 @@
     }
 
     function fileBadge(filename) {
-      if (filename.includes('daily')) return `<span class="badge badge-daily">${t().badges.daily}</span>`;
+      if (filename.includes('daily')) return '';
       if (filename.includes('weekly')) return `<span class="badge badge-weekly">${t().badges.weekly}</span>`;
       return '';
     }
