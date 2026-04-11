@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Safety Daily Brief</title>
+  <title>AI Safety Radar</title>
   <meta name="description" content="Daily AI safety research, policy, and development digest">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="icon" type="image/png" href="assets/shield.png">
-  <link rel="alternate" type="application/rss+xml" title="AI Safety Daily Brief RSS" href="feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="AI Safety Radar RSS" href="feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -89,8 +89,8 @@
       height: 24px;
       background: repeating-linear-gradient(
         90deg,
-        #11568C 0px,
-        #11568C 2px,
+        #999 0px,
+        #999 2px,
         transparent 2px,
         transparent 8px
       );
@@ -101,8 +101,8 @@
     [data-theme="dark"] .header-filler {
       background: repeating-linear-gradient(
         90deg,
-        var(--accent) 0px,
-        var(--accent) 2px,
+        #666 0px,
+        #666 2px,
         transparent 2px,
         transparent 8px
       );
@@ -405,7 +405,7 @@
 </head>
 <body>
   <header>
-    <a href="#" class="logo"><span id="logoText">AI Safety <span>Daily Brief</span></span></a>
+    <a href="#" class="logo"><span id="logoText">AI Safety <span>Radar 📡</span></span></a>
     <div class="header-filler" id="headerFiller"></div>
     <nav>
       <a href="feed.xml" title="RSS Feed" style="display:flex;align-items:center;">
@@ -448,7 +448,7 @@
         failedLoad: 'Failed to load digest.',
         searchPlaceholder: 'Search briefs...',
         resultsFound: (n) => `${n} result${n !== 1 ? 's' : ''} found`,
-        welcomeTitle: 'AI Safety Daily Brief',
+        welcomeTitle: 'AI Safety Radar 📡',
         welcomeSub: 'Daily digest of AI safety research, policy, and developments.',
         welcomeHint: 'Select a digest from the sidebar to begin reading.',
         fileLabels: {
@@ -464,7 +464,7 @@
         badges: { daily: 'daily', weekly: 'weekly' },
         locale: 'en-US',
         siteTitle: 'AI Safety',
-        siteTitleSub: 'Daily Brief',
+        siteTitleSub: 'Radar 📡',
       },
       fr: {
         disclaimer: 'Les bulletins quotidiens sur la sécurité de l\'IA sont générés par IA et peuvent contenir des erreurs. Consultez toujours les sources originales pour plus de précision.',
@@ -474,7 +474,7 @@
         failedLoad: 'Impossible de charger le bulletin.',
         searchPlaceholder: 'Rechercher...',
         resultsFound: (n) => `${n} résultat${n !== 1 ? 's' : ''} trouvé${n !== 1 ? 's' : ''}`,
-        welcomeTitle: 'Bulletin quotidien sur la sécurité de l\'IA',
+        welcomeTitle: 'Radar de la Sécurité de l\'IA 📡',
         welcomeSub: 'Synthèse quotidienne de la recherche, des politiques et des développements en matière de sécurité de l\'IA.',
         welcomeHint: 'Sélectionnez un bulletin dans la barre latérale pour commencer à lire.',
         fileLabels: {
@@ -489,8 +489,8 @@
         },
         badges: { daily: 'quotidien', weekly: 'hebdo' },
         locale: 'fr-CA',
-        siteTitle: 'Sécurité de l\'IA -',
-        siteTitleSub: 'Bulletin quotidien',
+        siteTitle: 'Radar de la',
+        siteTitleSub: 'Sécurité de l\'IA 📡',
       },
     };
 
