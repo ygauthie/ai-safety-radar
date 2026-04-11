@@ -86,15 +86,17 @@
     .header-filler {
       flex: 1;
       overflow: hidden;
-      margin: 0 1rem;
-      color: var(--border);
+      margin: 0 0.75rem;
+      color: #11568C;
       font-family: monospace;
-      font-size: 0.9rem;
-      letter-spacing: -1px;
+      font-size: 0.65rem;
+      letter-spacing: 0px;
       line-height: 1;
       user-select: none;
       white-space: nowrap;
     }
+
+    [data-theme="dark"] .header-filler { color: var(--accent); }
 
     nav { display: flex; gap: 1.25rem; align-items: center; flex-shrink: 0; }
 
@@ -378,7 +380,6 @@
 
     @media (max-width: 768px) {
       .logo { font-size: 1rem; }
-      .header-filler { display: none; }
       .sidebar {
         position: static;
         width: 100%;
