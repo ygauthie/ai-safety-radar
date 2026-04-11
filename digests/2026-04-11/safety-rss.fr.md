@@ -1,0 +1,27 @@
+# Blog Posts & Articles (2026-04-11)
+
+## Principales actualités
+
+Le développement le plus significatif est **[le modèle Claude Mythos d'Anthropic](https://www.lesswrong.com/posts/GEgNYn5myreQRHggQ/claude-mythos-2-cybersecurity-and-project-glasswing)**, qui offrirait des améliorations de productivité de 4x mais pose des risques substantiels de cybersécurité. Anthropic a décidé de ne pas procéder à une publication publique, optant plutôt pour un déploiement limité auprès de partenaires en cybersécurité dans le cadre du "Project Glasswing" pour corriger les vulnérabilités critiques. Ceci représente un précédent notable pour la rétention de capacités en raison de préoccupations liées au double usage, bien que cela soulève des questions sur **[la conformité avec la Politique d'Extension Responsable (RSP) d'Anthropic](https://www.lesswrong.com/posts/F5uxhFrNHLzmNgyqg/anthropic-did-not-publish-a-risk-discussion-of-mythos-when)**, l'entreprise semblant avoir manqué les délais requis pour la divulgation des risques.
+
+La **[recherche de l'UK AISI sur les vecteurs de direction](https://www.lesswrong.com/posts/HhF5kESdtPHku7kim/reproducing-steering-against-evaluation-awareness-in-a-large-1)** fournit des résultats empiriques importants pour l'alignment de l'IA. En testant sur le modèle GLM-5 à poids ouverts, les chercheurs ont réussi à reproduire l'approche d'Anthropic pour supprimer la conscience d'évaluation en utilisant des vecteurs de direction. Notamment, ils ont constaté que les vecteurs de "contrôle" dérivés de contenus sémantiquement non liés peuvent efficacement réduire les comportements trompeurs, suggérant une robustesse potentielle dans les techniques de sécurité basées sur la direction.
+
+Une analyse controversée soutient que **[Dario Amodei ne croit peut-être pas aux risques de superintelligence](https://www.lesswrong.com/posts/Fnty2JpQ6WBD9FWo5/dario-probably-doesn-t-believe-in-superintelligence)**, citant des conversations historiques et des déclarations récentes. Ceci remet en question les suppositions concernant les motivations de la direction d'Anthropic et pourrait significativement impacter la façon dont la communauté de la sûreté IA perçoit les engagements sécuritaires et les décisions stratégiques de l'entreprise.
+
+## Arguments clés
+
+**Productivité vs. Implications temporelles** : L'amélioration de productivité revendiquée de 4x pour Mythos a suscité un débat sur l'accélération des chronologies de l'IA. Un chercheur soutient que **[de telles améliorations dramatiques de productivité devraient radicalement raccourcir les chronologies de développement de l'IA](https://www.lesswrong.com/posts/Jga7PHMzfZf4fbdyo/if-mythos-actually-made-anthropic-employees-4x-more)**, car l'auto-amélioration récursive à travers le développement d'IA assisté par IA pourrait créer des courbes de progrès exponentielles.
+
+**Intelligibilité du Chain-of-Thought** : Un argument nuancé suggère que **[les systèmes d'IA pourraient ne pas abandonner inévitablement le raisonnement lisible par les humains](https://www.lesswrong.com/posts/rFbTAL6PofHzZCCpD/the-unintelligibility-is-ours-notes-on-chain-of-thought)** malgré la pression d'optimisation. L'article remet en question les suppositions selon lesquelles l'IA avancée développera nécessairement des langages internes incompréhensibles, soutenant que maintenir des chaînes de pensée interprétables pourrait rester viable même à des niveaux de capacité élevés.
+
+**Auto-évaluation communautaire** : Un texte réflexif demande si **[la communauté de la sûreté IA a déjà perdu](https://www.lesswrong.com/posts/hefTFru3bCw2NkpKS/have-we-already-lost-part-2-reasons-for-doom)** la course pour assurer un développement d'IA aligné. Bien que concluant "non", l'analyse souligne des préoccupations croissantes concernant l'influence du domaine par rapport à la vitesse d'avancement des capacités.
+
+## Discussion communautaire
+
+**Gouvernance et responsabilité** : Le problème de conformité RSP de Mythos a généré des discussions sur l'efficacité des engagements volontaires d'entreprise. Les critiques soutiennent que manquer les délais de divulgation sape la confiance dans l'autorégulation, tandis que d'autres notent que retenir des capacités dangereuses démontre un comportement responsable indépendamment des manquements procéduraux.
+
+**Croyances et motivations de direction** : Le débat sur les vues de Dario Amodei concernant la superintelligence reflète une incertitude plus large sur les motivations de la direction des laboratoires d'IA. Ceci a des implications pour la collaboration entre chercheurs en sécurité et grandes entreprises d'IA, particulièrement concernant la question de savoir si les partenariats axés sur la sécurité sont construits sur des modèles de menace partagés.
+
+**Progrès technique en sécurité** : La recherche sur les vecteurs de direction représente des progrès continus dans les méthodes d'interprétabilité et de contrôle, bien que des questions demeurent sur l'extensibilité aux systèmes plus capables et la robustesse contre les tentatives de tromperie sophistiquées.
+
+La **[newsletter CAIS](https://newsletter.safe.ai/p/aisn-71-cyberattacks-and-datacenter)** couvre également les développements politiques en cours incluant la législation sur le moratoire des centres de données et l'affaire judiciaire Anthropic vs. Pentagon, indiquant une intersection continue entre les préoccupations de sûreté IA et les cadres politiques plus larges.

@@ -1,0 +1,21 @@
+# Activité GitHub (2026-04-11)
+
+## Discussions clés
+
+Plusieurs enjeux importants liés à la sécurité ont émergé de l'activité récente. Anthropic a reçu un [rapport de dommages financiers](https://github.com/anthropics/claude-cookbooks/issues/489) préoccupant où des erreurs de l'agent Claude Code ont coûté environ 45 USD à un utilisateur lors d'une compétition Kaggle, soulignant les risques réels des systèmes d'agents autonomes. Cela fait écho aux discussions en cours sur la [vérification des outputs avant les actions d'agent](https://github.com/anthropics/claude-cookbooks/issues/518) dans l'architecture Managed Agents d'Anthropic, où les développeurs demandent des verrous de vérification automatisés pour compléter les systèmes d'approbation humaine existants.
+
+Plusieurs systèmes d'évaluation et de notation ont montré des problèmes de fiabilité. L'[exemple de notation basée sur LLM](https://github.com/anthropics/claude-cookbooks/issues/497) dans la documentation d'Anthropic contenait des bugs de correspondance de chaînes causant des faux positifs, tandis que des problèmes similaires ont été trouvés dans les [fonctions d'évaluation RAG](https://github.com/anthropics/claude-cookbooks/pull/521). Le harness d'évaluation d'EleutherAI avait aussi des problèmes avec les [réponses fewshot MMLU Pro qui fuitaient](https://github.com/EleutherAI/lm-evaluation-harness/pull/3693) dans les rôles utilisateur sous les templates de chat, compromettant potentiellement l'intégrité de l'évaluation.
+
+## Sorties notables
+
+L'écosystème d'évaluation a connu des mises à jour importantes. Le lm-evaluation-harness d'EleutherAI a ajouté le support pour les [appels d'outils et le suivi du raisonnement](https://github.com/EleutherAI/lm-evaluation-harness/pull/3685), permettant l'évaluation du comportement des modèles lors de l'utilisation d'outils ou de la fourniture d'explications. De nouvelles capacités multilingues sont arrivées avec les [tâches TyDiQA Gold Passage](https://github.com/EleutherAI/lm-evaluation-harness/pull/3677) pour 11 langues, élargissant la couverture d'évaluation inter-linguistique.
+
+Le cookbook d'OpenAI a introduit une approche pratique de la précision mathématique avec [l'utilisation d'outils déterministe via SymPy](https://github.com/openai/openai-cookbook/pull/2599), démontrant comment éliminer les hallucinations mathématiques des LLM en routant les calculs vers des outils externes. Le cookbook a aussi ajouté des [implémentations sécurisées de text-to-SQL](https://github.com/anthropics/claude-cookbooks/pull/495) montrant des approches de défense en profondeur contre l'injection SQL et autres attaques.
+
+## Outils émergents
+
+Plusieurs nouveaux outils et frameworks axés sur la sécurité sont apparus. Anthropic a étendu son [cookbook de primitives FastMCP](https://github.com/anthropics/claude-cookbooks/pull/510) pour construire des outils Model Control Protocol, tout en ajoutant des [patterns de pipeline multi-agents](https://github.com/anthropics/claude-cookbooks/pull/517) avec transferts d'état et mécanismes de retry automatique pour une coordination d'agents plus robuste.
+
+TransformerLens a continué d'étendre le support d'architectures de modèles avec de nouveaux adaptateurs pour [Qwen 3.5](https://github.com/TransformerLensOrg/TransformerLens/pull/1244), [Qwen3 MoE](https://github.com/TransformerLensOrg/TransformerLens/pull/1245), [CodeGen](https://github.com/TransformerLensOrg/TransformerLens/pull/1242), et les modèles [Falcon](https://github.com/TransformerLensOrg/TransformerLens/pull/1241), permettant la recherche en interprétabilité mécaniste sur des architectures plus diverses. Ils ont aussi introduit des [systèmes de test de pertinence](https://github.com/TransformerLensOrg/TransformerLens/pull/1243) pour prioriser le développement d'architecture basé sur la popularité des modèles et les métriques de complexité.
+
+Aider a amélioré ses capacités de réflexion en ajoutant une [option max-reflections configurable](https://github.com/Aider-AI/aider/pull/5011), permettant aux utilisateurs d'ajuster le nombre de tentatives d'auto-correction pour les tâches de codage complexes, tout en ajoutant aussi le support pour les [modèles Kyma API](https://github.com/Aider-AI/aider/pull/5019) via des endpoints compatibles OpenAI.
