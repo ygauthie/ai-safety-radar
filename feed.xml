@@ -5,7 +5,7 @@
     <link>https://ygauthie.github.io/ai-safety-daily-brief/</link>
     <description>Daily AI safety research, policy, and development digest</description>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Apr 2026 11:42:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 12:20:07 GMT</lastBuildDate>
     <item>
       <title>AI Safety Daily Brief: Executive Summary — 2026-04-12</title>
       <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-daily.fr.md</link>
@@ -14,15 +14,15 @@
       <description>
 ## Top 3 des développements
 
-1. **La mise en œuvre de la gouvernance devient concrète** : La communauté de la sécurité de l'IA passe des cadres théoriques vers des mécanismes d'application spécifiques. Un nouveau [post LessWrong](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) détaille comment les coalitions internationales pourraient surveiller les clusters de GPU de plus de 16 H100 pour faire respecter les pauses de développement de l'IA, représentant un changement significatif vers une gouvernance technique actionnable.
+1. **Analyse de gouvernance technique de MIRI sur l'application de la pause IA** - L'[équipe de gouvernance technique de MIRI a publié une analyse détaillée](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) examinant comment les moratoires internationaux sur le développement de l'IA pourraient être appliqués de manière pratique grâce à la gouvernance informatique, proposant des systèmes de surveillance qui pourraient détecter l'entraînement non autorisé de systèmes d'IA surhumains utilisant l'enregistrement de grappes au-dessus de 16 GPU H100.
 
-2. **Découverte de bugs critiques dans les frameworks d'évaluation** : Plusieurs bugs ont été trouvés dans les systèmes d'évaluation d'IA largement utilisés, incluant [des erreurs d'agrégation médiane](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) et [des bugs de calcul de précision](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695) dans le harness d'évaluation d'EleutherAI, plus [des problèmes de dilution d'instructions](https://github.com/anthropics/claude-cookbooks/pull/528) où l'efficacité des instructions de sécurité s'effondre de ~100% à 0-30% dans les environnements de production.
+2. **Recherche de Nature Machine Intelligence sur l'interprétabilité de l'IA biomédicale** - Un nouvel [article de Nature Machine Intelligence](https://www.nature.com/articles/s42256-026-01177-0) aborde les structures sémantiques implicites dans les réseaux de neurones pour les applications biomédicales à enjeux élevés, contribuant à des cadres pour comprendre ce que les modèles « savent » au-delà des sorties explicites - crucial pour l'alignment de l'IA dans des contextes de vie ou de mort.
 
-3. **Émergence du framework du problème post-alignment** : Une [analyse complète](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems) argumente que l'alignment technique ne s'attaque qu'à un sous-ensemble des risques de l'IA, identifiant des défis plus larges incluant le mauvais usage de l'IA, la désautonomisation graduelle, et les S-risks qui nécessitent un temps de préparation sociétale avant de déployer des systèmes superintelligents.
+3. **Vulnérabilités critiques de l'infrastructure d'évaluation identifiées** - Plusieurs bogues graves ont été découverts dans les outils d'évaluation d'IA largement utilisés, notamment [des fonctions d'agrégation médiane retournant des éléments arbitraires](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) et [des questions fondamentales sur la question de savoir si les benchmarks mesurent la capacité par rapport à l'adaptation à des données ambiguës](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698), soulignant des problèmes systémiques dans l'évaluation de la sécurité de l'IA.
 
 ## Résumés des sections
 
-**Posts de blog et articles** : Deux posts majeurs sur LessWrong plaident pour des pauses dans le développement de l'IA sous différents angles - l'un proposant [des mécanismes de surveillance concrets](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catch</description>
+**Articles de blog et articles** : Deux pièces majeures de gouvernance plaident pour les pauses de développement de l'IA comme stratégies de sécurité complètes. L'[analyse technique de MIRI](https://www.lesswrong.com/po</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Executive Summary — 2026-04-12</title>
@@ -32,17 +32,15 @@
       <description>
 ## Top 3 Developments
 
-1. **Governance Implementation Gets Concrete**: The AI safety community is moving beyond theoretical frameworks toward specific enforcement mechanisms. A new [LessWrong post](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) details how international coalitions could monitor GPU clusters larger than 16 H100s to enforce AI development pauses, representing a significant shift toward actionable technical governance.
+1. **MIRI Technical Governance Analysis on AI Pause Enforcement** - The [MIRI Technical Governance Team published a detailed analysis](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) examining how international AI development moratoria could be practically enforced through compute governance, proposing monitoring systems that could detect unauthorized training of superhuman AI systems using cluster registration above 16 H100 GPUs.
 
-2. **Critical Evaluation Framework Bugs Discovered**: Multiple bugs were found in widely-used AI evaluation systems, including [median aggregation errors](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) and [accuracy calculation bugs](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695) in EleutherAI's evaluation harness, plus [instruction dilution issues](https://github.com/anthropics/claude-cookbooks/pull/528) where safety instructions collapse from ~100% to 0-30% effectiveness in production environments.
+2. **Nature Machine Intelligence Research on Biomedical AI Interpretability** - A new [Nature Machine Intelligence article](https://www.nature.com/articles/s42256-026-01177-0) addresses implicit semantic structures in neural networks for high-stakes biomedical applications, contributing frameworks for understanding what models "know" beyond explicit outputs - critical for AI alignment in life-or-death contexts.
 
-3. **Post-Alignment Problem Framework Emerges**: A [comprehensive analysis](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems) argues that technical alignment only addresses a subset of AI risks, identifying broader challenges including AI misuse, gradual disempowerment, and S-risks that require societal preparation time before deploying superintelligent systems.
+3. **Critical Evaluation Infrastructure Vulnerabilities Identified** - Multiple serious bugs were discovered in widely-used AI evaluation tools, including [median aggregation functions returning arbitrary elements](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) and [fundamental questions about whether benchmarks measure capability versus adaptation to ambiguous data](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698), highlighting systemic issues in AI safety assessment.
 
 ## Section Summaries
 
-**Blog Posts &amp; Articles**: Two major LessWrong posts advocate for AI development pauses from different angles - one proposing [concrete monitoring mechanisms](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) for enforcement, another expanding risk categories beyond technical alignment to include [post-alignment societal problems](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems).
-
-**GitHub A</description>
+**Blog Posts &amp; Articles**: Two major governance pieces advocate for AI development pauses as comprehensive safety strategies. [MIRI's technical analysis](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) examines enforcement mechanisms for international AI moratoria through compute monitoring, while a [post-alignment problems analysis](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems) argues that development pau</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: GitHub Activity — 2026-04-12</title>
@@ -52,17 +50,17 @@
       <description>
 ## Discussions clés
 
-### Problèmes de sécurité et d'évaluation des modèles
+### Défis méthodologiques d'évaluation
 
-**Dilution d'instructions dans l'évaluation des LLM** : Le cookbook d'Anthropic a reçu une [pull request significative](https://github.com/anthropics/claude-cookbooks/pull/528) traitant de la dilution d'instructions - un phénomène où les frameworks de raisonnement atteignent ~100% de précision avec des prompts ciblés mais s'effondrent à 0-30% lorsqu'ils sont intégrés dans des environnements de production complexes. Cela met en évidence des lacunes critiques entre les performances de benchmarks et la sécurité de déploiement en conditions réelles.
+Une discussion critique a émergé autour de [la question de savoir si les benchmarks d'évaluation mesurent véritablement la capacité ou l'adaptation à des données ambiguës](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698). L'équipe lm-evaluation-harness d'EleutherAI s'attaque à des questions fondamentales sur le fait de savoir si leurs benchmarks évaluent la performance réelle des modèles ou simplement leur capacité d'adaptation à des données probabilistes, incohérentes ou sémantiquement ambiguës - une distinction cruciale pour l'évaluation de la sécurité de l'IA.
 
-**Bugs dans les frameworks d'évaluation des LLM** : Le harness d'évaluation d'EleutherAI a eu deux corrections critiques - un [bug d'agrégation médiane](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) qui retournait des éléments arbitraires au lieu de véritables médianes statistiques, et une [erreur de calcul de précision](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695) qui fusionnait silencieusement des questions de contextes différents. Ces bugs soulèvent des questions sur la fiabilité des évaluations de modèles existantes.
+Plusieurs bugs d'infrastructure d'évaluation ont également été identifiés, notamment [une fonction d'agrégation médiane qui retourne des éléments arbitraires au lieu de médianes réelles](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) et [des calculs stderr incorrects dans les tâches MultiRC](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695), soulignant le besoin d'outils d'évaluation robustes.
 
-**Effondrement par répétition de tokens de Gemma 4** : Un [rapport de bug préoccupant](https://github.com/google-deepmind/gemma/issues/622) décrit les deux variantes de Gemma 4 présentant un effondrement par répétition au niveau des tokens lors de générations longues, où les modèles se retrouvent bloqués dans des boucles qui consomment tout le budget de génération. Cela suggère des problèmes de sécurité potentiels avec la fiabilité des modèles lors d'interactions prolongées.
+### Problèmes de sécurité et fiabilité des modèles
 
-### Recherche en sécurité de l'IA et gouvernance
+Les modèles Gemma 4 de Google DeepMind connaissent [un effondrement par répétition de tokens lors de la génération de texte long](https://github.com/google-deepmind/gemma/issues/622), affectant à la fois les variantes 31B Dense et 26B MoE. Ce mode de défaillance, où les tokens se doublent puis s'effondrent en motifs répétitifs, représente un problème de fiabilité préoccupant pour les déploiements en production.
 
-**Préoccupations méthodologiques d'évaluation** : Une [discussion stimulante](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698) questionne si les évaluations actuelles mesurent une capacité authentique ou simplement l'adaptation à des données d'entraînement amb</description>
+Pendant ce temps, les cookbooks d'Anthropic traitent [les faux positifs de notation basée sur LLM](https://github.com/anthropics/claude-cookbooks/issues/497) et développent de nouveaux cadres d'évaluation pour [la dilution d'instruction](https://github.com/anthropics/claude-cookbooks/pull/528) - le phénomène où les cadres de raisonnement atteignent une haute précision dans des prompts ciblés mais s'effondrent lorsqu'ils sont intégrés dans des environne</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: GitHub Activity — 2026-04-12</title>
@@ -72,19 +70,23 @@
       <description>
 ## Key Discussions
 
-### Model Safety and Evaluation Issues
+### Evaluation Methodology Challenges
 
-**Instruction Dilution in LLM Evaluation**: Anthropic's cookbook received a [significant pull request](https://github.com/anthropics/claude-cookbooks/pull/528) addressing instruction dilution - a phenomenon where reasoning frameworks achieve ~100% accuracy in focused prompts but collapse to 0-30% when embedded in complex production environments. This highlights critical gaps between benchmark performance and real-world deployment safety.
+A critical discussion emerged around [whether evaluation benchmarks truly measure capability or adaptation to ambiguous data](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698). The EleutherAI lm-evaluation-harness team is grappling with fundamental questions about whether their benchmarks assess genuine model performance or merely how well models adapt to probabilistic, inconsistent, or semantically ambiguous data - a distinction crucial for AI safety evaluation.
 
-**LLM Evaluation Framework Bugs**: The EleutherAI evaluation harness had two critical fixes - a [median aggregation bug](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) that returned arbitrary elements instead of true statistical medians, and an [accuracy calculation error](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695) that silently merged questions from different contexts. These bugs raise questions about the reliability of existing model evaluations.
+Multiple evaluation infrastructure bugs were also identified, including [a median aggregation function that returns arbitrary elements instead of actual medians](https://github.com/EleutherAI/lm-evaluation-harness/pull/3696) and [incorrect stderr calculations in MultiRC tasks](https://github.com/EleutherAI/lm-evaluation-harness/pull/3695), highlighting the need for robust evaluation tooling.
 
-**Gemma 4 Token Repetition Collapse**: A concerning [bug report](https://github.com/google-deepmind/gemma/issues/622) describes both Gemma 4 variants exhibiting token-level repetition collapse during long generation, where models get stuck in loops that consume the entire generation budget. This suggests potential safety issues with model reliability in extended interactions.
+### Model Safety and Reliability Issues
 
-### AI Safety Research and Governance
+Google DeepMind's Gemma 4 models are experiencing [token repetition collapse during long text generation](https://github.com/google-deepmind/gemma/issues/622), affecting both the 31B Dense and 26B MoE variants. This failure mode, where tokens double then collapse into repeated patterns, represents a concerning reliability issue for production deployments.
 
-**Evaluation Methodology Concerns**: A thought-provoking [discussion](https://github.com/EleutherAI/lm-evaluation-harness/issues/3698) questions whether current evaluations measure genuine capability or merely adaptation to ambiguous training data, raising fundamental questions about how we assess AI system safety and alignment.
+Meanwhile, Anthropic's cookbooks are addressing [LLM-based grading false positives](https://github.com/anthropics/claude-cookbooks/issues/497) and developing new evaluation frameworks for [instruction dilution](https://github.com/anthropics/claude-cookbooks/pull/528) - the phenomenon where reasoning frameworks achieve high accuracy in focused prompts but collapse when embedded in complex production environments.
 
-**Evidence-Based Compliance**: NeMo Guardrails received a [feature request](https://github.com/NVIDIA-NeMo/Guardrails/issues/1781) for portable evidence artifacts that could support compliance with regulations like the EU AI Act, highlighting the growing </description>
+### AI Safety Tooling and Frameworks
+
+Several repositories are developing new safety-focused tools:
+
+- **ISC-Bench** released [comprehensive documentation updates](https://github.com/wuyoscar/ISC-Bench/releases/tag/v0.0.4) including TVD (Task-</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Hacker News — 2026-04-12</title>
@@ -92,21 +94,23 @@
       <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-hn.fr.md</guid>
       <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
       <description>
-## Sujets d'actualité
+## Sujets brûlants
 
-1. **[Mythos Just Proved the Alignment Field Is Building the Wrong Thing](https://substack.com/home/post/p-193928243)** (4 points, 2 commentaires) - Une critique des approches actuelles de l'alignment d'IA, suggérant des problèmes fondamentaux avec l'orientation du domaine. La discussion semble se concentrer sur la question de savoir si la recherche actuelle sur l'alignment aborde les bons problèmes.
+Les histoires les plus discutées sur Hacker News liées à la sécurité de l'IA révèlent des préoccupations croissantes concernant l'alignment de l'IA et les implémentations pratiques de sécurité :
 
-2. **[Recursive-Mode for Coding Agents](https://recursive-mode.dev/introduction)** (5 points) - Un nouveau framework pour les agents de codage qui implémente des approches récursives à la résolution de problèmes, représentant les développements en cours dans les systèmes d'IA autonomes pour le développement logiciel.
+1. **[Mythos Just Proved the Alignment Field Is Building the Wrong Thing](https://substack.com/home/post/p-193928243)** (4 points, 2 commentaires) - Une évaluation critique soutenant que la recherche actuelle en alignment de l'IA pourrait être fondamentalement mal orientée, générant un débat sur les priorités de recherche dans la communauté de la sécurité.
 
-3. **[AI Agent Systems Accidentally Become Org Charts](https://jointherevolution.today/emergence)** (3 points) - Une visualisation explorant comment les systèmes d'agents IA évoluent naturellement vers des structures hiérarchiques similaires aux organigrammes, mettant en évidence les comportements émergents dans les systèmes multi-agents.
+2. **[Show HN: I visualized how AI agent systems accidentally become org charts](https://jointherevolution.today/emergence)** (3 points) - Une exploration des structures organisationnelles émergentes dans les systèmes multi-agents, mettant en évidence des modèles de coordination inattendus qui pourraient avoir des implications en matière de gouvernance.
 
-4. **[Models Self-Report Difference Between RLHF and Base Cognition](https://github.com/Habitante/pine-trees/blob/main/docs/claude_code_interview.md)** (2 points) - Recherche examinant comment les modèles d'IA décrivent les différences entre leurs réponses entraînées par RLHF et leurs processus de raisonnement sous-jacents, touchant aux préoccupations d'alignment et d'interprétabilité.
+3. **[Show HN: Recursive-Mode for Coding Agents](https://recursive-mode.dev/introduction)** (5 points) - Un nouveau framework pour les agents de codage qui démontre une sophistication croissante dans les capacités de programmation autonome.
 
-5. **[Refund Guard – Policy Gate for AI Agents](https://github.com/MattMessinger1/agentic_refund_guardrail)** (2 points) - Un mécanisme de sécurité conçu pour contrôler la capacité des agents IA à émettre des remboursements, représentant des approches pratiques pour contraindre les capacités des agents autonomes dans des contextes financiers.
+4. **[Models self-report difference between RLHF trained responses and base cognition](https://github.com/Habitante/pine-trees/blob/main/docs/claude_code_interview.md)** (2 points) - Recherche montrant que les modèles d'IA peuvent distinguer entre leur entraînement aligné et leurs processus de raisonnement sous-jacents, soulevant des questions sur l'efficacité de l'alignment.
+
+5. **[Show HN: Refund Guard – a policy gate for AI agents that can issue refunds](https://github.com/MattMessinger1/agentic_refund_guardrail)** (2 points) - Une implémentation pratique de sécurité pour les agents IA gérant les transactions financières, représentant l'attention croissante portée aux applications concrètes de sécurité de l'IA.
 
 ## Sentiment de la communauté
 
-La communauté Hacker News sur la sécurité de l'IA semble se concentrer sur les défis d'implémentation pratique plutôt que sur les discussions </description>
+La communauté Hacker News montre une approche mitigée mais de plus e</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Hacker News — 2026-04-12</title>
@@ -116,21 +120,65 @@ La communauté Hacker News sur la sécurité de l'IA semble se concentrer sur le
       <description>
 ## Hot Topics
 
-1. **[Mythos Just Proved the Alignment Field Is Building the Wrong Thing](https://substack.com/home/post/p-193928243)** (4 points, 2 comments) - A critique of current AI alignment approaches, suggesting fundamental issues with the field's direction. The discussion appears focused on whether existing alignment research is addressing the right problems.
+The most discussed AI safety-related stories on Hacker News reveal growing concerns about AI alignment and practical safety implementations:
 
-2. **[Recursive-Mode for Coding Agents](https://recursive-mode.dev/introduction)** (5 points) - A new framework for coding agents that implements recursive approaches to problem-solving, representing ongoing developments in autonomous AI systems for software development.
+1. **[Mythos Just Proved the Alignment Field Is Building the Wrong Thing](https://substack.com/home/post/p-193928243)** (4 points, 2 comments) - A critical assessment arguing that current AI alignment research may be fundamentally misdirected, generating debate about research priorities in the safety community.
 
-3. **[AI Agent Systems Accidentally Become Org Charts](https://jointherevolution.today/emergence)** (3 points) - A visualization exploring how AI agent systems naturally evolve hierarchical structures similar to organizational charts, highlighting emergent behavior in multi-agent systems.
+2. **[Show HN: I visualized how AI agent systems accidentally become org charts](https://jointherevolution.today/emergence)** (3 points) - An exploration of emergent organizational structures in multi-agent systems, highlighting unexpected coordination patterns that could have governance implications.
 
-4. **[Models Self-Report Difference Between RLHF and Base Cognition](https://github.com/Habitante/pine-trees/blob/main/docs/claude_code_interview.md)** (2 points) - Research examining how AI models describe differences between their RLHF-trained responses and underlying reasoning processes, touching on alignment and interpretability concerns.
+3. **[Show HN: Recursive-Mode for Coding Agents](https://recursive-mode.dev/introduction)** (5 points) - A new framework for coding agents that demonstrates increasing sophistication in autonomous programming capabilities.
 
-5. **[Refund Guard – Policy Gate for AI Agents](https://github.com/MattMessinger1/agentic_refund_guardrail)** (2 points) - A safety mechanism designed to control AI agents' ability to issue refunds, representing practical approaches to constraining autonomous agent capabilities in financial contexts.
+4. **[Models self-report difference between RLHF trained responses and base cognition](https://github.com/Habitante/pine-trees/blob/main/docs/claude_code_interview.md)** (2 points) - Research showing AI models can distinguish between their aligned training and underlying reasoning processes, raising questions about alignment effectiveness.
+
+5. **[Show HN: Refund Guard – a policy gate for AI agents that can issue refunds](https://github.com/MattMessinger1/agentic_refund_guardrail)** (2 points) - A practical safety implementation for AI agents handling financial transactions, representing growing focus on real-world AI safety applications.
 
 ## Community Sentiment
 
-The Hacker News AI safety community appears focused on practical implementation challenges rather than theoretical discussions. There's notable interest in:
+The Hacker News community shows a mixed but increasingly sophisticated approach to AI safety concerns. There's notable skepticism about current alignment methodologies, as evidenced by the discussion around the Mythos critique. The community appears particularly interested in practical safety implementations - several "Show HN"</description>
+    </item>
+    <item>
+      <title>AI Safety Daily Brief: safety-journals.fr — 2026-04-12</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-journals.fr.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-journals.fr.md</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Articles clés
 
-- **Agent Control Mechanisms**: Multiple projects ([Refund Guard](https://github.com/MattMessinger1/agentic_refund_guardrail), [Recursive-Mode](https://recursive-mode.dev/introduction)) focus on constraining and directing AI agent beh</description>
+**[Interpretability and implicit model semantics in biomedicine and deep learning](https://www.nature.com/articles/s42256-026-01177-0)** - *Nature Machine Intelligence*
+
+Cet article examine l'intersection critique entre l'interprétabilité et la sémantique des modèles dans les applications biomédicales à enjeux élevés de l'apprentissage profond. La recherche aborde la façon dont les structures sémantiques implicites au sein des réseaux de neurones peuvent être décodées et exploitées pour améliorer l'interprétabilité, particulièrement pertinente pour la sécurité de l'IA dans les contextes médicaux où les décisions du modèle impactent directement les résultats des patients. Ce travail contribue au défi plus large de l'alignment en fournissant des cadres pour comprendre ce que les modèles "savent" au-delà de leurs sorties explicites.
+
+## Tendances
+
+Basé sur ce premier point de données, il semble y avoir un focus continu sur la **recherche en interprétabilité** dans les applications spécifiques à un domaine, particulièrement dans les domaines à enjeux élevés comme la biomédecine. Ceci s'aligne avec l'emphase de la communauté plus large de la sécurité de l'IA sur la compréhension des mécanismes internes des modèles et l'assurance d'un comportement fiable dans les applications critiques. L'emphase sur la "sémantique implicite des modèles" suggère une sophistication croissante dans les approches d'interprétabilité mécanistique.
+
+## Sources notables
+
+La publication dans **Nature Machine Intelligence** représente une visibilité significative pour la recherche adjacente à la sécurité de l'IA dans une revue de premier plan. Le focus de cette revue sur la recherche en interprétabilité indique une légitimité académique et une priorité continues pour comprendre les mécanismes internes des systèmes d'IA - un composant central de la recherche en alignment et sécurité de l'IA.
+
+*Note : Ce résumé est basé sur des données disponibles limitées. Une analyse plus complè</description>
+    </item>
+    <item>
+      <title>AI Safety Daily Brief: safety-journals — 2026-04-12</title>
+      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-journals.md</link>
+      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-12/safety-journals.md</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>
+## Key Articles
+
+**[Interpretability and implicit model semantics in biomedicine and deep learning](https://www.nature.com/articles/s42256-026-01177-0)** - *Nature Machine Intelligence*
+
+This article examines the critical intersection of interpretability and model semantics in high-stakes biomedical applications of deep learning. The research addresses how implicit semantic structures within neural networks can be decoded and leveraged for enhanced interpretability, particularly relevant for AI safety in medical contexts where model decisions directly impact patient outcomes. This work contributes to the broader alignment challenge by providing frameworks for understanding what models "know" beyond their explicit outputs.
+
+## Trends
+
+Based on this early data point, there appears to be continued focus on **interpretability research** in domain-specific applications, particularly in high-stakes fields like biomedicine. This aligns with the broader AI safety community's emphasis on understanding model internals and ensuring reliable behavior in critical applications. The emphasis on "implicit model semantics" suggests growing sophistication in mechanistic interpretability approaches.
+
+## Notable Sources
+
+The publication in **Nature Machine Intelligence** represents significant visibility for AI safety-adjacent research in a top-tier venue. This journal's focus on interpretability research indicates continued academic legitimacy and priority for understanding AI system internals - a core component of AI alignment and safety research.
+
+*Note: This digest is based on limited available data. A more comprehensive analysis would benefit from additional recent publications across the AI safety research landscape.*</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Blog Posts — 2026-04-12</title>
@@ -140,15 +188,17 @@ The Hacker News AI safety community appears focused on practical implementation 
       <description>
 ## Actualités principales
 
-[**Détecter les opérations d'entraînement distribué illicites pendant une pause dans l'IA**](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) examine les défis de gouvernance technique liés à l'application de moratoires sur le développement de l'IA. S'appuyant sur la proposition de l'équipe de gouvernance technique de MIRI pour des accords internationaux visant à arrêter le développement d'IA risquée, l'article analyse comment les coalitions menées par les États-Unis et la Chine pourraient surveiller les clusters de calcul de plus de 16 GPU H100 pour empêcher l'entraînement d'IA non sécurisée. Cela représente un changement significatif vers des stratégies d'implémentation concrètes pour les cadres de gouvernance de l'IA.
+**[Détecter les opérations d'entraînement distribué illicites pendant une pause sur l'IA](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an)** - Une analyse de l'équipe de gouvernance technique MIRI examine les mécanismes d'application pour les moratoires internationaux sur le développement de l'IA. L'article évalue comment les systèmes de surveillance pourraient détecter l'entraînement non autorisé de systèmes d'IA surhumains, s'appuyant sur des propositions précédentes de gouvernance informatique exigeant l'enregistrement de clusters dépassant 16 GPU H100 sous la supervision d'une coalition États-Unis-Chine.
 
-[**Mettre l'IA en pause est la meilleure réponse aux problèmes post-alignment**](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems) soutient que même résoudre l'alignment technique laisse de nombreux défis existentiels non résolus. L'auteur identifie des "problèmes post-alignment" incluant le mauvais usage de l'IA, les préoccupations de bien-être, la privation graduelle de pouvoir, le chômage de masse, et les risques provenant d'acteurs malveillants. L'article prône les pauses de développement comme solution principale pour permettre le temps d'aborder ces défis sociétaux et éthiques plus larges avant de déployer des systèmes superintelligents.
+**[Mettre l'IA en pause est la meilleure réponse aux problèmes post-alignment](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems)** - Cette analyse soutient que même résoudre l'alignment technique laisse de nombreux défis existentiels non résolus, notamment le mauvais usage de l'IA, les considérations de bien-être, la déresponsabilisation progressive et la concentration du pouvoir. L'auteur soutient que les pauses de développement fournissent le temps nécessaire pour traiter ces « problèmes post-alignment » avant de progresser vers l'intelligence artificielle superintelligente.
 
 ## Arguments clés
 
-**Focus sur l'implémentation de la gouvernance** : La proposition de surveillance représente une évolution notable des concepts abstraits de gouvernance de l'IA vers des détails d'implémentation technique spécifiques. L'accent mis sur la supervision basée sur le matériel (surveillance des clusters de GPU) suggère un consensus croissant autour de la gouvernance computationnelle comme mécanisme d'application pratique.
+Le discours sur la gouvernance cette semaine se concentre sur **les pauses de développement de l'IA comme stratégie de sécurité globale**. Deux arguments complémentaires émergent :
 
-**Expansion des catégories d</description>
+1. **Faisabilité technique de l'application** : L'analyse MIRI suggère que surveiller la conformité aux moratoires sur le développement de l'IA est techniquement réalisable grâce au suivi du calcul et aux systèmes d'enregistrement, particulièrement pour les opérations d'entraînement à grande échelle qui seraient nécessaires pour le développement d'IA surhumaine.
+
+2. **Extension de la portée au-delà de l'alignment** : Le cadre des problèmes post-a</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Blog Posts — 2026-04-12</title>
@@ -158,17 +208,21 @@ The Hacker News AI safety community appears focused on practical implementation 
       <description>
 ## Top Stories
 
-[**Catching illicit distributed training operations during an AI pause**](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an) examines the technical governance challenges of enforcing AI development moratoria. Building on MIRI's Technical Governance Team's proposal for international agreements to halt risky AI development, the post analyzes how coalitions led by the US and China could monitor computing clusters larger than 16 H100 GPUs to prevent unsafe AI training. This represents a significant shift toward concrete implementation strategies for AI governance frameworks.
+**[Catching illicit distributed training operations during an AI pause](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an)** - A MIRI Technical Governance Team analysis examines enforcement mechanisms for international AI development moratoria. The piece evaluates how monitoring systems could detect unauthorized training of superhuman AI systems, building on previous proposals for compute governance requiring registration of clusters above 16 H100 GPUs under US-China coalition oversight.
 
-[**Pausing AI Is the Best Answer to Post-Alignment Problems**](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems) argues that even solving technical alignment leaves numerous existential challenges unresolved. The author identifies "post-alignment problems" including AI misuse, welfare concerns, gradual disempowerment, mass unemployment, and risks from malevolent actors. The piece advocates for development pauses as the primary solution to allow time to address these broader societal and ethical challenges before deploying superintelligent systems.
+**[Pausing AI Is the Best Answer to Post-Alignment Problems](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems)** - This analysis argues that even solving technical alignment leaves numerous existential challenges unsolved, including AI misuse, welfare considerations, gradual disempowerment, and concentration of power. The author contends that development pauses provide necessary time to address these "post-alignment problems" before advancing to artificial superintelligence.
 
 ## Key Arguments
 
-**Governance Implementation Focus**: The monitoring proposal represents a notable evolution from abstract AI governance concepts toward specific technical implementation details. The focus on hardware-based oversight (monitoring GPU clusters) suggests growing consensus around compute governance as a practical enforcement mechanism.
+The governance discourse this week centers on **AI development pauses as a comprehensive safety strategy**. Two complementary arguments emerge:
 
-**Expanding Risk Categories**: The post-alignment problems framework broadens the AI safety discourse beyond technical alignment to encompass societal, economic, and ethical dimensions. This represents a more comprehensive risk assessment that includes gradual disempowerment scenarios and S-risks from AI-enabled conflicts.
+1. **Technical feasibility of enforcement**: The MIRI analysis suggests that monitoring compliance with AI development moratoria is technically achievable through compute tracking and registration systems, particularly for large-scale training operations that would be necessary for superhuman AI development.
 
-**Pause Advocacy**: Both top posts converge on pause </description>
+2. **Scope expansion beyond alignment**: The post-alignment problems framework argues for broadening safety considerations beyond technical alignment to include governance challenges, welfare considerations, and societal impacts that require resolution before AGI deployment.
+
+## Community Discussion
+
+The emphasis on pausing mechanisms represents a notable shift in AI safety discourse toward **governance-first appr</description>
     </item>
     <item>
       <title>AI Safety Daily Brief: Executive Summary — 2026-04-11</title>
@@ -253,44 +307,6 @@ Plusieurs systèmes d'évaluation et de notation ont montré des problèmes de f
 ## Sorties notables
 
 L'écosystème d'évaluation a connu des mises à jour importantes. Le lm-evaluation-harness d'EleutherAI a ajouté le support pour les [appels d'outils et le suivi du raisonnement](https://github.com/EleutherAI/lm-evaluation-harness/pull/3685), permettant l'évaluation du comportement des modèles lors de l'utilisation d'outils ou de la fourniture d'explications. De nouvelles capacités multilingues sont arrivées avec les [tâches TyDiQA Gold Passage](https://github.com/EleutherAI/lm-evaluation-harness/pull/367</description>
-    </item>
-    <item>
-      <title>AI Safety Daily Brief: GitHub Activity — 2026-04-11</title>
-      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-11/safety-github.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-11/safety-github.md</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate>
-      <description>
-## Key Discussions
-
-Several important safety-related issues emerged from recent activity. Anthropic received a concerning [financial damage report](https://github.com/anthropics/claude-cookbooks/issues/489) where Claude Code agent errors cost a user ~$45 USD during a Kaggle competition, highlighting the real-world risks of autonomous agent systems. This parallels ongoing discussions about [output verification before agent actions](https://github.com/anthropics/claude-cookbooks/issues/518) in Anthropic's Managed Agents architecture, where developers are requesting automated verification gates to complement existing human-in-the-loop approval systems.
-
-Multiple evaluation and grading systems showed reliability issues. The [LLM-based grading example](https://github.com/anthropics/claude-cookbooks/issues/497) in Anthropic's documentation contained string matching bugs causing false positives, while similar issues were found in [RAG evaluation functions](https://github.com/anthropics/claude-cookbooks/pull/521). EleutherAI's evaluation harness also had problems with [MMLU Pro fewshot answers leaking](https://github.com/EleutherAI/lm-evaluation-harness/pull/3693) into user roles under chat templates, potentially compromising evaluation integrity.
-
-## Notable Releases
-
-The evaluation ecosystem saw significant updates. EleutherAI's lm-evaluation-harness added support for [tool calls and reasoning tracking](https://github.com/EleutherAI/lm-evaluation-harness/pull/3685), enabling evaluation of model behavior when using tools or providing explanations. New multilingual capabilities arrived with [TyDiQA Gold Passage tasks](https://github.com/EleutherAI/lm-evaluation-harness/pull/3677) for 11 languages, expanding cross-lingual evaluation coverage.
-
-OpenAI's cookbook introduced a practical approach to mathematical accuracy with [deterministic tool use via SymPy](https://github.com/openai/openai-cookbook/pull/2599), demonstrating how to eliminate LLM mathematical hallucinations by</description>
-    </item>
-    <item>
-      <title>AI Safety Daily Brief: Hacker News — 2026-04-11</title>
-      <link>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-11/safety-hn.fr.md</link>
-      <guid>https://ygauthie.github.io/ai-safety-daily-brief/#2026-04-11/safety-hn.fr.md</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate>
-      <description>
-## Sujets brûlants
-
-La communauté AI safety fait face à plusieurs développements majeurs cette semaine :
-
-1. **Bouclier de responsabilité OpenAI** - [OpenAI soutient un projet de loi de l'Illinois qui limiterait les cas où les laboratoires d'IA peuvent être tenus responsables](https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/) (430 points, 312 commentaires). Cette législation exempterait les entreprises d'IA de responsabilité pour les préjudices causés by leurs modèles dans certaines circonstances, déclenchant un débat intense sur la responsabilité corporative et les cadres de gouvernance de l'IA.
-
-2. **Violence contre les dirigeants de l'IA** - Plusieurs articles ont couvert une [attaque au cocktail Molotov au domicile de Sam Altman](https://www.nytimes.com/2026/04/10/us/open-ai-sam-altman-molotov-cocktail.html) (228 points, 540 commentaires). L'incident souligne l'escalade des tensions autour du développement de l'IA et soulève de sérieuses préoccupations concernant la sécurité des chercheurs et dirigeants en IA.
-
-3. **Les revendications de sécurité d'Anthropic sous le feu des critiques** - [Claude Mythos d'Anthropic n'est pas un super-hacker sentient, c'est un argument de vente](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-claude-mythos-isnt-a-sentient-super-hacker-its-a-sales-pitch-claims-of-thousands-of-severe-zero-days-rely-on-just-198-manual-reviews) remet en question les affirmations de l'entreprise sur la découverte de vulnérabilités de cybersécurité, suggérant du battage marketing plutôt que de la substance.
-
-4. **Exode des plateformes** - [L'EFF quitte X](https://www.eff.org/deeplinks/2026/04/eff-leaving-x) (1 403 points, 1 276 commentaires) a dominé les discussions, bien qu'indirectement lié à l'AI safety via la défense des droits numériques.
-
-5. **Restrictions gouvernementales sur l'IA** - [Les juges nommés par Trump refusent de bloquer la mise sur liste noire par Trump de la technologie</description>
     </item>
   </channel>
 </rss>
