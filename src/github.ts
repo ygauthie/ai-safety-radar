@@ -15,6 +15,14 @@ const headers: Record<string, string> = {
   "User-Agent": "AI-Safety-Daily-Brief/1.0",
 };
 
+async function fetchReposByTopic(topic: string): Promise<string[]> {
+  const url = `https://api.github.com/search/repositories?q=topic:${topic}&sort=updated&order=desc&per_page=20`;
+  const res = await fetch(url, { headers });
+  if (!res.ok) return [];
+  const data = (await res.json()) as { items: Array<{ full_name: string }> };
+  return data.items.map((r) => r.full_name);
+}
+
 export async function fetchGithub(): Promise<GithubActivity[]> {
   const config = loadConfig();
   if (process.env.GITHUB_TOKEN) {
@@ -22,9 +30,18 @@ export async function fetchGithub(): Promise<GithubActivity[]> {
   }
 
   const since = formatDate(daysAgo(1));
+
+  // Discover repos via GitHub topics
+  const topicRepos = (
+    await Promise.all((config.github_topics ?? []).map(fetchReposByTopic))
+  ).flat();
+
+  // Merge with configured repos, deduplicate
+  const allRepos = [...new Set([...config.github_repos, ...topicRepos])];
+
   const allActivity: GithubActivity[] = [];
 
-  for (const repo of config.github_repos) {
+  for (const repo of allRepos) {
     try {
       const [issues, prs, releases] = await Promise.all([
         fetchRepoIssues(repo, since),

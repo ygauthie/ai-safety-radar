@@ -1,5 +1,12 @@
 # AI Safety Daily Brief Configuration
 
+# GitHub topics to discover repos dynamically (top 20 most recently active per topic)
+github_topics:
+  - ai-safety
+  - llm-alignment
+  - llm-safety
+  - ai-alignment
+
 # GitHub repositories to track for AI safety developments
 github_repos:
   # Anthropic

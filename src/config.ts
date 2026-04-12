@@ -21,6 +21,7 @@ export interface AisiWebsite {
 }
 
 export interface Config {
+  github_topics: string[];
   github_repos: string[];
   arxiv: {
     categories: string[];
