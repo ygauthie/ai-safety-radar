@@ -2,20 +2,24 @@
 
 ## Top Stories
 
-**[Catching illicit distributed training operations during an AI pause](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an)** - A MIRI Technical Governance Team analysis examines enforcement mechanisms for international AI development moratoria. The piece evaluates how monitoring systems could detect unauthorized training of superhuman AI systems, building on previous proposals for compute governance requiring registration of clusters above 16 H100 GPUs under US-China coalition oversight.
+**[Catching illicit distributed training operations during an AI pause](https://www.lesswrong.com/posts/35yyWJnXvC2ae6NKH/catching-illicit-distributed-training-operations-during-an)** examines the technical challenges of monitoring compliance with proposed AI development moratoria. The post builds on MIRI's Technical Governance Team's proposal for an international agreement requiring registration of AI clusters above 16 H100 GPUs. The author analyzes potential evasion strategies actors might use to circumvent such restrictions and discusses detection mechanisms for illicit distributed training operations.
 
-**[Pausing AI Is the Best Answer to Post-Alignment Problems](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems)** - This analysis argues that even solving technical alignment leaves numerous existential challenges unsolved, including AI misuse, welfare considerations, gradual disempowerment, and concentration of power. The author contends that development pauses provide necessary time to address these "post-alignment problems" before advancing to artificial superintelligence.
+**[Pausing AI Is the Best Answer to Post-Alignment Problems](https://www.lesswrong.com/posts/WtqD9pehq8p83cesT/pausing-ai-is-the-best-answer-to-post-alignment-problems)** argues that even solving AI alignment won't address the full spectrum of existential risks from advanced AI systems. The post catalogs "post-alignment problems" including misuse risks, AI welfare concerns, S-risks from conflict, gradual disempowerment, and concentration of power. The author contends that pausing AI development provides necessary time to address these complex challenges before deploying superintelligent systems.
+
+**[The Blast Radius Principle](https://www.lesswrong.com/posts/rDzMraAEkBBewn7vy/the-blast-radius-principle)** uses examples from recent conflicts, including destruction of Ukrainian infrastructure, to illustrate vulnerabilities in centralized systems. While not exclusively focused on AI safety, the post's "Decentralize or Die" thesis has clear implications for AI governance and the concentration of advanced AI capabilities in centralized institutions.
 
 ## Key Arguments
 
-The governance discourse this week centers on **AI development pauses as a comprehensive safety strategy**. Two complementary arguments emerge:
+The governance discussion centers on two complementary approaches to AI risk mitigation. The monitoring approach emphasizes technical solutions for enforcement, exploring how coalitions of states could detect violations of AI development restrictions through chip-level monitoring and detection of distributed training signatures. This builds on existing proposals for compute governance and hardware-based oversight mechanisms.
 
-1. **Technical feasibility of enforcement**: The MIRI analysis suggests that monitoring compliance with AI development moratoria is technically achievable through compute tracking and registration systems, particularly for large-scale training operations that would be necessary for superhuman AI development.
+The pause advocacy takes a broader view, arguing that alignment research alone is insufficient preparation for superintelligence. The post identifies a taxonomy of post-alignment risks spanning misuse, welfare, conflict, and power concentration concerns. This represents a shift from narrow technical alignment focus toward comprehensive risk assessment across social, economic, and political dimensions.
 
-2. **Scope expansion beyond alignment**: The post-alignment problems framework argues for broadening safety considerations beyond technical alignment to include governance challenges, welfare considerations, and societal impacts that require resolution before AGI deployment.
+The decentralization principle, while drawn from infrastructure security contexts, raises important questions about whether centralized AI development increases systemic risks and whether distributed approaches might offer better resilience against various failure modes.
 
 ## Community Discussion
 
-The emphasis on pausing mechanisms represents a notable shift in AI safety discourse toward **governance-first approaches**. Rather than focusing primarily on technical solutions to alignment, both pieces advocate for regulatory and policy interventions to create time and space for addressing the full spectrum of AI risks.
+The governance posts reflect ongoing debates within the AI safety community about the feasibility and desirability of development moratoria. The monitoring discussion acknowledges significant technical challenges in enforcement while exploring potential solutions, suggesting pragmatic engagement with pause proposals rather than dismissal based on implementation difficulties.
 
-The timing of these governance-focused posts suggests growing community recognition that technical alignment work alone may be insufficient, and that coordinated international action on AI development timelines is both necessary and potentially achievable through existing compute governance frameworks.
+The post-alignment problems framework may generate discussion about research prioritization and whether the AI safety community should expand focus beyond technical alignment. This touches on longstanding questions about the scope of AI safety research and its relationship to broader existential risk and governance concerns.
+
+The infrastructure resilience argument introduces perspectives from security studies that may influence thinking about AI system design and deployment strategies, particularly regarding centralization versus distribution tradeoffs in AI governance.
