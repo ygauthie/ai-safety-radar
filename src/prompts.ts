@@ -145,6 +145,16 @@ export function dailyRollupPrompt(sections: string, date: string, lang: Lang = "
 
 Today is ${date}. Below are the individual section digests for today. Create a unified daily executive summary in ${lang === "fr" ? "French" : "English"}.
 
+When selecting the Top 3 Developments and Risk Watch items, not all sources carry equal weight. Prioritize developments from higher-credibility sources. In decreasing order of importance:
+1. AISI Updates (official government AI Safety Institute publications and policy actions)
+2. Scientific Journals (peer-reviewed findings from Nature, Science, PNAS, JAIR, etc.)
+3. ArXiv (preprint research — significant but not yet peer-reviewed)
+4. Hacker News (community signal on what practitioners find important)
+5. Blog Posts (expert commentary and analysis)
+6. GitHub Activity (technical developments, lower editorial bar)
+
+A peer-reviewed finding in Nature outweighs a blog post on the same topic. A government AISI policy action outweighs an ArXiv preprint. Apply this weighting when deciding what rises to the Top 3 or Risk Watch.
+
 Structure:
 1. **Top 3 Developments**: The single most important things that happened today in AI safety. Each item must include at least one inline markdown link to the original source.
 2. **Section Summaries**: A 1-2 sentence summary of each section. Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links.
