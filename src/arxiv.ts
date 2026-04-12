@@ -13,12 +13,13 @@ export interface ArxivPaper {
 
 export async function fetchArxiv(): Promise<ArxivPaper[]> {
   const config = loadConfig();
-  const since = daysAgo(1);
+  // ArXiv doesn't publish on weekends; use 2-day lookback to catch Friday papers on Monday
+  const since = daysAgo(2);
 
   const allPapers: ArxivPaper[] = [];
 
   // Search by safety keywords across AI categories
-  for (const keyword of config.arxiv.keywords.slice(0, 8)) {
+  for (const keyword of config.arxiv.keywords) {
     const catQuery = config.arxiv.categories.map((c) => `cat:${c}`).join("+OR+");
     const searchQuery = `(${catQuery})+AND+all:${encodeURIComponent(keyword)}`;
     const url = `http://export.arxiv.org/api/query?search_query=${searchQuery}&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending`;
