@@ -1,8 +1,8 @@
-# <img src="assets/shield.png" width="32" height="32" valign="middle"> AI Safety Daily Brief
+# AI Safety Radar
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
-Runs every morning at 5 AM ET via GitHub Actions, pulls from seven sources, summarizes with Claude, and publishes to GitHub Pages as a clean, searchable static site with an RSS feed.  Adapted from [agents-radar](https://github.com/duanyytop/agents-radar).
+Runs every morning at 5 AM ET via GitHub Actions, pulls from eight sources, summarizes with Claude, and publishes to GitHub Pages as a clean, searchable static site with an RSS feed.  Adapted from [agents-radar](https://github.com/duanyytop/agents-radar).
 
 Live site: [ygauthie.github.io/ai-safety-daily-brief](https://ygauthie.github.io/ai-safety-daily-brief)
 
@@ -13,16 +13,21 @@ Live site: [ygauthie.github.io/ai-safety-daily-brief](https://ygauthie.github.io
 | Source | What it tracks |
 |---|---|
 | **ArXiv** | Papers tagged cs.AI, cs.CL, cs.LG, cs.CY matching safety keywords |
+| **Scientific Journals** | Peer-reviewed articles from Nature, Science, PNAS, Nature Machine Intelligence, JAIR, and others — keyword-filtered for AI safety relevance |
 | **RSS Feeds** | Alignment Forum, LessWrong, 10+ AI safety Substacks |
-| **GitHub** | Releases and activity from key safety/alignment repos |
-| **Hacker News** | Top discussions on AI safety, governance, and alignment |
+| **GitHub** | Releases and activity from tracked repos + dynamic discovery via AI safety topics |
+| **Hacker News** | Top discussions matching safety keywords |
 | **Org Websites** | New publications from Anthropic, OpenAI, DeepMind (sitemap crawling) |
 | **AI Safety Institutes** | Updates from US AISI, UK AISI, Canada CAISI, Japan J-AISI, Singapore AISI, EU AI Office, Korea AISI |
 | **Weekly Rollup** | Every Monday — cross-source synthesis of the past week |
 
-### ArXiv keywords tracked
+### Keywords
+
+The same keyword list is used for three sources: **ArXiv** (paper search), **Hacker News** (story search), and **Scientific Journals** (title + abstract filtering). All 31 keywords:
 
 `activation steering` · `adversarial robustness` · `AI ethics` · `AI evaluation` · `AI governance` · `AI guardrails` · `AI oversight` · `AI regulation` · `AI safety` · `AI Safety Institute` · `AI Security Institute` · `alignment` · `CAISI` · `collusion risk` · `constitutional AI` · `content provenance` · `deception` · `deepfake detection` · `existential risk` · `hallucination` · `honesty evaluation` · `interpretability` · `jailbreak` · `mechanistic interpretability` · `multilingual AI safety` · `red teaming` · `responsible AI` · `RLHF` · `scalable oversight` · `synthetic content detection` · `value alignment`
+
+GitHub uses a fixed list of repos plus dynamic discovery via GitHub topics (`ai-safety`, `llm-alignment`, `llm-safety`, `ai-alignment`). RSS feeds and org websites are not keyword-filtered — all content is passed to Claude.
 
 ---
 
@@ -33,8 +38,9 @@ GitHub Actions (cron 5 AM ET)
     │
     ├── Fetch sources in parallel
     │     ├── ArXiv API
-    │     ├── RSS/Atom feeds
-    │     ├── GitHub REST API
+    │     ├── Scientific journal RSS feeds (keyword-filtered)
+    │     ├── RSS/Atom feeds (blogs, forums)
+    │     ├── GitHub REST API + topic discovery
     │     ├── HN Algolia API
     │     ├── Website sitemaps
     │     └── AISI websites + RSS
@@ -43,6 +49,7 @@ GitHub Actions (cron 5 AM ET)
     │     └── Per-source digest + daily rollup
     │
     ├── Save to digests/YYYY-MM-DD/safety-{source}.md
+    ├── Translate to French (if languages includes "fr")
     ├── Regenerate manifest.json + feed.xml
     └── Commit and push → GitHub Pages serves index.html
 ```
@@ -54,8 +61,9 @@ src/
   index.ts              # Main daily pipeline entry point
   weekly.ts             # Weekly rollup entry point
   arxiv.ts              # ArXiv paper fetcher
-  rss.ts                # RSS/Atom feed fetcher
-  github.ts             # GitHub activity fetcher
+  journals.ts           # Scientific journal RSS fetcher (keyword-filtered)
+  rss.ts                # RSS/Atom feed fetcher (blogs, forums)
+  github.ts             # GitHub activity fetcher + topic discovery
   hn.ts                 # Hacker News fetcher
   web.ts                # Org website sitemap crawler
   aisi.ts               # AI Safety Institute fetcher
@@ -64,7 +72,7 @@ src/
   generate-manifest.ts  # manifest.json + feed.xml generator
   config.ts             # Config loader
   date.ts               # Date utilities
-  i18n.ts               # Internationalisation (en + fr prepared)
+  i18n.ts               # Internationalisation (en + fr)
   providers/            # LLM provider abstraction (OpenRouter default)
 config.yml              # All data source configuration
 index.html              # Single-page frontend (no build step)
@@ -73,6 +81,7 @@ digests/                # Generated markdown files, committed by CI
     safety-daily.md
     safety-weekly.md    # Mondays only
     safety-arxiv.md
+    safety-journals.md
     safety-rss.md
     safety-github.md
     safety-hn.md
@@ -121,19 +130,20 @@ pnpm typecheck              # TypeScript type check
 
 All sources are configured in `config.yml`:
 
-- **`github_repos`** — list of `owner/repo` to track
-- **`arxiv.keywords`** — keywords to filter papers
-- **`rss_feeds`** — name + URL pairs for any RSS/Atom feed
-- **`websites`** — sitemap URL + URL patterns to include
+- **`github_topics`** — GitHub topics for dynamic repo discovery (top 20 most recently active per topic)
+- **`github_repos`** — fixed list of `owner/repo` to always track
+- **`arxiv.keywords`** — keywords used for ArXiv search, HN search, and journal filtering
+- **`journal_feeds`** — name + URL pairs for peer-reviewed journal RSS feeds
+- **`rss_feeds`** — name + URL pairs for blog/forum RSS feeds
+- **`websites`** — sitemap URL + URL patterns for org website crawling
 - **`aisi_websites`** — national AI Safety Institute URLs and optional RSS feeds
-- **`hn_keywords`** — Hacker News search terms
 - **`languages`** — `[en]` by default; add `fr` to enable French digests
 
 ---
 
 ## Languages
 
-English by default. French support is prepared via `src/i18n.ts` — add `fr` to the `languages` list in `config.yml` to generate parallel French digests.
+English by default. Add `fr` to the `languages` list in `config.yml` to generate parallel French digests. English reports are generated first, then translated by Claude.
 
 ---
 
@@ -145,4 +155,3 @@ English by default. French support is prepared via `src/i18n.ts` — add `fr` to
 | Weekly Rollup | Every Monday at 5:30 AM ET (09:30 UTC) |
 
 ---
-
