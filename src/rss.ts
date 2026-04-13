@@ -17,7 +17,7 @@ export async function fetchRssFeeds(): Promise<RssItem[]> {
   for (const feed of config.rss_feeds) {
     try {
       const res = await fetch(feed.url, {
-        headers: { "User-Agent": "AI-Safety-Daily-Brief/1.0" },
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; AI-Safety-Radar/1.0; +https://github.com/ygauthie/ai-safety-daily-brief)" },
       });
       if (!res.ok) {
         console.error(`RSS fetch failed for ${feed.name}: ${res.status}`);
@@ -25,6 +25,7 @@ export async function fetchRssFeeds(): Promise<RssItem[]> {
       }
       const xml = await res.text();
       const items = parseRssXml(xml, feed.name, since).slice(0, 3);
+      console.log(`  ${feed.name}: ${items.length} items`);
       allItems.push(...items);
     } catch (e) {
       console.error(`RSS error for ${feed.name}:`, e);
