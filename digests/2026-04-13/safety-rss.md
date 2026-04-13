@@ -2,22 +2,22 @@
 
 ## Top Stories
 
-### [The policy surrounding Mythos marks an irreversible power shift](https://www.lesswrong.com/posts/3MhJELzwpbR42xsJ3/the-policy-surrounding-mythos-marks-an-irreversible-power)
+**[The policy surrounding Mythos marks an irreversible power shift](https://www.lesswrong.com/posts/3MhJELzwpbR42xsJ3/the-policy-surrounding-mythos-marks-an-irreversible-power)** - A LessWrong analysis argues that Anthropic's decision to restrict access to their latest model "Mythos" represents a fundamental shift in AI deployment. The author contends this marks the end of the era where anyone could access state-of-the-art AI models, as Mythos will only be available to select companies through "project glasswing" for cybersecurity applications. This represents a potential new paradigm where the most capable AI systems remain under strict organizational control rather than being publicly accessible.
 
-This LessWrong post argues that Anthropic's "Mythos" model represents a fundamental shift in AI accessibility. According to the author, while anyone could previously access state-of-the-art AI models like ChatGPT for a small fee, Anthropic is keeping Mythos restricted to select companies through "project glasswing" for cybersecurity applications. The post claims this marks the end of public access to cutting-edge AI capabilities and suggests this restricted access pattern will become permanent. This development has significant implications for AI governance, potentially concentrating advanced AI capabilities among a small number of organizations rather than maintaining broad public access.
+**[Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment](https://importai.substack.com/p/import-ai-453-breaking-ai-agents)** - Jack Clark's latest Import AI newsletter covers vulnerabilities in AI agents, introduces "MirrorCode," and examines multiple perspectives on gradual disempowerment scenarios. The newsletter appears to address key safety concerns around agent robustness and the philosophical question of whether transformative technologies like fire represent historical precedents for AI singularity scenarios.
 
-### [Returns to intelligence](https://www.lesswrong.com/posts/CBTe8Etwb9wdjbpZC/returns-to-intelligence)
-
-This piece explores the relationship between intelligence and outcomes through a personal narrative involving Peter Schmidt-Nielsen and his distinguished scientific lineage. While the full implications aren't clear from the excerpt, the post appears to examine how intelligence translates into real-world impact, which is relevant to discussions about AI capability development and the potential returns from increasingly intelligent AI systems.
+**[The biggest advance in AI since the LLM](https://garymarcus.substack.com/p/the-biggest-advance-in-ai-since-the)** and **[Even more good news for the future of neurosymbolic AI](https://garymarcus.substack.com/p/even-more-good-news-for-the-future)** - Gary Marcus argues that "Claude Code" represents a paradigm shift comparable to the original LLM breakthrough, while also defending neurosymbolic approaches and Apple's 2025 reasoning research that was previously criticized. Marcus suggests these developments vindicate hybrid AI architectures that combine neural and symbolic methods.
 
 ## Key Arguments
 
-**Restricted AI Access as New Normal**: The Mythos post presents a stark argument that the era of public access to state-of-the-art AI models has permanently ended. The author contends that powerful AI systems will now be restricted to select organizations, marking a significant shift in AI deployment strategy and potentially concentrating advanced capabilities among fewer actors.
+**Restricted AI Access as Security Policy**: The Mythos analysis presents the argument that limiting access to the most powerful AI systems may be necessary for safety and security, but warns this creates an "irreversible power shift" away from democratized AI access toward concentrated control by select organizations.
 
-**Cybersecurity Justification**: The restriction of Mythos appears to be justified through cybersecurity applications via "project glasswing," suggesting that safety and security concerns are being used to limit broader access to advanced AI capabilities.
+**Neurosymbolic Renaissance**: Marcus advocates that pure LLM approaches are reaching limitations and that the future lies in hybrid neurosymbolic systems that can provide more reliable reasoning. He positions recent developments as validation of this long-held view against the prevailing scaling-focused paradigm.
+
+**Agent Vulnerability Concerns**: Import AI's coverage of "breaking AI agents" highlights ongoing safety challenges as AI systems become more autonomous and are deployed in real-world applications where adversarial attacks could have significant consequences.
 
 ## Community Discussion
 
-The limited dataset doesn't reveal significant community debates, but the Mythos discussion raises important questions about the trade-offs between AI safety through restricted access versus the benefits of broad availability for research and development. This touches on ongoing debates in AI governance about whether limiting access to powerful models enhances safety or merely concentrates power without meaningfully reducing risks.
+The LessWrong post on Mythos access restrictions appears to be generating debate about the trade-offs between AI safety/security and democratic access to AI capabilities. This touches on fundamental governance questions about who should control advanced AI systems and whether restricted deployment is a necessary safety measure or an concerning concentration of power.
 
-The shift described in the Mythos post, if accurate, represents a significant policy development that warrants close monitoring by AI safety researchers and policymakers, as it could establish precedents for how future advanced AI systems are deployed and controlled.
+The neurosymbolic AI discussion represents an ongoing methodological debate in the AI research community between those advocating for continued scaling of current architectures versus those pushing for hybrid approaches that incorporate symbolic reasoning and structured knowledge representation.
