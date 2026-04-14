@@ -1,43 +1,38 @@
 # Activité GitHub (2026-04-14)
 
-## Versions notables
-
-Plusieurs versions importantes ont émergé dans l'écosystème de la sécurité et de l'évaluation de l'IA :
-
-- **[µHALO v0.1.0-dev](https://github.com/XwhyZ-WHYLD/hfr0-muhalo/releases/tag/v0.1.0-dev)** — Une version de recherche initiale pour la détection de risque d'hallucination en temps d'exécution via l'analyse de dérive temporelle inter-token, incluant l'implémentation HDI (Indice de Dérive d'Hallucination) et l'évaluation sur les jeux de données TruthfulQA/HotpotQA.
-
-- **[Styxx v2.0.1](https://github.com/fathom-lab/styxx/releases/tag/v2.0.1)** — Première version publique d'un système de provenance cognitive fournissant un suivi d'état cognitif en temps réel pour les agents LLM, offrant des capacités de proprioception via l'analyse de logprob.
-
-- **[Open Bias v0.4.0](https://github.com/open-bias/open-bias/releases/tag/v0.4.0)** — Changements majeurs dans le framework d'évaluation de biais avec une configuration simplifiée de liste `evaluators` remplaçant plusieurs clés de configuration séparées.
-
 ## Discussions clés
 
-### Problèmes de sécurité et de sûreté de l'IA
+Plusieurs discussions importantes sur la sécurité et l'alignment émergent dans les principaux dépôts d'IA :
 
-Un problème critique d'hygiène de sécurité a été soulevé dans le [cookbook d'Anthropic](https://github.com/anthropics/claude-cookbooks/issues/531), identifiant des schémas vulnérables dans le code d'exemple incluant des antipatterns de sécurité prêts à copier-coller et des configurations Docker s'exécutant en tant que root. Bien qu'il ne s'agisse pas de vulnérabilités dans les services d'Anthropic eux-mêmes, ces schémas dans les matériaux éducatifs pourraient propager des pratiques non sécurisées.
+**Sécurité et garde-fous**
+Le [Cookbook Anthropic a identifié des problèmes d'hygiène de sécurité](https://github.com/anthropics/claude-cookbooks/issues/531) via une analyse statique, mettant en évidence des motifs vulnérables dans le code d'exemple et les configurations Docker s'exécutant en tant que root. Cela souligne l'importance des pratiques axées sur la sécurité dans les ressources de développement d'IA.
 
-Le [projet NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails/issues/1786) a une demande de fonctionnalité ouverte pour l'export optionnel des décisions de protection pour des fins d'audit et de conformité, abordant une lacune clé dans l'infrastructure de gouvernance de l'IA où les décisions d'application de politique doivent être documentées pour la conformité réglementaire.
+Une demande de fonctionnalité importante pour l'[audit et la conformité dans NVIDIA NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails/issues/1786) appelle à l'exportation optionnelle des décisions de garde-fous, comblant une lacune critique dans la gouvernance d'IA d'entreprise où la transparence des décisions est essentielle pour les cadres de conformité.
 
-### Améliorations de l'évaluation et des tests de modèles
+**Sécurité et évaluation des modèles**
+Le [LM Evaluation Harness subit une refactorisation majeure](https://github.com/EleutherAI/lm-evaluation-harness/pull/3703) avec la révision de la version 0.5, indiquant une évolution continue des pratiques d'évaluation d'IA standardisées. De plus, le [support natif du Tensor Parallelism pour le backend HuggingFace](https://github.com/EleutherAI/lm-evaluation-harness/pull/3692) démontre des améliorations de mise à l'échelle pour les évaluations de grands modèles.
 
-[Le harnais d'évaluation d'EleutherAI](https://github.com/EleutherAI/lm-evaluation-harness/pull/3702) a corrigé un crash critique dans les tâches à choix multiples BigBench lors du traitement de jeux de données à format mixte, améliorant la robustesse pour les benchmarks standard de capacité d'IA. De plus, [le support natif de Tensor Parallelism](https://github.com/EleutherAI/lm-evaluation-harness/pull/3692) a été ajouté pour les modèles HuggingFace, accélérant potentiellement les évaluations à grande échelle.
+**Détection des hallucinations et surveillance des biais**
+Plusieurs dépôts avancent la surveillance de sécurité en temps réel. La [version de recherche µHALO](https://github.com/XwhyZ-WHYLD/hfr0-muhalo/releases/tag/v0.1.0-dev) introduit la détection d'hallucinations à l'exécution via l'analyse de dérive temporelle inter-tokens, tandis qu'[Open Bias v0.4.0](https://github.com/open-bias/open-bias/releases/tag/v0.4.0) livre un cadre d'évaluation des biais restructuré avec des changements non rétrocompatibles pour améliorer la flexibilité.
 
-### Expansion de l'architecture des modèles
+## Versions notables
 
-TransformerLens continue d'étendre le support d'interprétabilité avec de nouveaux adaptateurs d'architecture pour les modèles [InternLM2](https://github.com/TransformerLensOrg/TransformerLens/pull/1251), [XGLM](https://github.com/TransformerLensOrg/TransformerLens/pull/1250), [GPTBigCode](https://github.com/TransformerLensOrg/TransformerLens/pull/1248), et [Cohere](https://github.com/TransformerLensOrg/TransformerLens/pull/1247). Notamment, [le support bêta d'architecture SSM](https://github.com/TransformerLensOrg/TransformerLens/pull/1246) a été ajouté pour les modèles Mamba et Mamba 2, étendant les outils d'interprétabilité mécaniste aux modèles d'espace d'état.
+**[styxx v2.0.1](https://github.com/fathom-lab/styxx/releases/tag/v2.0.1)** introduit des "certificats de provenance cognitive" - une approche novatrice de la proprioception d'agent LLM fournissant une classification en temps réel de l'état cognitif pour les refus, les schémas de raisonnement et les hallucinations.
+
+**[agent-guardrails v0.19.4](https://github.com/logi-cmd/agent-guardrails/releases/tag/v0.19.4)** livre un bundle de visibilité OSS Pro avec un rendu amélioré du plan de preuve et un guidage de mémoire-preuve, étendant l'écosystème d'outils de sécurité open-source.
+
+**[Open Bias v0.4.0](https://github.com/open-bias/open-bias/releases/tag/v0.4.0)** représente un changement architectural majeur avec des modifications non rétrocompatibles à la structure de configuration, passant des configurations individuelles moteur/politique/juge à une approche de liste d'évaluateurs unifiée.
 
 ## Outils émergents
 
-### Surveillance d'état cognitif
+**Surveillance de sécurité en temps réel**
+[styxx](https://github.com/fathom-lab/styxx) offre une approche légère de surveillance de l'état cognitif qui fonctionne avec tout modèle compatible logprob, fournissant aux praticiens de la sécurité un aperçu immédiat des schémas de raisonnement LLM et des préoccupations potentielles de sécurité.
 
-La [bibliothèque Styxx](https://github.com/fathom-lab/styxx) introduit la classification d'état cognitif en temps réel pour les réponses LLM, catégorisant les sorties en raisonnement, refus, hallucination, et catégories hors-sujet utilisant l'analyse de logprob. Les améliorations récentes incluent [une meilleure gestion d'erreur](https://github.com/fathom-lab/styxx/pull/4) quand les logprobs ne sont pas disponibles.
+**Analyse de modèles améliorée**
+[TransformerLens étend son support d'architectures](https://github.com/TransformerLensOrg/TransformerLens/pull/1251) avec de nouveaux adaptateurs pour les modèles InternLM2, XGLM, GPTBigCode et Cohere, plus un [support bêta d'architecture SSM](https://github.com/TransformerLensOrg/TransformerLens/pull/1246) pour les modèles Mamba, permettant la recherche en interprétabilité mécaniste à travers un écosystème de modèles plus large.
 
-### Infrastructure d'évaluation améliorée
+**Infrastructure d'évaluation**
+L'[intégration tensor parallelism du LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness/pull/3692) permet une évaluation plus efficace des grands modèles, tandis que les [corrections de métriques de robustesse de HELM](https://github.com/stanford-crfm/helm/pull/4193) corrigent des bugs de précédence d'opérateurs qui pourraient ignorer d'importantes vérifications de sécurité.
 
-[L'évaluation de robustesse de HELM](https://github.com/stanford-crfm/helm/pull/4193) a reçu une correction de bug pour les problèmes de précédence d'opérateur qui sautaient incorrectement les vérifications de groupe de métrique de robustesse, améliorant la fiabilité des évaluations de robustesse des modèles.
-
-### Améliorations du flux de travail de développement
-
-Plusieurs dépôts adoptent des pratiques de développement plus sécurisées, avec [OpenAI Evals](https://github.com/openai/evals/pull/1644) épinglant les hooks de pre-commit à des commits immuables plutôt qu'à des tags/branches mutables, réduisant les risques de chaîne d'approvisionnement dans les outils de développement.
-
-Le cookbook d'Anthropic a ajouté un [nouveau guide pour créer des fichiers CLAUDE.md efficaces](https://github.com/anthropics/claude-cookbooks/pull/522), abordant le besoin croissant de documentation standardisée d'agent IA alors que l'adoption de Claude Code augmente.
+**Cadres de sécurité d'agents**
+Plusieurs projets émergent autour de la sécurité d'agents IA, incluant des discussions comparatives entre les approches [ThumbGate et agent-guardrails](https://github.com/logi-cmd/agent-guardrails/issues/3), suggérant un écosystème en maturation d'outils de sécurité d'agents complémentaires.
