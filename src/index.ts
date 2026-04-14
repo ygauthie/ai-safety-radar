@@ -1,4 +1,6 @@
 import "dotenv/config";
+import { existsSync, readFileSync } from "fs";
+import { join } from "path";
 import { today } from "./date.js";
 import { fetchArxiv } from "./arxiv.js";
 import { fetchRssFeeds } from "./rss.js";
@@ -105,11 +107,26 @@ async function main() {
     sections.push(`## Community & Tools [Tier 3]\n\n${communityToolsReport}`);
   }
 
+  // Load recent daily briefs for deduplication context (last 2 days)
+  const digestsDir = join(process.cwd(), "digests");
+  const recentHeadlines: string[] = [];
+  for (let daysBack = 1; daysBack <= 2; daysBack++) {
+    const d = new Date(date + "T12:00:00");
+    d.setDate(d.getDate() - daysBack);
+    const pastDate = d.toISOString().slice(0, 10);
+    const pastFile = join(digestsDir, pastDate, "safety-daily.md");
+    if (existsSync(pastFile)) {
+      const lines = readFileSync(pastFile, "utf-8").split("\n");
+      const headlines = lines.filter((l) => /^#{1,3}\s|^\*\*/.test(l)).join("\n");
+      if (headlines) recentHeadlines.push(`--- ${pastDate} ---\n${headlines}`);
+    }
+  }
+
   // Phase 3: Generate daily rollup
   if (sections.length > 0) {
     console.log("Generating daily executive summary...");
     const rollup = await generateReport(
-      dailyRollupPrompt(sections.join("\n\n---\n\n"), date),
+      dailyRollupPrompt(sections.join("\n\n---\n\n"), date, "en", recentHeadlines.join("\n\n")),
       6144
     );
     const dailyContent = `# Daily Brief (${date})\n\n${rollup}`;

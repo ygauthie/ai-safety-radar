@@ -80,11 +80,14 @@ CONTENT:
 ${content}`;
 }
 
-export function dailyRollupPrompt(sections: string, date: string, lang: Lang = "en"): string {
+export function dailyRollupPrompt(sections: string, date: string, lang: Lang = "en", recentHeadlines = ""): string {
+  const recentContext = recentHeadlines
+    ? `\nRECENT COVERAGE (last 2 days — do not repeat items already covered; if there is a meaningful update to an ongoing story, briefly note it as "ongoing" rather than treating it as new):\n${recentHeadlines}\n`
+    : "";
   return `${SYSTEM_ROLE}
 
 Today is ${date}. Below are the individual section digests for today. Create a unified daily executive summary in ${lang === "fr" ? "French" : "English"}.
-
+${recentContext}
 Each source section below is tagged with a credibility tier. When selecting Top Developments and Risk Watch items, weight by tier:
 
 - **Tier 1 (Institutional/Peer-reviewed)**: Government AISIs, peer-reviewed journals (Nature, Science, PNAS), established think tanks (RAND, Georgetown CSET), International AI Safety Report. Highest credibility — prioritize these.
