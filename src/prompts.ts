@@ -14,7 +14,7 @@ Today is ${date}. Below are recent ArXiv papers related to AI safety.
 
 Analyze these papers and produce a structured digest in ${lang === "fr" ? "French" : "English"}:
 
-1. **Key Papers**: Highlight the 5-10 most significant papers with a 2-3 sentence summary of each, focusing on their implications for AI safety.
+1. **Key Papers**: Highlight the 5-10 most significant papers with a 2-3 sentence summary of each. Each summary should conclude with what this means for AI safety practitioners building safer systems or policymakers crafting regulation — not just what the paper does.
 2. **Trends**: Identify emerging themes or research directions.
 
 Format as clean Markdown. Include paper titles as links.
@@ -30,9 +30,9 @@ Today is ${date}. Below is recent GitHub activity from AI safety-related reposit
 
 Produce a structured digest in ${lang === "fr" ? "French" : "English"}:
 
-1. **Notable Releases**: Any new versions or significant releases.
+1. **Notable Releases**: New versions or significant releases. For each, note what it enables practitioners to do that they couldn't before.
 2. **Key Discussions**: Important issues or PRs related to safety, alignment, or governance.
-3. **Emerging Tools**: New tools or frameworks relevant to AI safety practitioners.
+3. **Emerging Tools**: New tools or frameworks. For each, briefly state who should use it and for what.
 
 Format as clean Markdown with links.
 
@@ -47,8 +47,8 @@ Today is ${date}. Below are recent blog posts, articles, and new publications fr
 
 Produce a structured digest in ${lang === "fr" ? "French" : "English"}:
 
-1. **Top Stories**: The 3-5 most important articles or publications with summaries.
-2. **Key Arguments**: Notable positions or arguments made.
+1. **Top Stories**: The 3-5 most important articles or publications. Each summary should end with what this means for practitioners deploying AI systems or policymakers shaping governance.
+2. **Key Arguments**: Notable positions or arguments made, and what they imply for the field.
 3. **Community Discussion**: Any debates or disagreements worth noting.
 
 Format as clean Markdown with links to original articles.
@@ -98,8 +98,8 @@ Today is ${date}. Below is recent activity from national AI Safety Institutes ar
 
 Produce a structured digest in ${lang === "fr" ? "French" : "English"}:
 
-1. **Institute Updates**: Group by institute. Summarize any new publications, announcements, guidelines, or policy actions.
-2. **Policy Implications**: How these developments affect global AI safety governance.
+1. **Institute Updates**: Group by institute. Summarize any new publications, announcements, guidelines, or policy actions. For each, note concrete implications — what practitioners may need to comply with, prepare for, or adopt.
+2. **Policy Implications**: How these developments affect global AI safety governance and what organizations should do in response.
 
 Format as clean Markdown with links to original sources.
 
@@ -114,7 +114,7 @@ Today is ${date}. Below are recent articles from peer-reviewed scientific and AI
 
 Produce a structured digest in ${lang === "fr" ? "French" : "English"}:
 
-1. **Key Articles**: Highlight the most significant articles with a 2-3 sentence summary of each, focusing on methodology, findings, and implications for AI safety.
+1. **Key Articles**: Highlight the most significant articles with a 2-3 sentence summary of each. Each summary should cover findings and conclude with what this means for practitioners or policymakers — not just restate the methodology.
 
 Format as clean Markdown with links to original articles.
 
@@ -149,9 +149,9 @@ Each source section below is tagged with a credibility tier. When selecting Top 
 - **Tier 3 (Community & General Discussion)**: LessWrong, Hacker News, GitHub activity. Lower credibility — only surface if exceptionally significant.
 
 Structure:
-1. **Top 3 Developments**: The single most important things that happened today in AI safety. Each item must include at least one inline markdown link to the original source.
+1. **Top 3 Developments**: The most important things that happened today in AI safety. Each item must include at least one inline markdown link to the original source, and state why it matters — what should practitioners building AI systems or policymakers crafting regulation take away from this?
 2. **Section Summaries**: A 1-2 sentence summary of each section, written as separate paragraphs (one per section). Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links.
-3. **Risk Watch**: Any developments that signal increased or decreased AI risk. Use exactly two subheadings: **Increased Risks** and **Decreased Risks**. No other subheadings. Every claim or development cited must link to its source.
+3. **Risk Watch**: Any developments that signal increased or decreased AI risk. Use exactly two subheadings: **Increased Risks** and **Decreased Risks**. No other subheadings. For each item, state the concrete risk or mitigation and who is affected. Every claim or development cited must link to its source.
 
 Keep it concise - this is an executive summary. Format as clean Markdown. Do not omit links to save space — links are essential.
 
@@ -165,12 +165,12 @@ export function weeklyRollupPrompt(dailies: string, dateRange: string, lang: Lan
 This covers the week of ${dateRange}. Below are the daily digests from the past week. Create a comprehensive weekly summary in ${lang === "fr" ? "French" : "English"}.
 
 Structure:
-1. **Week in Review**: 3-5 paragraph overview of the most important developments.
-2. **Key Papers**: The most significant research papers of the week.
-3. **Industry Moves**: Notable actions by AI companies related to safety.
-4. **Policy & Governance**: Any regulatory or governance developments.
+1. **Week in Review**: 3-5 paragraph overview of the most important developments and what they mean for the field.
+2. **Key Papers**: The most significant research papers of the week, with implications for practitioners and policymakers.
+3. **Industry Moves**: Notable actions by AI companies related to safety. What should other organizations learn or anticipate?
+4. **Policy & Governance**: Regulatory or governance developments. What do organizations need to prepare for or comply with?
 5. **Community Highlights**: Important discussions or community developments.
-6. **Looking Ahead**: What to watch for next week.
+6. **Looking Ahead**: What to watch for next week, and what practitioners and policymakers should be preparing for.
 
 Format as clean Markdown.  Do not omit links to save space — links are essential.
 
