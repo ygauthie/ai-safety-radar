@@ -1,23 +1,17 @@
 {
-  "generated": "2026-04-14T10:44:19.549Z",
+  "generated": "2026-04-14T13:53:02.951Z",
   "entries": [
     {
       "date": "2026-04-14",
       "files": [
-        "2026-04-14/safety-aisi.fr.md",
-        "2026-04-14/safety-aisi.md",
-        "2026-04-14/safety-arxiv.fr.md",
-        "2026-04-14/safety-arxiv.md",
+        "2026-04-14/safety-analysis.fr.md",
+        "2026-04-14/safety-analysis.md",
+        "2026-04-14/safety-community.fr.md",
+        "2026-04-14/safety-community.md",
         "2026-04-14/safety-daily.fr.md",
         "2026-04-14/safety-daily.md",
-        "2026-04-14/safety-github.fr.md",
-        "2026-04-14/safety-github.md",
-        "2026-04-14/safety-hn.fr.md",
-        "2026-04-14/safety-hn.md",
-        "2026-04-14/safety-journals.fr.md",
-        "2026-04-14/safety-journals.md",
-        "2026-04-14/safety-rss.fr.md",
-        "2026-04-14/safety-rss.md"
+        "2026-04-14/safety-research.fr.md",
+        "2026-04-14/safety-research.md"
       ]
     },
     {

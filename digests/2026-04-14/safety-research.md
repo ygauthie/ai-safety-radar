@@ -1,0 +1,31 @@
+# Research Papers (2026-04-14)
+
+## Key Papers
+
+**[Playing Along: Learning a Double-Agent Defender for Belief Steering via Theory of Mind](https://arxiv.org/abs/2604.11666v1)** explores how LLMs can act as "double agents" to defend against adversarial partners by leveraging theory-of-mind capabilities. The research introduces a privacy-themed challenge where defenders must strategically steer attackers' beliefs while maintaining deception. This work is crucial for AI safety practitioners developing systems that can handle adversarial interactions and for policymakers considering regulations around AI deception capabilities in security contexts.
+
+**[Why Do Large Language Models Generate Harmful Content?](https://arxiv.org/abs/2604.11663v1)** provides mechanistic insights into harmful content generation through causal mediation analysis. The study identifies that harmful generation primarily arises in later model layers, with specific attention blocks and neurons responsible for different types of harm. This granular understanding enables AI safety teams to develop targeted interventions and helps regulators establish more precise technical requirements for harm mitigation.
+
+**[Detecting Safety Violations Across Many Agent Traces](https://arxiv.org/abs/2604.11806v1)** addresses the critical challenge of identifying safety failures that only become apparent when analyzing multiple agent interactions together. The work tackles complex scenarios like covert sabotage and coordinated misuse campaigns that individual trace analysis would miss. For safety practitioners, this provides essential tooling for large-scale deployment monitoring; for policymakers, it offers frameworks for auditing AI systems at organizational scale.
+
+**[ClawGuard: A Runtime Security Framework for Tool-Augmented LLM Agents Against Indirect Prompt Injection](https://arxiv.org/abs/2604.11790v1)** presents a practical defense system against indirect prompt injection attacks where malicious instructions are embedded in tool-returned content. The framework provides runtime protection across web content, local files, and server interactions. This directly addresses one of the most pressing security vulnerabilities in current agentic AI deployments, offering implementable solutions for practitioners and technical standards for regulatory frameworks.
+
+**[PRISM Risk Signal Framework: Hierarchy-Based Red Lines for AI Behavioral Risk](https://arxiv.org/abs/2604.11070v1)** introduces a systematic approach to defining AI safety boundaries at the structural level of reasoning rather than case-by-case outputs. The framework identifies 27 behavioral risk signals across value hierarchies, evidence weighting, and source prioritization. This provides safety teams with proactive risk detection capabilities and gives policymakers a foundation for establishing systemic rather than reactive AI governance standards.
+
+**[The Salami Slicing Threat: Exploiting Cumulative Risks in LLM Systems](https://arxiv.org/abs/2604.11309v1)** reveals how attackers can bypass safety measures through multi-turn interactions that gradually accumulate harmful content below detection thresholds. The research demonstrates that current jailbreaking defenses fail against persistent, incremental attacks. This finding is critical for safety practitioners implementing conversation-level rather than turn-level safety measures and for regulators considering the temporal dynamics of AI system misuse.
+
+**[Context Kubernetes: Declarative Orchestration of Enterprise Knowledge for Agentic AI Systems](https://arxiv.org/abs/2604.11623v1)** proposes a systematic architecture for managing organizational knowledge in multi-agent systems, addressing the scalability challenges of enterprise AI deployment. The framework provides declarative management of knowledge permissions, freshness, and access patterns. This work offers practical infrastructure solutions for organizations deploying AI agents at scale and informs policy discussions about data governance in organizational AI systems.
+
+**[SWE-AGILE: A Software Agent Framework for Efficiently Managing Dynamic Reasoning Context](https://arxiv.org/abs/2604.11716v1)** tackles the fundamental context management problem in software engineering agents, where maintaining full reasoning history leads to performance degradation while discarding it forces agents to restart analysis. The solution enables deep System-2 reasoning without context explosion. For practitioners building coding agents, this provides essential architectural patterns; for policymakers, it demonstrates technical approaches to maintaining AI system reliability in complex reasoning tasks.
+
+## Trends
+
+**Multi-Agent Security and Governance**: A prominent theme emerges around securing and governing multi-agent systems. Papers like ClawGuard, Context Kubernetes, and the safety violation detection work collectively address the infrastructure challenges of deploying AI agents at organizational scale. This trend indicates the field's maturation toward production deployment considerations.
+
+**Mechanistic Understanding of AI Risks**: Research is moving beyond black-box safety testing toward mechanistic analysis of how harmful behaviors emerge. The harmful content generation analysis and PRISM framework represent efforts to understand AI risks at the architectural level, enabling more precise interventions.
+
+**Temporal and Cumulative Threat Models**: Multiple papers explore how AI safety failures manifest over time through repeated interactions, multi-turn conversations, and coordinated agent behaviors. This shift from single-interaction to temporal threat models reflects the reality of deployed AI systems in persistent environments.
+
+**Context and Memory Management**: Several works tackle the fundamental challenge of managing long-term context in AI agents, from conversation memory to organizational knowledge orchestration. This trend addresses a key bottleneck in deploying capable AI agents in real-world scenarios requiring sustained reasoning and memory.
+
+**Hybrid Human-AI Governance**: Papers on belief steering, epistemic infrastructure, and governance frameworks suggest an emerging focus on systems where humans and AI agents share decision-making authority, requiring new frameworks for accountability and control.
