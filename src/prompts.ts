@@ -38,7 +38,6 @@ Produce a unified analysis & policy digest in ${lang === "fr" ? "French" : "Engl
 
 1. **Top Stories**: The 3-5 most important articles or publications from labs, research orgs, and expert commentators. Each summary should end with one sentence explaining why it matters.
 2. **Policy & Governance**: Any AISI updates, regulatory developments, or think tank publications. For each, end with one sentence explaining why it matters. If no policy updates exist today, omit this subsection.
-3. **Key Arguments**: Notable positions or arguments made, and what they imply for the field.
 
 Format as clean Markdown with links to original sources.
 
