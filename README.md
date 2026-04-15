@@ -2,7 +2,7 @@
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
-Runs every morning at 5 AM ET via GitHub Actions, pulls from eight sources, summarizes with Claude, and publishes to GitHub Pages as a clean, searchable static site with an RSS feed.  Adapted from [agents-radar](https://github.com/duanyytop/agents-radar).
+Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from eight sources, summarizes with Claude, and publishes to GitHub Pages as a clean, searchable static site with an RSS feed.  Also generates a **Weekly Rollup**, cross-source synthesis of the past week, every Monday. Adapted from [agents-radar](https://github.com/duanyytop/agents-radar).
 
 Live site: [ygauthie.github.io/ai-safety-daily-brief](https://ygauthie.github.io/ai-safety-daily-brief)
 
@@ -12,14 +12,13 @@ Live site: [ygauthie.github.io/ai-safety-daily-brief](https://ygauthie.github.io
 
 | Source | What it tracks |
 |---|---|
+| **AI Safety Institutes** | Updates from US AISI, UK AISI, Canada CAISI, Japan J-AISI, Singapore AISI, EU AI Office, Korea AISI |
 | **ArXiv** | Papers tagged cs.AI, cs.CL, cs.LG, cs.CY matching safety keywords |
 | **Scientific Journals** | Peer-reviewed articles from Nature, Science, PNAS, Nature Machine Intelligence, JAIR, and others — keyword-filtered for AI safety relevance |
-| **RSS Feeds** | Alignment Forum, LessWrong, 15+ AI safety newsletters and Substacks |
-| **GitHub** | Releases and activity from tracked repos + dynamic discovery via AI safety topics |
-| **Hacker News** | Top discussions matching safety keywords |
 | **Org Websites** | New publications from Anthropic, OpenAI, DeepMind (sitemap crawling) |
-| **AI Safety Institutes** | Updates from US AISI, UK AISI, Canada CAISI, Japan J-AISI, Singapore AISI, EU AI Office, Korea AISI |
-| **Weekly Rollup** | Every Monday — cross-source synthesis of the past week |
+| **RSS Feeds** | Alignment Forum, LessWrong, 15+ AI safety newsletters and Substacks |
+| **Hacker News** | Top discussions matching safety keywords |
+| **GitHub** | Releases and activity from tracked repos + dynamic discovery via AI safety topics |
 
 ### Keywords
 
@@ -156,7 +155,7 @@ English by default. Add `fr` to the `languages` list in `config.yml` to generate
 
 | Workflow | When |
 |---|---|
-| Daily Digest | Every day at 5:00 AM ET (09:00 UTC) |
-| Weekly Rollup | Every Monday at 5:30 AM ET (09:30 UTC) |
+| Daily Brief | Every day at approximately 5:00 AM ET (09:00 UTC) - Github Actions can be queued or delayed|
+| Weekly Rollup | Every Monday at approximately 5:30 AM ET (09:30 UTC) |
 
 ---
