@@ -11,6 +11,11 @@ github_topics:
   - llm-alignment
   - llm-safety
   - ai-alignment
+  - mechanistic-interpretability
+  - llm-evaluation
+  - red-teaming
+  - adversarial-robustness
+  - rlhf
 
 # GitHub repositories to track for AI safety developments
 github_repos:
