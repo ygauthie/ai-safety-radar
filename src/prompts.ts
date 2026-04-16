@@ -93,7 +93,7 @@ Each source section below is tagged with a credibility tier. When selecting Top 
 
 Structure:
 1. **Top 3 Developments**: The most important things that happened today in AI safety. Each item must include at least one inline markdown link to the original source and end with one sentence explaining why it matters.
-2. **Section Summaries**: A 1-2 sentence summary of each section, written as separate paragraphs (one per section). Bold the section name at the start of each paragraph (e.g. **Research Papers:**). Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links.
+2. **Section Summaries**: A 1-2 sentence summary of each section, written as separate paragraphs (one per section). The three sections are **Research Papers**, **Blogs & News**, and **Community & Tools** — bold the section name at the start of each paragraph (e.g. **Research Papers:**). Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links.
 3. **Risk Watch**: Any developments that signal increased or decreased AI risk. Use exactly two subheadings: **Increased Risks** and **Decreased Risks**. No other subheadings. For each item, state the concrete risk or mitigation in one sentence. Every claim or development cited must link to its source.
 
 Keep it concise - this is an executive summary. Format as clean Markdown. Do not omit links to save space — links are essential.
