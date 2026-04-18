@@ -309,7 +309,8 @@
     "https://www.anthropic.com/research/trustworthy-agents",
     "https://www.anthropic.com/news/narasimhan-board",
     "https://www.anthropic.com/research/automated-alignment-researchers",
-    "https://www.anthropic.com/news/claude-opus-4-7"
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://www.anthropic.com/news/claude-design-anthropic-labs"
   ],
   "OpenAI Blog": [
     "https://openai.com/sitemap.xml/research/"
@@ -459,7 +460,8 @@
     "https://epoch.ai/blog/who-is-leading-in-ai-an-analysis-of-industry-ai-research",
     "https://epoch.ai/blog/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data",
     "https://epoch.ai/blog/will-we-run-out-of-ml-data-evidence-from-projecting-dataset",
-    "https://epoch.ai/blog/have-ai-capabilities-accelerated"
+    "https://epoch.ai/blog/have-ai-capabilities-accelerated",
+    "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
   ],
   "DeepMind Blog": [
     "https://deepmind.google/research/",

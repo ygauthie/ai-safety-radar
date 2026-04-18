@@ -1,0 +1,25 @@
+# Communauté & Outils (2026-04-18)
+
+## Discussions clés
+
+**Propositions de gouvernance des dépenses d'agents IA** : Le cookbook d'Anthropic voit émerger des propositions pour la [gouvernance des dépenses d'agents](https://github.com/anthropics/claude-cookbooks/issues/546) et l'[évaluation de la qualité des prompts pré-inférence](https://github.com/anthropics/claude-cookbooks/issues/551) alors que les paiements par agents deviennent mainstream avec AP2 de Google, TAP de Visa et d'autres systèmes de paiement. Ces propositions importent car elles adressent des lacunes critiques d'infrastructure alors que les agents IA acquièrent des capacités financières.
+
+**Sortie majeure de TransformerLens 3.0** : [TransformerLens v3.0](https://github.com/TransformerLensOrg/TransformerLens/releases/tag/v3.0.0) introduit le système TransformerBridge, étendant le support de modèles d'environ 200 à ~9 000 modèles en repensant la façon dont les modèles et architectures sont chargés. Ceci importe car cela réduit drastiquement les barrières à la recherche en interprétabilité mécanistique à travers diverses familles de modèles.
+
+**Préoccupations de sécurité sur Claude Opus 4.7** : Plusieurs dépôts suivent les problèmes avec [Claude Opus 4.7](https://github.com/wuyoscar/ISC-Bench/releases/tag/v0.0.5), incluant ISC-Bench rapportant un jailbreaking réussi avec 52/100 complétions nuisibles et divers outils communautaires comme [cc-safe-setup](https://github.com/yurukusa/cc-safe-setup/releases/tag/v33.0.0) ajoutant des hooks de détection pour le changement de modèle et les modifications de comportement. Ceci importe car cela souligne les défis persistants du maintien des garde-fous de sécurité à travers les mises à jour de modèles.
+
+**Positionnement d'Agent Airlock pour la sécurité MCP** : Le [projet agent-airlock](https://github.com/sattyamjjain/agent-airlock/issues/6) se positionne comme middleware de sécurité MCP d'exécution de premier niveau avec une feuille de route v0.5.0 complète ciblant le marché croissant pour l'infrastructure de sécurité des agents IA. Ceci importe car cela adresse des lacunes de sécurité critiques alors que l'adoption du Model Control Protocol s'accélère.
+
+**Bug de corruption de cache dans Evaluation Harness** : Le harness d'évaluation d'EleutherAI avait un [bug de cache critique](https://github.com/EleutherAI/lm-evaluation-harness/pull/3715) où les requêtes generate_until répétées étaient aliasées par référence, causant un hachage de tous les K frères vers une clé de cache unique et effondrant silencieusement les évaluations pass@k. Ceci importe car cela aurait pu invalider de nombreux résultats d'évaluation publiés qui reposaient sur l'échantillonnage répété.
+
+## Sorties GitHub & Outils notables
+
+**TransformerLens v3.0** : [Sortie majeure](https://github.com/TransformerLensOrg/TransformerLens/releases/tag/v3.0.0) introduisant le système TransformerBridge qui étend de ~200 à ~9 000 modèles supportés, changeant fondamentalement la façon dont les modèles sont chargés et interfacés. Ceci permet la recherche en interprétabilité mécanistique à une échelle sans précédent à travers les familles de modèles.
+
+**Language-Model-SAEs v2.0.0b32** : [Nouvelle sortie](https://github.com/OpenMOSS/Language-Model-SAEs/releases/tag/v2.0.0b32) qui refactorise TransformerLensLanguageModel pour hériter de HookedTransformer et corrige les désalignements de traçage QK dans l'analyse des autoencodeurs parses. Ceci permet des flux de travail d'interprétabilité mécanistique plus robustes pour comprendre les mécanismes internes des modèles.
+
+**cc-safe-setup v33.0.0** : [Dernière sortie](https://github.com/yurukusa/cc-safe-setup/releases/tag/v33.0.0) qui ajoute des hooks de détection Opus 4.7 pour capturer le changement silencieux de modèle et enregistre tous les appels d'outils vers des fichiers JSONL pour analyse, répondant aux préoccupations communautaires sur les changements de comportement des modèles. Ceci fournit des capacités de surveillance essentielles pour les utilisateurs préoccupés par la fiabilité et la cohérence des agents IA.
+
+**ISC-Bench v0.0.5** : [Sortie](https://github.com/wuyoscar/ISC-Bench/releases/tag/v0.0.5) documentant le jailbreaking réussi de Claude Opus 4.7 avec 52/100 complétions nuisibles utilisant des techniques QwenGuard agentiques à travers plusieurs langues. Ceci fournit des données de benchmarking critiques pour évaluer les mesures de sécurité à travers les systèmes IA de pointe.
+
+**Sortie PyPI de Gemma 4** : [Google DeepMind a publié](https://github.com/google-deepmind/gemma/pull/625) Gemma 4 sur PyPI avec des corrections pour les désalignements de forme d'entrée multimodale et diverses améliorations de stabilité. Ceci permet un accès plus large au dernier modèle de langage open-source de Google pour les applications de recherche et développement.
