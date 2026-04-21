@@ -37,7 +37,7 @@ GitHub uses a fixed list of repos plus dynamic discovery via GitHub topics (`ai-
 ## Architecture
 
 ```
-GitHub Actions (cron 5 AM ET)
+GitHub Actions (cron 5 AM ET - actual runtime may vary due to queuing)
     │
     ├── Fetch sources in parallel
     │     ├── ArXiv API
