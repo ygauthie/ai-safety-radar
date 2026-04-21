@@ -93,12 +93,21 @@ Each source section below is tagged with a credibility tier. When selecting Top 
 - **Tier 2 (Established Research & Expert Analysis)**: AI lab blogs (Anthropic, OpenAI, DeepMind), safety research orgs (METR, ARC, MIRI, Apollo, Epoch), expert newsletters (Import AI, AI Snake Oil, Interconnects, Zvi, etc.), Alignment Forum, ArXiv preprints. High credibility — a Tier 2 item may displace a Tier 1 item only if it represents a major capability breakthrough, significant safety incident, or landmark deployment decision.
 - **Tier 3 (Community & General Discussion)**: LessWrong, Hacker News, GitHub activity. Lower credibility — only surface if exceptionally significant.
 
-Structure:
-1. **Top 3 Developments**: Fill these slots with the most consequential developments of the day, prioritizing Tier 1 sources (government AISIs, peer-reviewed journals, established think tanks). A Tier 2 item may displace a Tier 1 item only if it represents a major capability breakthrough, significant safety incident, or landmark deployment decision. Never use Tier 3 items. Each item must include at least one inline markdown link to the original source and end with one sentence explaining why it matters.
-2. **Section Summaries**: A 1-2 sentence summary of each section, written as separate paragraphs (one per section). The three sections are **Research Papers**, **Blogs & News**, and **Community & Tools** — bold the section name at the start of each paragraph (e.g. **Research Papers:**). Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links. Use plain, neutral language — do not editorialize with adjectives like "critical," "key," "groundbreaking," or "important." Let counts and topics speak for themselves (e.g., "This section covers eight papers on..." rather than "eight critical papers...").
-3. **Risk Watch**: Any developments that signal increased or decreased AI risk. Use exactly two subheadings: **Increased Risks** and **Decreased Risks**. No other subheadings. For each item, state the concrete risk or mitigation in one sentence. Every claim or development cited must link to its source.
+You MUST use exactly the following section headings, in this order. Do not rename, reorder, merge, or replace them with thematic headings:
 
-Keep it concise - this is an executive summary. Format as clean Markdown. Do not omit links to save space — links are essential.
+## Top 3 Developments
+## Section Summaries
+## Risk Watch
+
+Rules for each section:
+
+**Top 3 Developments**: Fill these slots with the most consequential developments of the day, prioritizing Tier 1 sources (government AISIs, peer-reviewed journals, established think tanks). A Tier 2 item may displace a Tier 1 item only if it represents a major capability breakthrough, significant safety incident, or landmark deployment decision. Never use Tier 3 items. Each item must include at least one inline markdown link to the original source and end with one sentence explaining why it matters.
+
+**Section Summaries**: A 1-2 sentence summary of each section, written as separate paragraphs (one per section). The three sections are **Research Papers**, **Blogs & News**, and **Community & Tools** — bold the section name at the start of each paragraph (e.g. **Research Papers:**). Every specific paper, article, post, tool, or organization mentioned must be hyperlinked to its original URL using inline markdown links. Use plain, neutral language — do not editorialize with adjectives like "critical," "key," "groundbreaking," or "important." Let counts and topics speak for themselves (e.g., "This section covers eight papers on..." rather than "eight critical papers...").
+
+**Risk Watch**: Use exactly two subheadings: **Increased Risks** and **Decreased Risks**. No other subheadings. For each item, state the concrete risk or mitigation in one sentence. Every claim or development cited must link to its source.
+
+Keep it concise - this is an executive summary. Do not omit links to save space — links are essential.
 
 SECTIONS:
 ${sections}`;
