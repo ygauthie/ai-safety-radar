@@ -1,0 +1,19 @@
+# Community & Tools (2026-04-22)
+
+## Key Discussions
+
+**Meta Employee Surveillance for AI Training** - [Meta to start capturing employee mouse movements, keystrokes for AI training](https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/) garnered 539 points and 392 comments on [Hacker News](https://news.ycombinator.com/item?id=47851948). The discussion centered on privacy concerns, consent models, and the broader implications of workplace surveillance for AI development. This matters because it highlights growing tensions between AI data collection needs and worker privacy rights, setting potential precedents for industry practices.
+
+**Agent Airlock Security Response** - The [Agent Airlock v0.5.3 release](https://github.com/sattyamjjain/agent-airlock/releases/tag/v0.5.3) represents a significant security response to the OX Security "Mother of All AI Supply Chains" dossier, which disclosed 10+ coordinated MCP ecosystem CVEs. The release includes Azure/Splunk CVE presets, Agent Egress Bench, and supply-chain response tooling. This matters because it demonstrates the AI safety community's rapid response capability to emerging supply chain vulnerabilities in AI agent ecosystems.
+
+**Aider Security Vulnerabilities** - Multiple security issues were reported in the Aider codebase, including [prompt injection in architect mode](https://github.com/Aider-AI/aider/issues/5058) that can turn README instructions into backdoored code, and [bypassed pre-commit hooks](https://github.com/Aider-AI/aider/issues/5057) through default `--no-verify` behavior. This matters because it reveals trust-boundary problems in AI-assisted development tools that could enable sophisticated supply chain attacks.
+
+## Notable GitHub Releases & Tools
+
+**Anthropic Cookbook Updates** - Several significant updates to the [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) including [computer use getting started guide](https://github.com/anthropics/claude-cookbooks/pull/563), [batch item classifier recipe](https://github.com/anthropics/claude-cookbooks/pull/562), and [pre-inference prompt quality scoring](https://github.com/anthropics/claude-cookbooks/pull/566). These enable developers to better utilize Claude's multimodal capabilities, implement structured batch processing, and validate prompt quality before API calls. This matters because it democratizes access to advanced AI agent capabilities and improves prompt engineering practices.
+
+**ZIRAN AI Security Benchmark** - [ZIRAN v0.30.0](https://github.com/taoq-ai/ziran/releases/tag/v0.30.0) achieved complete OWASP LLM Top 10 coverage and added MITRE ATLAS technique mapping alongside defense profile schemas and evasion-rate metrics. This enables comprehensive AI security testing across established threat frameworks. This matters because it provides standardized tooling for evaluating AI system security against known attack vectors.
+
+**Aegis Security Tool** - [Aegis v0.5.2](https://github.com/IliasAlmerekov/aegis/releases/tag/v0.5.2) shipped shell security hardening, auto-install codex hooks, and improved validation for shell paths to prevent unwrap-based vulnerabilities. This enables safer execution of AI-generated shell commands with built-in security guardrails. This matters because it addresses a critical attack surface where AI tools interact with system shells.
+
+**Observal AI Monitoring** - [Observal v0.2.0](https://github.com/BlazeUp-AI/Observal/releases/tag/v0.2.0) added trace privacy toggles for admins, live session updates via GraphQL subscriptions, and Windows hook path fixes for Claude Code integration. This enables privacy-preserving AI system monitoring with real-time observability. This matters because it provides enterprises with audit trails for AI agent activity while respecting user privacy boundaries.
