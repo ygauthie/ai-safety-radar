@@ -81,32 +81,9 @@
     }
 
     .logo .mark {
-      width: 30px;
-      height: 30px;
-      border: 2px solid var(--text);
-      display: grid;
-      place-items: center;
-      position: relative;
+      width: 34px;
+      height: 34px;
       flex-shrink: 0;
-    }
-
-    .logo .mark::before {
-      content: "";
-      width: 13px;
-      height: 13px;
-      border: 2px solid var(--text);
-      border-radius: 50%;
-    }
-
-    .logo .mark::after {
-      content: "";
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      top: 3px;
-      right: 3px;
     }
 
     .logo .t { display: flex; flex-direction: column; line-height: 1.15; }
@@ -495,7 +472,7 @@
 <body>
   <header>
     <a href="#" class="logo">
-      <div class="mark"></div>
+      <img src="assets/ai-safety-radar.svg" class="mark" alt="AI Safety Radar logo">
       <div class="t">
         <b id="logoTitle">AI Safety Radar</b>
         <span id="logoSub">Daily digest</span>
