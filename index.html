@@ -10,29 +10,32 @@
   <link rel="alternate" type="application/rss+xml" title="AI Safety Radar RSS" href="feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
-      --surface: #f2f2f2;
-      --border: #d9d9d9;
-      --text: #333333;
-      --text-muted: #4d4d4d;
-      --accent: #26374a;
-      --accent-hover: #002740;
-      --accent-subtle: #26374a0d;
+      --surface: #f4f4f2;
+      --border: #e4e2dd;
+      --border-strong: #cfccc3;
+      --text: #1a1a1a;
+      --text-muted: #6b6a63;
+      --accent: #0b6aa8;
+      --accent-hover: #084e7c;
+      --accent-subtle: #0b6aa814;
       --link: #1354ec;
       --green: #2a7d4f;
       --orange: #b45309;
       --red: #df2039;
-      --strong: #1a1a1a;
+      --strong: #0e0e0c;
       --header-height: 56px;
+      --logo-size: 15px;
     }
 
     [data-theme="dark"] {
       --bg: #101922;
       --surface: #161b22;
       --border: #272d35;
+      --border-strong: #3a4149;
       --text: #e6edf3;
       --text-muted: #8b949e;
       --accent: #5b8dd9;
@@ -48,17 +51,17 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
-      font-size: 17px;
+      font-size: 15px;
       -webkit-font-smoothing: antialiased;
     }
 
     header {
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
+      border-bottom: 1px solid var(--border-strong);
+      padding: 0 20px;
       height: var(--header-height);
       display: flex;
       align-items: center;
@@ -70,75 +73,82 @@
     }
 
     .logo {
-      font-family: 'Lato', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: #11568C;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--logo-size);
+      font-weight: 700;
+      color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.02em;
       white-space: nowrap;
       flex-shrink: 0;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    [data-theme="dark"] .logo { color: var(--accent); }
-    .logo span span { color: var(--text); }
-    
+    .logo::before {
+      content: "";
+      width: calc(var(--logo-size) - 1px);
+      height: calc(var(--logo-size) - 1px);
+      border: 1.5px solid var(--text);
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .logo span span { color: var(--text-muted); font-weight: 500; }
 
     .header-filler {
       flex: 1;
-      margin: 0 0.4rem 0 0.4rem;
-      height: 1.03rem;
+      margin: 0 20px;
+      height: 10px;
       background: repeating-linear-gradient(
         90deg,
-        var(--text) 0px,
-        var(--text) 2px,
-        transparent 2px,
-        transparent 8px
+        var(--text-muted) 0px,
+        var(--text-muted) 1px,
+        transparent 1px,
+        transparent 6px
       );
-      -webkit-mask-image: linear-gradient(90deg, black 0%, transparent 80%);
-      mask-image: linear-gradient(90deg, black 0%, transparent 80%);
+      -webkit-mask-image: linear-gradient(90deg, black 0%, transparent 85%);
+      mask-image: linear-gradient(90deg, black 0%, transparent 85%);
     }
 
-    nav { display: flex; gap: 1.25rem; align-items: center; flex-shrink: 0; }
+    nav { display: flex; gap: 2px; align-items: center; flex-shrink: 0; }
 
     nav a, nav button {
       color: var(--text);
       text-decoration: none;
-      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
       font-weight: 500;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       background: none;
       border: none;
       cursor: pointer;
-      font-family: inherit;
-      transition: color 0.15s;
-    }
-
-    nav a:hover, nav button:hover { color: var(--accent); }
-
-    .theme-toggle {
-      width: 30px;
-      height: 30px;
+      padding: 7px 10px;
+      border-radius: 3px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      padding: 0;
+      gap: 6px;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    nav a:hover, nav button:hover { background: var(--surface); color: var(--accent); }
+
+    .theme-toggle {
+      padding: 6px 8px;
       text-transform: none;
       letter-spacing: 0;
     }
-
-    .theme-toggle:hover { background: var(--accent-subtle); }
 
     .sidebar {
       position: fixed;
       left: 0;
       top: var(--header-height);
       bottom: 0;
-      width: 300px;
-      border-right: 1px solid var(--border);
+      width: 280px;
+      border-right: 1px solid var(--border-strong);
       display: flex;
       flex-direction: column;
       background: var(--bg);
@@ -146,51 +156,52 @@
 
     .search-box {
       flex-shrink: 0;
-      padding: 1.25rem 1rem 0.875rem;
+      padding: 10px 12px;
       border-bottom: 1px solid var(--border);
     }
 
     .search-box input {
       width: 100%;
-      padding: 0.45rem 0.7rem;
+      padding: 6px 10px;
       border: 1px solid var(--border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--surface);
       color: var(--text);
-      font-size: 0.95rem;
-      font-family: inherit;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
       outline: none;
       transition: border-color 0.15s;
     }
 
-    .search-box input::placeholder { color: var(--text-muted); }
+    .search-box input::placeholder { color: var(--text-muted); opacity: 0.7; }
     .search-box input:focus { border-color: var(--accent); }
 
     .sidebar-entries {
       flex: 1;
       overflow-y: auto;
-      padding: 0.75rem 0.75rem 1.5rem;
+      padding: 8px 8px 20px;
     }
 
-    .date-group { margin-bottom: 0.25rem; }
+    .date-group { margin: 2px 0; }
 
     .date-label {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
       color: var(--text-muted);
-      font-weight: 600;
-      padding: 0.35rem 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-weight: 400;
+      padding: 5px 8px;
       cursor: pointer;
       border-radius: 3px;
       user-select: none;
       transition: background 0.1s, color 0.1s;
     }
 
-    .date-label:hover { background: var(--surface); color: var(--text); }
+    .date-label .date-day { color: var(--text); font-weight: 600; }
+
+    .date-label:hover { background: var(--surface); }
 
     .date-label .chevron {
       transition: transform 0.2s;
@@ -203,113 +214,145 @@
     .date-files {
       overflow: hidden;
       transition: max-height 0.2s ease;
+      padding: 2px 0 4px;
     }
 
     .date-group.collapsed .date-files {
       max-height: 0 !important;
+      padding: 0;
     }
 
     .file-link {
-      display: block;
-      padding: 0.3rem 0.4rem 0.3rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      padding: 5px 10px 5px 18px;
       color: var(--text);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 13px;
       border-radius: 3px;
       transition: background 0.1s, color 0.1s;
       border-left: 2px solid transparent;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin-left: 2px;
+      position: relative;
     }
 
-    .file-link:hover {
-      background: var(--accent-subtle);
-      color: var(--text);
-      border-left-color: var(--border);
+    .file-link::before {
+      content: "▸";
+      font-family: monospace;
+      font-size: 9px;
+      color: var(--text-muted);
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
     }
+
+    .file-link:hover { background: var(--accent-subtle); }
 
     .file-link.active {
       background: var(--accent-subtle);
-      color: var(--accent);
+      color: var(--text);
       border-left-color: var(--accent);
       font-weight: 500;
     }
 
+    .file-link.active::before { content: "■"; color: var(--accent); }
+
     .file-link .badge {
-      font-size: 0.65rem;
-      padding: 0.1rem 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      padding: 1px 5px;
+      border: 1px solid var(--border-strong);
       border-radius: 2px;
-      margin-left: 0.3rem;
-      vertical-align: middle;
-      font-weight: 600;
-      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
       text-transform: uppercase;
+      font-weight: 500;
+      flex-shrink: 0;
     }
 
-    .badge-daily { background: var(--green); color: #fff; }
-    .badge-weekly { background: var(--orange); color: #fff; }
-    .badge-arxiv { background: #6d3bb5; color: #fff; }
+    .badge-daily { border-color: var(--accent); color: var(--accent); }
+    .badge-weekly { border-color: var(--orange); color: var(--orange); }
+    .badge-arxiv { border-color: #6d3bb5; color: #6d3bb5; }
 
     .main {
-      margin-left: 300px;
-      padding: 2.5rem 3rem;
+      margin-left: 280px;
+      padding: 40px 56px 80px;
       min-height: calc(100vh - var(--header-height));
     }
 
-    #content { max-width: 780px; }
+    #content { max-width: 740px; }
 
     #content h1 {
-      font-family: 'Lato', sans-serif;
-      font-size: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      line-height: 1.25;
+      line-height: 1.15;
       letter-spacing: -0.01em;
-      padding-bottom: 0.75rem;
+      padding-bottom: 12px;
       border-bottom: 2px solid var(--accent);
       color: var(--strong);
     }
 
     #content h2 {
-      font-family: 'Lato', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin: 2rem 0 0.75rem;
-      color: var(--accent);
-      letter-spacing: -0.01em;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 2.25rem 0 0.85rem;
+      color: var(--text);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-strong);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+
+    #content h2::before { content: "§"; color: var(--accent); font-weight: 400; }
 
     #content h3 {
-      font-family: 'Lato', sans-serif;
-      font-size: 1rem;
-      font-weight: 800;
-      margin: 1.25rem 0 0.5rem;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin: 1.4rem 0 0.5rem;
       color: var(--strong);
-      letter-spacing: -0.01em;
+      letter-spacing: -0.005em;
     }
 
-    #content p { margin-bottom: 0.875rem; line-height: 1.75; }
-    #content a { color: var(--link); text-decoration: underline; transition: color 0.15s; }
-    #content a:hover { color: var(--accent); }
-    #content ul, #content ol { padding-left: 1.5rem; margin-bottom: 0.875rem; }
-    #content li { margin-bottom: 0.4rem; line-height: 1.7; }
-    #content code { background: var(--surface); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.875em; border: 1px solid var(--border); }
-    #content pre { background: var(--surface); padding: 1.25rem; border-radius: 4px; overflow-x: auto; margin-bottom: 1.25rem; border: 1px solid var(--border); }
+    #content p { margin-bottom: 0.9rem; line-height: 1.7; }
+    #content a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+      transition: color 0.12s;
+    }
+    #content a:hover { color: var(--accent-hover); }
+    #content ul, #content ol { padding-left: 1.4rem; margin-bottom: 0.9rem; }
+    #content li { margin-bottom: 0.45rem; line-height: 1.65; }
+    #content code { font-family: 'JetBrains Mono', monospace; background: var(--surface); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.88em; border: 1px solid var(--border); }
+    #content pre { font-family: 'JetBrains Mono', monospace; background: var(--surface); padding: 1.1rem; border-radius: 3px; overflow-x: auto; margin-bottom: 1.1rem; border: 1px solid var(--border); }
     #content pre code { background: none; padding: 0; border: none; }
-    #content blockquote { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 1.25rem; color: var(--text-muted); margin-bottom: 0.875rem; font-style: italic; }
-    #content hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    #content blockquote { border-left: 2px solid var(--accent); padding: 0.25rem 0 0.25rem 1rem; color: var(--text-muted); margin-bottom: 0.9rem; font-style: italic; }
+    #content hr { border: none; border-top: 1px solid var(--border-strong); margin: 2rem 0; }
     #content strong { color: var(--strong); font-weight: 600; }
 
     .ai-disclaimer {
       margin-top: 3rem;
-      padding: 0.875rem 0;
-      border-top: 1px solid var(--border);
-      font-size: 0.9rem;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-strong);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
       color: var(--text-muted);
-      font-style: italic;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
     }
 
+    .ai-disclaimer::before { content: "DISCLAIMER · "; color: var(--orange); font-weight: 600; letter-spacing: 0.1em; }
     .ai-disclaimer a { color: var(--text-muted); text-decoration: underline; }
     .ai-disclaimer a:hover { color: var(--link); }
 
@@ -320,17 +363,16 @@
     }
 
     .welcome h1 {
-      font-family: 'Lato', sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-weight: 700;
       letter-spacing: -0.01em;
       color: var(--accent);
       border: none;
-      font-size: 2.25rem;
+      font-size: 2rem;
       margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
     }
 
-    .welcome p { font-size: 1.05rem; line-height: 1.7; }
+    .welcome p { font-size: 1rem; line-height: 1.7; }
 
     .loading { color: var(--text-muted); padding: 2rem; text-align: center; font-size: 0.9rem; }
 
@@ -348,20 +390,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.75rem;
-      color: var(--accent);
-      font-weight: 700;
-      padding: 0.4rem 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 8px 8px 6px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       cursor: pointer;
       border-radius: 3px;
       user-select: none;
-      transition: background 0.1s;
+      transition: background 0.1s, color 0.1s;
       border-bottom: 1px solid var(--border);
     }
 
-    .month-label:hover { background: var(--surface); }
+    .month-label:hover { background: var(--surface); color: var(--text); }
 
     .month-label .chevron {
       transition: transform 0.2s;
@@ -386,7 +429,7 @@
         position: static;
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--border-strong);
         max-height: 40vh;
       }
       .main { margin-left: 0; padding: 1.5rem; }
@@ -404,7 +447,7 @@
       <a href="https://github.com/ygauthie/ai-safety-radar-securite-ia" title="GitHub" style="display:flex;align-items:center;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
       </a>
-      <button id="langToggle" style="font-size:0.8rem;font-weight:600;letter-spacing:0.04em;padding:2px 7px;border:1px solid var(--border);border-radius:3px;background:none;color:var(--text);cursor:pointer;font-family:inherit;transition:color 0.15s,border-color 0.15s;" title="Switch language">EN</button>
+      <button id="langToggle" style="font-size:11px;font-weight:500;letter-spacing:0.06em;padding:4px 9px;border:1px solid var(--border-strong);border-radius:3px;background:none;color:var(--text);cursor:pointer;font-family:'JetBrains Mono',monospace;transition:background 0.12s,color 0.12s;" title="Switch language">EN</button>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">
         <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
