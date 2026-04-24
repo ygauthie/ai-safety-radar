@@ -1,4 +1,4 @@
-# Daily Brief (2026-04-24)
+# Daily Digest (2026-04-24)
 
 ## Top 3 Developments
 
