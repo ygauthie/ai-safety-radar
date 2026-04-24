@@ -10,15 +10,15 @@
   <link rel="alternate" type="application/rss+xml" title="AI Safety Radar RSS" href="feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #ffffff;
-      --surface: #f4f4f2;
-      --border: #e4e2dd;
-      --border-strong: #cfccc3;
-      --text: #1a1a1a;
-      --text-muted: #6b6a63;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --border: #e4e6ec;
+      --border-strong: #d1d5dc;
+      --text: #14161a;
+      --text-muted: #6b6f78;
       --accent: #0b6aa8;
       --accent-hover: #084e7c;
       --accent-subtle: #0b6aa814;
@@ -26,9 +26,8 @@
       --green: #2a7d4f;
       --orange: #b45309;
       --red: #df2039;
-      --strong: #0e0e0c;
+      --strong: #0a0b0d;
       --header-height: 56px;
-      --logo-size: 15px;
     }
 
     [data-theme="dark"] {
@@ -59,154 +58,199 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* ------ HEADER ------ */
     header {
       border-bottom: 1px solid var(--border-strong);
-      padding: 0 20px;
+      padding: 0 28px;
       height: var(--header-height);
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: sticky;
       top: 0;
-      background: var(--bg);
+      background: var(--surface);
       z-index: 100;
     }
 
     .logo {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--logo-size);
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-      flex-shrink: 0;
-      text-transform: uppercase;
       display: flex;
       align-items: center;
       gap: 12px;
-    }
-
-    .logo::before {
-      content: "";
-      width: calc(var(--logo-size) - 1px);
-      height: calc(var(--logo-size) - 1px);
-      border: 1.5px solid var(--text);
-      background: var(--accent);
+      text-decoration: none;
       flex-shrink: 0;
     }
 
-    .logo span span { color: var(--text-muted); font-weight: 500; }
-
-    .header-filler {
-      flex: 1;
-      margin: 0 20px;
-      height: 10px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--text-muted) 0px,
-        var(--text-muted) 1px,
-        transparent 1px,
-        transparent 6px
-      );
-      -webkit-mask-image: linear-gradient(90deg, black 0%, transparent 85%);
-      mask-image: linear-gradient(90deg, black 0%, transparent 85%);
+    .logo .mark {
+      width: 24px;
+      height: 24px;
+      border: 1.5px solid var(--text);
+      display: grid;
+      place-items: center;
+      position: relative;
+      flex-shrink: 0;
     }
 
-    nav { display: flex; gap: 2px; align-items: center; flex-shrink: 0; }
+    .logo .mark::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 1.5px solid var(--text);
+      border-radius: 50%;
+    }
+
+    .logo .mark::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 3px;
+      right: 3px;
+    }
+
+    .logo .t { display: flex; flex-direction: column; line-height: 1.15; }
+
+    .logo .t b {
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    .logo .t span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    nav { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
 
     nav a, nav button {
       color: var(--text);
       text-decoration: none;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       background: none;
-      border: none;
+      border: 1px solid transparent;
       cursor: pointer;
-      padding: 7px 10px;
-      border-radius: 3px;
+      padding: 6px 10px;
+      border-radius: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
-      transition: background 0.12s, color 0.12s;
+      transition: all 0.12s;
     }
 
-    nav a:hover, nav button:hover { background: var(--surface); color: var(--accent); }
+    nav a:hover, nav button:hover { border-color: var(--border-strong); background: var(--bg); }
 
-    .theme-toggle {
-      padding: 6px 8px;
-      text-transform: none;
-      letter-spacing: 0;
-    }
+    .theme-toggle { padding: 6px 8px; }
 
+    /* ------ SIDEBAR ------ */
     .sidebar {
       position: fixed;
       left: 0;
       top: var(--header-height);
       bottom: 0;
-      width: 280px;
+      width: 290px;
       border-right: 1px solid var(--border-strong);
       display: flex;
       flex-direction: column;
-      background: var(--bg);
+      background: var(--surface);
     }
 
     .search-box {
       flex-shrink: 0;
-      padding: 10px 12px;
+      padding: 14px 16px;
       border-bottom: 1px solid var(--border);
     }
 
+    .search-box .wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      background: var(--bg);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+    }
+
+    .search-box .wrap svg { color: var(--text-muted); flex-shrink: 0; }
+
     .search-box input {
-      width: 100%;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      background: var(--surface);
-      color: var(--text);
-      font-size: 13px;
-      font-family: 'JetBrains Mono', monospace;
-      outline: none;
-      transition: border-color 0.15s;
-    }
-
-    .search-box input::placeholder { color: var(--text-muted); opacity: 0.7; }
-    .search-box input:focus { border-color: var(--accent); }
-
-    .sidebar-entries {
       flex: 1;
-      overflow-y: auto;
-      padding: 8px 8px 20px;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
     }
 
-    .date-group { margin: 2px 0; }
+    .search-box input::placeholder { color: var(--text-muted); opacity: 0.8; }
+
+    .sidebar-entries { flex: 1; overflow-y: auto; padding: 6px 0 16px; }
+
+    .date-group {
+      margin: 0 14px;
+      padding: 6px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .month-entries .date-group:first-child { border-top: none; }
 
     .date-label {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--text-muted);
-      font-weight: 400;
-      padding: 5px 8px;
+      align-items: baseline;
+      gap: 10px;
+      padding: 6px 8px;
+      border-radius: 4px;
       cursor: pointer;
-      border-radius: 3px;
       user-select: none;
-      transition: background 0.1s, color 0.1s;
+      transition: background 0.1s;
     }
 
-    .date-label .date-day { color: var(--text); font-weight: 600; }
+    .date-label:hover { background: var(--bg); }
 
-    .date-label:hover { background: var(--surface); }
+    .date-label .num {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .date-label .dow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .date-label .rel {
+      margin-left: auto;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .date-label .rel.today { color: var(--accent); }
 
     .date-label .chevron {
       transition: transform 0.2s;
       opacity: 0.5;
       flex-shrink: 0;
+      margin-left: 4px;
     }
 
     .date-group.collapsed .chevron { transform: rotate(-90deg); }
@@ -214,144 +258,161 @@
     .date-files {
       overflow: hidden;
       transition: max-height 0.2s ease;
-      padding: 2px 0 4px;
+      padding: 4px 0;
     }
 
-    .date-group.collapsed .date-files {
-      max-height: 0 !important;
-      padding: 0;
-    }
+    .date-group.collapsed .date-files { max-height: 0 !important; padding: 0; }
 
     .file-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 6px;
-      padding: 5px 10px 5px 18px;
+      gap: 8px;
+      padding: 6px 10px 6px 14px;
       color: var(--text);
       text-decoration: none;
-      font-size: 14px;
-      border-radius: 3px;
-      transition: background 0.1s, color 0.1s;
-      border-left: 2px solid transparent;
-      margin-left: 2px;
+      font-size: 13.5px;
+      border-radius: 4px;
+      margin: 1px 0;
+      transition: background 0.1s;
       position: relative;
     }
 
     .file-link::before {
-      content: "▸";
-      font-family: monospace;
-      font-size: 9px;
-      color: var(--text-muted);
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--border-strong);
+      flex-shrink: 0;
     }
 
-    .file-link:hover { background: var(--accent-subtle); }
+    .file-link:hover { background: var(--bg); }
 
-    .file-link.active {
-      background: var(--accent-subtle);
-      color: var(--text);
-      border-left-color: var(--accent);
-      font-weight: 500;
-    }
+    .file-link.active { background: var(--accent-subtle); font-weight: 500; }
+    .file-link.active::before { background: var(--accent); }
 
-    .file-link.active::before { content: "■"; color: var(--accent); }
+    .file-link .lbl { flex: 1; }
 
     .file-link .badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9px;
-      padding: 1px 5px;
-      border: 1px solid var(--border-strong);
-      border-radius: 2px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
       color: var(--text-muted);
       letter-spacing: 0.04em;
-      text-transform: uppercase;
       font-weight: 500;
       flex-shrink: 0;
     }
 
-    .badge-daily { border-color: var(--accent); color: var(--accent); }
-    .badge-weekly { border-color: var(--orange); color: var(--orange); }
-    .badge-arxiv { border-color: #6d3bb5; color: #6d3bb5; }
+    .badge-daily { color: var(--accent); }
+    .badge-weekly { color: var(--orange); }
 
+    /* ------ MAIN ------ */
     .main {
-      margin-left: 280px;
-      padding: 40px 56px 80px;
+      margin-left: 290px;
+      padding: 56px 72px 96px;
       min-height: calc(100vh - var(--header-height));
     }
 
-    #content { max-width: 740px; }
+    #content { max-width: 720px; }
 
     #content h1 {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      padding-bottom: 12px;
-      border-bottom: 2px solid var(--accent);
-      color: var(--strong);
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--text);
     }
 
     #content h2 {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 15px;
-      font-weight: 700;
-      margin: 2.25rem 0 0.85rem;
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 500;
+      font-size: 26px;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
       color: var(--text);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding-bottom: 6px;
+      margin: 2.75rem 0 1rem;
+      padding-bottom: 10px;
       border-bottom: 1px solid var(--border-strong);
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 14px;
     }
 
-    #content h2::before { content: "§"; color: var(--accent); font-weight: 400; }
+    #content h2::before {
+      content: "§";
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
 
     #content h3 {
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      margin: 1.4rem 0 0.5rem;
-      color: var(--strong);
-      letter-spacing: -0.005em;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
     }
 
-    #content p { margin-bottom: 0.9rem; line-height: 1.7; }
+    #content p { margin-bottom: 1rem; line-height: 1.7; }
     #content a {
       color: var(--link);
       text-decoration: underline;
       text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
       transition: color 0.12s;
     }
     #content a:hover { color: var(--accent-hover); }
-    #content ul, #content ol { padding-left: 1.4rem; margin-bottom: 0.9rem; }
-    #content li { margin-bottom: 0.45rem; line-height: 1.65; }
-    #content code { font-family: 'JetBrains Mono', monospace; background: var(--surface); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.88em; border: 1px solid var(--border); }
-    #content pre { font-family: 'JetBrains Mono', monospace; background: var(--surface); padding: 1.1rem; border-radius: 3px; overflow-x: auto; margin-bottom: 1.1rem; border: 1px solid var(--border); }
-    #content pre code { background: none; padding: 0; border: none; }
-    #content blockquote { border-left: 2px solid var(--accent); padding: 0.25rem 0 0.25rem 1rem; color: var(--text-muted); margin-bottom: 0.9rem; font-style: italic; }
-    #content hr { border: none; border-top: 1px solid var(--border-strong); margin: 2rem 0; }
+    #content ul, #content ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+    #content li { margin-bottom: 0.5rem; line-height: 1.7; }
     #content strong { color: var(--strong); font-weight: 600; }
+    #content code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.88em;
+      background: var(--surface);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+    #content pre {
+      font-family: 'IBM Plex Mono', monospace;
+      background: var(--surface);
+      padding: 1.1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin-bottom: 1.1rem;
+      border: 1px solid var(--border);
+    }
+    #content pre code { background: none; padding: 0; border: none; }
+    #content blockquote {
+      border-left: 2px solid var(--accent);
+      padding: 0.25rem 0 0.25rem 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 17px;
+    }
+    #content hr { border: none; border-top: 1px solid var(--border-strong); margin: 2rem 0; }
 
     .ai-disclaimer {
-      margin-top: 3rem;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-strong);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
+      margin-top: 4rem;
+      padding-top: 18px;
+      border-top: 1px solid var(--text);
+      font-family: 'IBM Plex Serif', serif;
+      font-style: italic;
+      font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.7;
-      letter-spacing: 0.02em;
+      line-height: 1.65;
     }
 
-    .ai-disclaimer::before { content: "DISCLAIMER · "; color: var(--orange); font-weight: 600; letter-spacing: 0.1em; }
     .ai-disclaimer a { color: var(--text-muted); text-decoration: underline; }
     .ai-disclaimer a:hover { color: var(--link); }
 
@@ -362,12 +423,12 @@
     }
 
     .welcome h1 {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
       color: var(--accent);
       border: none;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 0.75rem;
     }
 
@@ -378,32 +439,31 @@
     .search-results-info {
       font-size: 0.75rem;
       color: var(--text-muted);
-      padding: 0.25rem 0.5rem 0.5rem;
+      padding: 0.25rem 1rem 0.5rem;
+      font-family: 'IBM Plex Mono', monospace;
     }
 
     .date-group.hidden { display: none; }
 
-    .month-group { margin-bottom: 0.5rem; }
+    .month-group { margin-bottom: 10px; }
 
     .month-label {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
       color: var(--text-muted);
       font-weight: 600;
-      padding: 8px 8px 6px;
+      padding: 14px 20px 8px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
       cursor: pointer;
-      border-radius: 3px;
       user-select: none;
-      transition: background 0.1s, color 0.1s;
-      border-bottom: 1px solid var(--border);
+      transition: color 0.1s;
     }
 
-    .month-label:hover { background: var(--surface); color: var(--text); }
+    .month-label:hover { color: var(--text); }
 
     .month-label .chevron {
       transition: transform 0.2s;
@@ -413,14 +473,8 @@
 
     .month-group.collapsed .month-label .chevron { transform: rotate(-90deg); }
 
-    .month-entries {
-      display: block;
-    }
-
-    .month-group.collapsed .month-entries {
-      display: none;
-    }
-
+    .month-entries { display: block; }
+    .month-group.collapsed .month-entries { display: none; }
     .month-group.hidden { display: none; }
 
     @media (max-width: 768px) {
@@ -437,19 +491,26 @@
 </head>
 <body>
   <header>
-    <a href="#" class="logo"><span id="logoText">AI Safety <span>Radar</span></span></a>
-    <div class="header-filler" id="headerFiller"></div>
+    <a href="#" class="logo">
+      <div class="mark"></div>
+      <div class="t">
+        <b id="logoTitle">AI Safety Radar</b>
+        <span id="logoSub">Daily digest</span>
+      </div>
+    </a>
     <nav>
-      <a href="feed.xml" title="RSS Feed" style="display:flex;align-items:center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <a href="feed.xml" title="RSS Feed">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+        RSS
       </a>
-      <a href="https://github.com/ygauthie/ai-safety-radar-securite-ia" title="GitHub" style="display:flex;align-items:center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      <a href="https://github.com/ygauthie/ai-safety-radar-securite-ia" title="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        Source
       </a>
-      <button id="langToggle" style="font-size:12px;font-weight:500;letter-spacing:0.06em;padding:4px 9px;border:1px solid var(--border-strong);border-radius:3px;background:none;color:var(--text);cursor:pointer;font-family:'JetBrains Mono',monospace;transition:background 0.12s,color 0.12s;" title="Switch language">EN</button>
+      <button id="langToggle" title="Switch language">EN</button>
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-        <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </nav>
   </header>
@@ -552,7 +613,10 @@
       if (welcomeTitle) welcomeTitle.textContent = strings.welcomeTitle;
       if (welcomeSub) welcomeSub.textContent = strings.welcomeSub;
       if (welcomeHint) welcomeHint.textContent = strings.welcomeHint;
-      document.getElementById('logoText').innerHTML = `${strings.siteTitle} <span>${strings.siteTitleSub}</span>`;
+      const logoTitle = document.getElementById('logoTitle');
+      const logoSub = document.getElementById('logoSub');
+      if (logoTitle) logoTitle.textContent = lang === 'en' ? 'AI Safety Radar' : 'Sécurité IA — Radar';
+      if (logoSub) logoSub.textContent = lang === 'en' ? 'Daily digest' : 'Bulletin quotidien';
     }
 
     function hashForLang(hash, lang) {
@@ -638,7 +702,7 @@
     function fileBadge(filename) {
       if (filename.includes('daily')) return `<span class="badge badge-daily">${t().badges.daily}</span>`;
       if (filename.includes('weekly')) return `<span class="badge badge-weekly">${t().badges.weekly}</span>`;
-      return '';
+      return `<span class="badge">${filename.includes('research') ? 'papers' : filename.includes('analysis') ? 'news' : filename.includes('community') ? 'community' : ''}</span>`;
     }
 
     async function loadManifest() {
@@ -681,7 +745,7 @@
 
       const chevronSvg = `<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
 
-      let html = `<div class="search-box"><input type="text" id="searchInput" placeholder="${t().searchPlaceholder}"></div>`;
+      let html = `<div class="search-box"><div class="wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="text" id="searchInput" placeholder="${t().searchPlaceholder}"></div></div>`;
       html += '<div class="sidebar-entries" id="sidebarEntries">';
 
       months.forEach((mk, mi) => {
@@ -693,25 +757,26 @@
           const sorted = sortFiles(filterFilesByLang(entry.files));
           const dayCollapsed = (mi === 0 && i === 0) ? '' : ' collapsed';
           const filesHtml = sorted.map(file =>
-            `<a href="#${file}" class="file-link" data-hash="${file}" data-label="${fileLabel(file).toLowerCase()}" data-date="${entry.date}">${fileLabel(file)}${fileBadge(file)}</a>`
+            `<a href="#${file}" class="file-link" data-hash="${file}" data-label="${fileLabel(file).toLowerCase()}" data-date="${entry.date}"><span class="lbl">${fileLabel(file)}</span>${fileBadge(file)}</a>`
           ).join('');
           const filesHeight = sorted.length * 42;
           const d = new Date(entry.date + 'T12:00:00');
           const lang = getLang();
-          let dateDisplay;
-          if (lang === 'fr') {
-            const wd = d.toLocaleDateString('fr-CA', { weekday: 'short' }).toUpperCase().replace('.', '');
-            const mm = String(d.getMonth() + 1).padStart(2, '0');
-            const dd = String(d.getDate()).padStart(2, '0');
-            dateDisplay = `${wd} · ${mm}-${dd}`;
-          } else {
-            const wd = d.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
-            const mm = String(d.getMonth() + 1).padStart(2, '0');
-            const dd = String(d.getDate()).padStart(2, '0');
-            dateDisplay = `${wd} · ${mm}-${dd}`;
-          }
+          const dayNum = d.getDate();
+          const dow = d.toLocaleDateString('en-US', { weekday: 'short' });
+          const today = new Date(); today.setHours(0,0,0,0);
+          const dCopy = new Date(d); dCopy.setHours(0,0,0,0);
+          const diffDays = Math.round((today - dCopy) / 86400000);
+          let relText = '', relClass = '';
+          if (diffDays === 0) { relText = lang === 'fr' ? "auj." : "today"; relClass = 'today'; }
+          else if (diffDays > 0 && diffDays < 60) { relText = diffDays + 'd'; }
           return `<div class="date-group${dayCollapsed}" data-date="${entry.date}">
-            <div class="date-label"><span>${dateDisplay}</span>${chevronSvg}</div>
+            <div class="date-label">
+              <span class="num">${dayNum}</span>
+              <span class="dow">${dow}</span>
+              ${relText ? `<span class="rel ${relClass}">${relText}</span>` : ''}
+              ${chevronSvg}
+            </div>
             <div class="date-files" style="max-height:${dayCollapsed ? 0 : filesHeight}px">${filesHtml}</div>
           </div>`;
         }).join('');
