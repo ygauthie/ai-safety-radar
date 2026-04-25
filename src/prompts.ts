@@ -81,7 +81,7 @@ ${content}`;
 
 export function dailyRollupPrompt(sections: string, date: string, lang: Lang = "en", recentHeadlines = ""): string {
   const recentContext = recentHeadlines
-    ? `\nRECENT COVERAGE (last 2 days — do not repeat items already covered; if there is a meaningful update to an ongoing story, briefly note it as "ongoing" rather than treating it as new):\n${recentHeadlines}\n`
+    ? `\nRECENT COVERAGE (last 6 days + last weekly digest — do not repeat items already covered; if there is a meaningful update to an ongoing story, briefly note it as "ongoing" rather than treating it as new):\n${recentHeadlines}\n`
     : "";
   return `${SYSTEM_ROLE}
 

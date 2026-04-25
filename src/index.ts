@@ -117,10 +117,10 @@ async function main() {
     sections.push(`## Community & Tools [Tier 3]\n\n${communityToolsReport}`);
   }
 
-  // Load recent daily briefs for deduplication context (last 2 days)
+  // Load recent daily briefs for deduplication context (last 6 days)
   const digestsDir = join(process.cwd(), "digests");
   const recentHeadlines: string[] = [];
-  for (let daysBack = 1; daysBack <= 2; daysBack++) {
+  for (let daysBack = 1; daysBack <= 6; daysBack++) {
     const d = new Date(date + "T12:00:00");
     d.setDate(d.getDate() - daysBack);
     const pastDate = d.toISOString().slice(0, 10);
@@ -128,7 +128,20 @@ async function main() {
     if (existsSync(pastFile)) {
       const lines = readFileSync(pastFile, "utf-8").split("\n");
       const headlines = lines.filter((l) => /^#{1,3}\s|^\*\*/.test(l)).join("\n");
-      if (headlines) recentHeadlines.push(`--- ${pastDate} ---\n${headlines}`);
+      if (headlines) recentHeadlines.push(`--- ${pastDate} (daily) ---\n${headlines}`);
+    }
+  }
+  // Also load the most recent weekly digest for deduplication
+  for (let daysBack = 1; daysBack <= 7; daysBack++) {
+    const d = new Date(date + "T12:00:00");
+    d.setDate(d.getDate() - daysBack);
+    const pastDate = d.toISOString().slice(0, 10);
+    const weeklyFile = join(digestsDir, pastDate, "safety-weekly.md");
+    if (existsSync(weeklyFile)) {
+      const lines = readFileSync(weeklyFile, "utf-8").split("\n");
+      const headlines = lines.filter((l) => /^#{1,3}\s|^\*\*/.test(l)).join("\n");
+      if (headlines) recentHeadlines.push(`--- ${pastDate} (weekly) ---\n${headlines}`);
+      break;
     }
   }
 
