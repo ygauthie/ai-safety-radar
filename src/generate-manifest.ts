@@ -90,7 +90,7 @@ function main() {
     }
     const xmlLabel = label.replace(/&/g, "&amp;");
     return `    <item>
-      <title>AI Safety Daily Brief: ${xmlLabel} — ${date}</title>
+      <title>AI Safety Daily Digest: ${xmlLabel} — ${date}</title>
       <link>https://ygauthie.github.io/ai-safety-radar-securite-ia/#${date}/${file}</link>
       <guid>https://ygauthie.github.io/ai-safety-radar-securite-ia/#${date}/${file}</guid>
       <pubDate>${new Date(date).toUTCString()}</pubDate>
@@ -101,7 +101,7 @@ function main() {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>AI Safety Daily Brief</title>
+    <title>AI Safety Daily Digest</title>
     <link>https://ygauthie.github.io/ai-safety-radar-securite-ia/</link>
     <description>Daily AI safety research, policy, and development digest</description>
     <language>en</language>

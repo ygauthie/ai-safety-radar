@@ -11,7 +11,7 @@ export class OpenRouterProvider implements LlmProvider {
       apiKey: process.env.OPENROUTER_API_KEY,
       defaultHeaders: {
         "HTTP-Referer": "https://github.com/ygauthie/ai-safety-radar-securite-ia",
-        "X-Title": "AI Safety Daily Brief",
+        "X-Title": "AI Safety Daily Digest",
       },
     });
     this.model = process.env.LLM_MODEL || "anthropic/claude-sonnet-4";

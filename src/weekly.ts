@@ -12,7 +12,7 @@ async function main() {
   const startDate = formatDate(daysAgo(7));
   const dateRange = `${startDate} to ${date}`;
 
-  console.log(`\n=== AI Safety Daily Brief - Weekly Digest (${dateRange}) ===\n`);
+  console.log(`\n=== AI Safety Daily Digest - Weekly Digest (${dateRange}) ===\n`);
 
   // Collect English daily digests from the past week
   const dailies: string[] = [];

@@ -152,7 +152,7 @@ async function main() {
       dailyRollupPrompt(sections.join("\n\n---\n\n"), date, "en", recentHeadlines.join("\n\n")),
       6144
     );
-    const dailyContent = `# Daily Brief (${date})\n\n${rollup}`;
+    const dailyContent = `# Daily Digest (${date})\n\n${rollup}`;
     saveReport(date, "safety-daily.md", dailyContent);
     enFiles.push({ filename: "safety-daily.md", content: dailyContent });
   } else {
