@@ -2,25 +2,20 @@
 
 ## Key Discussions
 
-**[Tell HN: Claude 4.7 is ignoring stop hooks](https://news.ycombinator.com/item?id=47895029)** (78 points, 82 comments)
-Community reports that Anthropic's Claude 4.7 model is not properly respecting stop sequence parameters, potentially continuing generation beyond intended boundaries. Discussion covers implications for applications relying on precise output control and whether this represents a model capability regression or implementation bug. This matters because reliable stop sequence handling is critical for AI safety applications that need deterministic output boundaries.
+**Claude 4.7 Stop Hook Issues** - A [Tell HN discussion](https://news.ycombinator.com/item?id=47895029) (88 points, 84 comments) reports that Claude 4.7 is ignoring stop hooks, which could indicate either a regression or intentional behavior changes in the latest model version. This matters because reliable stop token handling is critical for agent safety and preventing runaway generation.
 
-**[Researchers Simulated a Delusional User to Test Chatbot Safety](https://www.404media.co/delusion-using-chatgpt-gemini-claude-grok-safety-ai-psychosis-study/)** (20 points, 3 comments)
-Security researchers created synthetic personas exhibiting delusional thinking patterns to evaluate how major AI assistants respond to users experiencing psychosis or paranoid ideation. The study tested whether models would reinforce harmful delusions or provide appropriate redirection to professional help. This matters because it represents a novel approach to testing AI safety guardrails against vulnerable user populations that traditional red-teaming might miss.
+**Wuphf: Agent-Maintained Knowledge Wikis** - The [Show HN for Wuphf](https://github.com/nex-crm/wuphf) (173 points, 87 comments) demonstrates a Karpathy-style LLM wiki that agents can maintain using Markdown and Git, representing an interesting approach to dynamic knowledge management where AI systems curate their own reference materials. This matters as it explores how agents can maintain persistent, version-controlled knowledge bases without human intervention.
+
+**Gemma 4 Token Repetition Collapse** - A [serious bug report](https://github.com/google-deepmind/gemma/issues/622) describes how both Gemma 4 31B Dense and 26B MoE models exhibit token-level repetition collapse during long generation, where models get stuck repeating a single token. This matters because it indicates fundamental issues with attention mechanisms in longer contexts that could affect deployment reliability.
+
+**Multi-Agent Cost Control** - [New cookbook examples](https://github.com/openai/openai-cookbook/pull/2635) show how to implement cost limits in multi-agent workflows and iterative refinement loops, addressing a practical concern about unbounded token usage in autonomous systems. This matters because cost control is essential for production deployment of multi-agent systems.
 
 ## Notable GitHub Releases & Tools
 
-**[Anthropic Cookbook: Multi-Agent Coordination Patterns](https://github.com/anthropics/claude-cookbooks/pull/572)**
-New cookbook demonstrating five patterns for Claude agents participating in "The Colony," a social network populated entirely by AI agents, covering posting, commenting, and voting behaviors in multi-agent environments. This matters because it provides practical blueprints for researchers studying emergent behaviors in AI-to-AI social interactions.
+**Agent Airlock v0.5.6** - [Released](https://github.com/sattyamjjain/agent-airlock/releases/tag/v0.5.6) with support for Claude Managed Agents, CVE-2026-39884 and CVE-2026-23744 security presets, and an archived MCP server detection system for identifying potentially vulnerable packages. This matters because it provides concrete security tooling for the rapidly expanding agent ecosystem.
 
-**[OpenAI Cookbook: Cost Control in Multi-Agent Workflows](https://github.com/openai/openai-cookbook/pull/2635)**
-Practical examples showing how to implement spending limits in iterative AI workflows, with demonstrations of context growth tracking and automatic termination when cost thresholds are reached. This matters because uncontrolled costs in autonomous agent systems pose a significant operational risk that could limit safe deployment.
+**Phoenix v14.15.0** - [Released](https://github.com/Arize-ai/phoenix/releases/tag/arize-phoenix-v14.15.0) with agent page context awareness, allowing the Phoenix assistant to understand what users are viewing (traces, spans, projects) and provide contextually relevant help. This matters because it represents a significant UX improvement for AI observability tools.
 
-**[NVIDIA Guardrails: Native OpenAI-Compatible Client](https://github.com/NVIDIA-NeMo/Guardrails/pull/1797)**
-Major framework addition providing a native HTTP client for OpenAI-compatible endpoints, reducing dependencies on LangChain and offering lighter-weight guardrail deployment options. This matters because reduced dependency complexity improves the reliability and auditability of AI safety infrastructure.
+**NeMo Guardrails Updates** - Multiple PRs add [OpenAI-compatible client support](https://github.com/NVIDIA-NeMo/Guardrails/pull/1797), [reasoning model compatibility](https://github.com/NVIDIA-NeMo/Guardrails/pull/1816), and [telemetry metrics](https://github.com/NVIDIA-NeMo/Guardrails/pull/1819) for production monitoring. This matters as it modernizes the guardrails framework for current model capabilities and enterprise deployment needs.
 
-**[Phantom Secrets: Security Audit Fixes](https://github.com/ashlrai/phantom-secrets/pull/25-35)**
-Comprehensive security hardening addressing 10+ audit findings including timing attacks, privilege escalation vectors, and secret exposure risks in AI development workflows. This matters because secure secret management is foundational to preventing AI systems from inadvertently exposing sensitive data during training or deployment.
-
-**[LM Evaluation Harness: Tool Calls and Reasoning Tracking](https://github.com/EleutherAI/lm-evaluation-harness/pull/3685)**
-Adds support for tracking and evaluating model reasoning traces and tool usage patterns, enabling more granular analysis of model decision-making processes beyond final outputs. This matters because understanding intermediate reasoning steps is crucial for detecting alignment failures that might not be visible in final answers alone.
+**TransformerLens Updates** - [PyTorch 2.8 MPS warning](https://github.com/TransformerLensOrg/TransformerLens/pull/1271) and [multi-device GPU support](https://github.com/TransformerLensOrg/TransformerLens/pull/1270) improve compatibility and scalability for mechanistic interpretability research. This matters because it addresses critical bugs that could silently corrupt interpretability results.
