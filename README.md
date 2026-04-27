@@ -2,7 +2,7 @@
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
-Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from ten sources, summarizes with Claude, and publishes to GitHub Pages as a clean, bilingual, searchable static site with an RSS feed.  Also generates a **weekly rollup**, cross-source synthesis of the past week, every Monday. Inspired from [agents-radar](https://github.com/duanyytop/agents-radar).
+Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from ten types of data sources, summarizes with Claude, and publishes to GitHub Pages as a clean, bilingual, searchable static site with an RSS feed.  Also generates a **weekly rollup**, cross-source synthesis of the past week, every Monday. Inspired from [agents-radar](https://github.com/duanyytop/agents-radar).
 
 **Live site:** [ygauthie.github.io/ai-safety-radar-securite-ia](https://ygauthie.github.io/ai-safety-radar-securite-ia)
 
@@ -18,7 +18,7 @@ Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from ten s
 | **ArXiv** | Papers tagged cs.AI, cs.CL, cs.LG, cs.CY matching safety keywords |
 | **Scientific Journals** | Peer-reviewed articles from Nature, Science, PNAS, Nature Machine Intelligence, JAIR, and others — keyword-filtered for AI safety relevance |
 | **Org Websites** | New publications from Anthropic, OpenAI, DeepMind (sitemap crawling) |
-| **RSS Feeds** | Alignment Forum, LessWrong, 15+ AI safety newsletters and Substacks |
+| **RSS Feeds** | Alignment Forum, LessWrong, and 15+ AI safety newsletters and Substacks |
 | **Hacker News** | Top discussions matching safety keywords |
 | **GitHub** | Releases and activity from tracked repos + dynamic discovery via AI safety topics |
 | **Actually Relevant** | AI safety-filtered stories from actuallyrelevant.news (keyword-filtered) |
@@ -50,7 +50,7 @@ GitHub Actions (cron 5 AM ET - actual runtime may vary due to queuing)
     │     └── Actually Relevant API (keyword-filtered)
     │
     ├── Summarize with Claude (OpenRouter) — 3 sections in parallel
-    │     ├── Research Papers (ArXiv + journals)
+    │     ├── Research Papers (ArXiv + peer-reviewed journals)
     │     ├── Blogs & News (RSS + org websites + AISIs + Actually Relevant + Google News)
     │     ├── Community & Tools (HN + GitHub)
     │     └── Daily executive summary (rollup with dedup context from last 2 days)
@@ -161,7 +161,7 @@ English by default. Add `fr` to the `languages` list in `config.yml` to generate
 
 | Workflow | When |
 |---|---|
-| Daily Brief | Every day at approximately 5:00 AM ET (09:00 UTC) - Github Actions can be queued or delayed|
+| Daily Digest | Every day at approximately 5:00 AM ET (09:00 UTC) - Github Actions can be queued or delayed|
 | Weekly Rollup | Every Monday at approximately 5:30 AM ET (09:30 UTC) |
 
 ---
