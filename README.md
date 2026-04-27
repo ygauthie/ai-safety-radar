@@ -1,4 +1,4 @@
-# AI Safety Radar
+# AI Safety Radar  ![Logo](./assets/favicon.svg)
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
