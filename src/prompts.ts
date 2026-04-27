@@ -35,7 +35,7 @@ Today is ${date}. Below are recent articles, blog posts, and policy updates from
 - **AI lab blogs & research org updates** [Tier 2]: Anthropic, OpenAI, DeepMind, Apollo Research, Epoch AI, METR, ARC, MIRI, Conjecture, IAPS, FLI.
 - **Expert newsletters & community forums** [Tier 2]: Import AI, AI Snake Oil, Interconnects, Alignment Forum, and others.
 - **Community forums** [Tier 3]: LessWrong.
-- **General news aggregators** [Tier 3]: Google News, Actually Relevant. Broader coverage; treat as lower-signal background context.
+- **General news aggregators** [Tier 3]: Actually Relevant. Broader coverage; treat as lower-signal background context.
 
 Produce a unified blogs & news digest in ${lang === "fr" ? "French" : "English"}:
 
@@ -93,7 +93,7 @@ Each source section below is tagged with a credibility tier. When selecting Top 
 
 - **Tier 1 (Institutional/Peer-reviewed)**: Government AISIs, peer-reviewed journals (Nature, Science, PNAS), established think tanks (RAND, Georgetown CSET), International AI Safety Report. Highest credibility — prioritize these.
 - **Tier 2 (Established Research & Expert Analysis)**: AI lab blogs (Anthropic, OpenAI, DeepMind), safety research orgs (METR, ARC, MIRI, Apollo, Epoch), expert newsletters (Import AI, AI Snake Oil, Interconnects, Zvi, etc.), Alignment Forum, ArXiv preprints. High credibility — a Tier 2 item may displace a Tier 1 item only if it represents a major capability breakthrough, significant safety incident, or landmark deployment decision.
-- **Tier 3 (Community & General Discussion)**: LessWrong, Hacker News, Google News, Actually Relevant, GitHub activity. Lower credibility — only surface if exceptionally significant.
+- **Tier 3 (Community & General Discussion)**: LessWrong, Hacker News, Actually Relevant, GitHub activity. Lower credibility — only surface if exceptionally significant.
 
 You MUST use exactly the following section headings, in this order. Do not rename, reorder, merge, or replace them with thematic headings:
 

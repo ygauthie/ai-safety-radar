@@ -2,7 +2,7 @@
 
 **A daily automated digest of AI safety research, policy, and developments.**
 
-Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from ten types of data sources, summarizes with Claude, and publishes to GitHub Pages as a clean, bilingual, searchable static site with an RSS feed.  Also generates a **weekly rollup**, cross-source synthesis of the past week, every Monday. Inspired from [agents-radar](https://github.com/duanyytop/agents-radar).
+Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from nine types of data sources, summarizes with Claude, and publishes to GitHub Pages as a clean, bilingual, searchable static site with an RSS feed.  Also generates a **weekly rollup**, cross-source synthesis of the past week, every Monday. Inspired from [agents-radar](https://github.com/duanyytop/agents-radar).
 
 **Live site:** [ygauthie.github.io/ai-safety-radar-securite-ia](https://ygauthie.github.io/ai-safety-radar-securite-ia)
 
@@ -22,7 +22,6 @@ Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from ten t
 | **Hacker News** | Top discussions matching safety keywords |
 | **GitHub** | Releases and activity from tracked repos + dynamic discovery via AI safety topics |
 | **Actually Relevant** | AI safety-filtered stories from actuallyrelevant.news (keyword-filtered) |
-| **Google News** | Last 24h news matching `"AI safety"` |
 
 ### Keywords
 
@@ -42,7 +41,7 @@ GitHub Actions (cron 5 AM ET - actual runtime may vary due to queuing)
     ├── Fetch sources in parallel
     │     ├── ArXiv API
     │     ├── Scientific journal RSS feeds (keyword-filtered)
-    │     ├── RSS/Atom feeds (blogs, forums, Google News)
+    │     ├── RSS/Atom feeds (blogs, forums)
     │     ├── GitHub REST API + topic discovery
     │     ├── HN Algolia API
     │     ├── Website sitemaps
@@ -51,7 +50,7 @@ GitHub Actions (cron 5 AM ET - actual runtime may vary due to queuing)
     │
     ├── Summarize with Claude (OpenRouter) — 3 sections in parallel
     │     ├── Research Papers (ArXiv + peer-reviewed journals)
-    │     ├── Blogs & News (RSS + org websites + AISIs + Actually Relevant + Google News)
+    │     ├── Blogs & News (RSS + org websites + AISIs + Actually Relevant)
     │     ├── Community & Tools (HN + GitHub)
     │     └── Daily executive summary (rollup with dedup context from last 2 days)
     │
@@ -138,7 +137,7 @@ All sources are configured in `config.yml`:
 - **`github_repos`** — fixed list of `owner/repo` to always track
 - **`arxiv.keywords`** — keywords used for ArXiv search and journal filtering
 - **`journal_feeds`** — name + URL pairs for peer-reviewed journal RSS feeds (Tier 1)
-- **`rss_feeds`** — name + URL + tier for blog/newsletter RSS feeds (Tier 1–3, includes Google News)
+- **`rss_feeds`** — name + URL + tier for blog/newsletter RSS feeds (Tier 1–3)
 - **`websites`** — sitemap URL + URL patterns for org website crawling (Tier 1–2)
 - **`aisi_websites`** — national AI Safety Institute URLs, optional RSS feeds, and optional additional URLs (Tier 1)
 - **`hn_keywords`** — keywords + `min_points` threshold (default 20) for HN story filtering
@@ -147,7 +146,7 @@ All sources are configured in `config.yml`:
 Sources are annotated with a credibility tier used by the LLM when prioritizing content:
 - **Tier 1**: Government AISIs, peer-reviewed journals, established think tanks (RAND, Georgetown CSET, Ada Lovelace Institute)
 - **Tier 2**: AI lab blogs (Anthropic, OpenAI, DeepMind), safety research orgs (METR, ARC, MIRI, Apollo, Epoch), preprints / non-peer-reviewed papers, expert newsletters
-- **Tier 3**: LessWrong, Hacker News, GitHub activity, Google News, Actually Relevant
+- **Tier 3**: LessWrong, Hacker News, GitHub activity, Actually Relevant
 
 ---
 
