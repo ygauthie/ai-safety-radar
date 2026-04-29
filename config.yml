@@ -138,6 +138,9 @@ rss_feeds:
   - name: AI Safety Newsletter (CAIS)
     url: https://newsletter.safe.ai/feed
     tier: 2
+  - name: ML Safety Newsletter
+    url: https://newsletter.mlsafety.org/feed
+    tier: 2
   - name: Interconnects (Nathan Lambert)
     url: https://www.interconnects.ai/feed
     tier: 2
