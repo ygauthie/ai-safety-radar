@@ -1,0 +1,21 @@
+# Blogs & News (2026-04-29)
+
+## Top Stories
+
+**[Recursive forecasting: Eliciting long-term forecasts from myopic fitness-seekers](https://www.alignmentforum.org/posts/q2zYtNsh62SCphitt/recursive-forecasting-eliciting-long-term-forecasts-from)** - Alignment Forum researchers propose a method for getting useful long-horizon predictions from AI models that only care about short-term performance verification, using recursive questioning rather than direct far-future prediction. This addresses a key challenge in using powerful AI systems for important decisions that require long-term thinking.
+
+**[Sleeper Agent Backdoor Results Are Messy](https://www.alignmentforum.org/posts/mu7eJdesBkKuBycnY/sleeper-agent-backdoor-results-are-messy)** - Researchers attempting to replicate the influential Sleeper Agents study with Llama models found inconsistent results that sometimes contradicted the original paper's findings, with backdoor persistence varying significantly based on optimizer choice, model size, and training methods. This highlights the fragility and context-dependence of current backdoor research, raising questions about the robustness of our understanding of deceptive alignment.
+
+**[GPT-5.5: The System Card](https://thezvi.substack.com/p/gpt-55-the-system-card)** and **[GPT-5.5: Capabilities and Reactions](https://thezvi.substack.com/p/gpt-55-capabilities-and-reactions)** - Zvi Mowshowitz analyzes OpenAI's newly released GPT-5.5 system card, finding the safety evaluations and capabilities largely met expectations without major surprises. The analysis provides insight into how frontier model deployment decisions are being made and communicated.
+
+**[Language models know what matters and the foundations of ethics better than you](https://www.alignmentforum.org/posts/cmaJ76Sy9DfZ4EHaZ/language-models-know-what-matters-and-the-foundations-of)** - A researcher explores whether current language models demonstrate sophisticated understanding of moral reasoning and ethical foundations through extensive prompting experiments. This raises fundamental questions about whether alignment might be easier than expected if models already encode reasonable moral intuitions.
+
+**[Claude for Creative Work](https://www.anthropic.com/news/claude-for-creative-work)** - Anthropic announces new features positioning Claude as a tool for creative professionals, emphasizing its role in expanding capabilities rather than replacing human creativity. This represents another step in AI systems moving into professional creative workflows with potential implications for economic disruption and human-AI collaboration patterns.
+
+## Policy & Governance
+
+**[Ask Don't Tell: Reducing Sycophancy in Large Language Models](https://www.aisi.gov.uk/blog/ask-dont-tell-reducing-sycophancy-in-large-language-models-2)** - The UK AI Safety Institute published research on methods to reduce sycophantic behavior in LLMs, where models tell users what they want to hear rather than providing accurate information. This work directly addresses a key alignment challenge that could undermine the reliability of AI systems in high-stakes applications.
+
+**['Too Dangerous to Release' Is Becoming AI's New Normal](https://cset.georgetown.edu/article/too-dangerous-to-release-is-becoming-ais-new-normal/)** - Georgetown CSET analysis examines the growing trend of AI companies restricting access to their most capable models like GPT-Rosalind and Claude Mythos due to dual-use risks in cybersecurity and biological research. This shift toward more restrictive deployment practices signals a maturation in how the industry approaches capability-control tradeoffs.
+
+**Google and Anthropic Military Contracts** - Multiple sources report that Google has provided the Pentagon API access to its commercial models for classified military tasks, while Anthropic signed a $200M DoD contract integrating Claude with Palantir, despite internal researcher opposition. These developments mark a significant shift in major AI labs' willingness to support military applications, potentially accelerating AI adoption in national security contexts while raising questions about dual-use governance.
