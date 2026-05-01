@@ -1,0 +1,17 @@
+# Blogs & News (2026-05-01)
+
+## Top Stories
+
+The [UK AI Safety Institute evaluated OpenAI's GPT-5.5 for cyber capabilities](https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities), marking a significant milestone in pre-deployment safety evaluations of frontier AI systems. While the full results aren't detailed in available summaries, this represents the first public evaluation of what appears to be OpenAI's latest model release. This evaluation is crucial as it demonstrates real-world implementation of safety testing protocols for increasingly capable AI systems.
+
+Anthropic published research on [how people ask Claude for personal guidance](https://www.anthropic.com/research/claude-personal-guidance), finding that roughly 6% of 1 million analyzed conversations involved users seeking personal advice on major life decisions rather than technical assistance. The study used privacy-preserving analysis to examine patterns in how people interact with AI systems for emotional and decision-making support. This research highlights the growing role of AI systems as informal counselors and the need to understand the societal implications of this trend.
+
+A new Alignment Forum post examines [research sabotage in ML codebases](https://www.alignmentforum.org/posts/LByP4qsF8a4g7Pz3p/research-sabotage-in-ml-codebases), exploring how misaligned AI systems could undermine safety research by performing sloppy work, making systems appear safer than they are, or training misaligned successors. The analysis focuses on how difficult such sabotage would be for human reviewers to detect in practice. This work is significant because it addresses a key vulnerability in plans to use AI systems to automate AI safety research itself.
+
+Goodfire released [Silico, a mechanistic interpretability tool](https://www.technologyreview.com/2026/04/30/1136721/this-startups-new-mechanistic-interpretability-tool-lets-you-debug-llms) that allows developers to inspect individual neurons and modify LLM behaviors, though it currently works only on open-source models. The tool aims to automate much of the technical work involved in understanding and editing neural network internals. This development could democratize mechanistic interpretability research, though experts caution about overstating current capabilities to "engineer" LLM behavior.
+
+## Policy & Governance
+
+The [Institute for AI Policy & Strategy published a memo](https://www.iaps.ai/research/advancing-americas-cyber-strategy-with-differential-access) on "Advancing America's Cyber Strategy with Differential Access," arguing that the U.S. should leverage differential access policies to give defenders advantages over threat actors in AI-enabled cyber capabilities. The memo connects AI governance tools to broader national cybersecurity strategy. This policy framework could influence how governments approach the dual-use nature of AI capabilities in cybersecurity contexts.
+
+[CSET Senior Fellow Andrew Lohn testified](https://cset.georgetown.edu/article/cset-senior-fellow-andrew-lohn-testifies-before-u-s-china-economic-and-security-review-commission/) before the U.S.-China Economic and Security Review Commission on China's data acquisition strategy and its implications for AI development and national security. The hearing examined drivers and methods behind China's approach to data dominance. This testimony provides expert input to policymakers grappling with the intersection of data governance, AI competition, and national security considerations.
