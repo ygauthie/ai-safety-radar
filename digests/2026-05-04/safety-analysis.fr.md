@@ -1,0 +1,9 @@
+# Blogs et actualités (2026-05-04)
+
+## Principales actualités
+
+**[Measuring the ability of Opus 4.5 to fool narrow classifiers](https://www.lesswrong.com/posts/wNiEmD52xubBwnj9r/measuring-the-ability-of-opus-4-5-to-fool-narrow-classifiers)** - Une nouvelle étude d'évaluation teste si le dernier modèle Opus 4.5 d'Anthropic peut contourner avec succès les classificateurs de sécurité conçus pour détecter les sorties dangereuses, trouvant des taux de réussite d'attaque relativement faibles contre les classificateurs à la fois sollicités et fine-tunés, particulièrement lorsque les défenseurs utilisent un raisonnement par chaîne de pensée. Cette recherche fournit des données empiriques cruciales sur les dynamiques adverses entre les systèmes d'IA de plus en plus capables et les mécanismes de sécurité conçus pour les contraindre.
+
+**[You Are Not Immune To Mode Collapse](https://www.lesswrong.com/posts/vKtuRbo4e3ffixmee/you-are-not-immune-to-mode-collapse)** - Une analyse de l'effondrement de mode dans les systèmes d'IA, examinant comment les modèles entraînés sur des données générées par l'IA tendent à converger vers la production uniquement des sorties les plus communes de leur distribution d'entraînement, limitant potentiellement la diversité et les capacités au fil du temps. Ce phénomène a des implications significatives pour la sécurité de l'IA car il pourrait affecter la fiabilité et la robustesse des systèmes déployés, particulièrement ceux impliqués dans des scénarios d'auto-amélioration récursive.
+
+*Note : Contenu limité sur la sécurité de l'IA disponible des sources primaires aujourd'hui. La section politique et gouvernance est omise car aucune mise à jour pertinente des sources de niveau 1 n'a été fournie dans les données d'aujourd'hui.*
