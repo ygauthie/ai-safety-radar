@@ -16,7 +16,7 @@ Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from nine 
 |---|---|
 | **AI Safety Institutes** | Updates from US AISI, UK AISI, Canada CAISI, Japan J-AISI, Singapore AISI, EU AI Office, Korea AISI |
 | **ArXiv** | Papers tagged cs.AI, cs.CL, cs.LG, cs.CY matching safety keywords |
-| **Scientific Journals** | Peer-reviewed articles from Nature, Science, PNAS, Nature Machine Intelligence, JAIR, and others — keyword-filtered for AI safety relevance |
+| **Scientific Journals** | Peer-reviewed articles from general science (Nature, Science, PNAS, PLOS ONE), AI/ML technical journals (Nature Machine Intelligence, JMLR, JAIR, Patterns), and AI ethics/society/policy journals (AI & Society, AI and Ethics, Ethics and Information Technology, Minds and Machines, Philosophy & Technology, Big Data & Society) — keyword-filtered for AI safety relevance |
 | **Org Websites** | New publications from Anthropic, OpenAI, DeepMind (sitemap crawling) |
 | **RSS Feeds** | Alignment Forum, LessWrong, and 15+ AI safety newsletters and Substacks |
 | **Hacker News** | Top discussions matching safety keywords |
@@ -25,9 +25,11 @@ Runs every morning at approximately 5 AM ET via GitHub Actions, pulls from nine 
 
 ### Keywords
 
-The same keyword list is used for three sources: **ArXiv** (paper search), **Hacker News** (story search), and **Scientific Journals** (title + abstract filtering). All 31 keywords:
+**ArXiv** (paper search) and **Hacker News** (story search) share one keyword list (`arxiv.keywords`, 31 entries):
 
 `activation steering` · `adversarial robustness` · `AI ethics` · `AI evaluation` · `AI governance` · `AI guardrails` · `AI oversight` · `AI regulation` · `AI safety` · `AI Safety Institute` · `AI Security Institute` · `alignment` · `CAISI` · `collusion risk` · `constitutional AI` · `content provenance` · `deception` · `deepfake detection` · `existential risk` · `hallucination` · `honesty evaluation` · `interpretability` · `jailbreak` · `mechanistic interpretability` · `multilingual AI safety` · `red teaming` · `responsible AI` · `RLHF` · `scalable oversight` · `synthetic content detection` · `value alignment`
+
+**Scientific Journals** use a broader, separate list (`journal_keywords`) to catch more peer-reviewed content. Journals publish at slower cadence and use more academic vocabulary, so the list uses looser stems (e.g. `deepfake`, `interpretab`, `explainab`) and adds AI ethics/governance/policy terms (`AI Act`, `algorithmic accountability`, `trustworthy AI`, etc.) that would flood the high-volume ArXiv pipeline. See `config.yml` for the full list.
 
 GitHub uses a fixed list of repos plus dynamic discovery via GitHub topics (`ai-safety`, `llm-alignment`, `llm-safety`, `ai-alignment`). RSS feeds and org websites are not keyword-filtered — all content is passed to Claude.
 
@@ -135,7 +137,8 @@ All sources are configured in `config.yml`:
 
 - **`github_topics`** — GitHub topics for dynamic repo discovery (top 20 most recently active per topic)
 - **`github_repos`** — fixed list of `owner/repo` to always track
-- **`arxiv.keywords`** — keywords used for ArXiv search and journal filtering
+- **`arxiv.keywords`** — keywords used for ArXiv search and Hacker News filtering
+- **`journal_keywords`** — broader keyword list applied only to peer-reviewed journals (looser stems + ethics/governance terms)
 - **`journal_feeds`** — name + URL pairs for peer-reviewed journal RSS feeds (Tier 1)
 - **`rss_feeds`** — name + URL + tier for blog/newsletter RSS feeds (Tier 1–3)
 - **`websites`** — sitemap URL + URL patterns for org website crawling (Tier 1–2)

@@ -23,7 +23,19 @@
       "WebFetch(domain:www.planned-obsolescence.org)",
       "WebFetch(domain:www.aisummer.org)",
       "Bash(curl -sL --max-time 10 -o /dev/null -w \"%{http_code}\" -H \"User-Agent: Mozilla/5.0\" \"https://www.rand.org/pubs/feed\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://www.jmlr.org/jmlr.xml\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://www.jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss2\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://link.springer.com/search.rss?facet-journal-id=43681&query=\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://link.springer.com/search.rss?facet-journal-id=11023&query=\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://link.springer.com/search.rss?facet-journal-id=13347&query=\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://www.cell.com/patterns/current.rss\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://journals.sagepub.com/action/showFeed?type=etoc&feed=rss&jc=bdsa\")",
+      "Bash(curl -sL --max-time 10 -H \"User-Agent: Mozilla/5.0\" \"https://jmlr.org/tmlr/papers/\" -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git stash *)",
+      "Bash(git commit *)"
     ]
   }
 }

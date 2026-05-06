@@ -77,6 +77,80 @@ arxiv:
     - synthetic content detection
     - value alignment
 
+# Broader keyword list applied only to peer-reviewed journal feeds.
+# Journals publish at slower cadence and use more academic vocabulary, so we
+# allow looser stems here than in arxiv.keywords (which would flood arxiv).
+journal_keywords:
+  # Technical safety
+  - AI alignment
+  - value alignment
+  - alignment problem
+  - mechanistic interpret
+  - AI interpretab
+  - adversarial robustness
+  - adversarial example
+  - jailbreak
+  - red team
+  - RLHF
+  - constitutional AI
+  - scalable oversight
+  - human oversight
+  - AI guardrail
+  - activation steering
+  - AI hallucination
+  - model hallucination
+  - sycophan
+  - reward hacking
+  - AI deception
+  - collusion risk
+
+  # Evaluation & misuse
+  - AI evaluation
+  - AI benchmark
+  - deepfake
+  - synthetic media
+  - synthetic content
+  - content provenance
+  - AI watermark
+  - misinformation
+  - disinformation
+
+  # Governance / policy
+  - AI governance
+  - AI regulation
+  - AI policy
+  - AI Act
+  - AI Safety Institute
+  - AI Security Institute
+  - CAISI
+  - AI audit
+  - AI accountability
+  - AI liability
+  - AI compliance
+
+  # Ethics / fairness
+  - AI ethics
+  - AI bias
+  - algorithmic bias
+  - algorithmic fairness
+  - algorithmic accountability
+  - trustworthy AI
+  - AI transparency
+  - explainab
+  - AI privacy
+  - AI surveillance
+  - AI autonomy
+
+  # Frontier / catastrophic
+  - existential risk
+  - catastrophic AI
+  - AGI safety
+  - superintelligence
+  - frontier AI
+  - frontier model
+  - machine learning safety
+  - ML safety
+
 # Peer-reviewed journal RSS feeds (keyword-filtered for AI safety relevance)
 journal_feeds:
   # High-impact general science
@@ -92,15 +166,37 @@ journal_feeds:
   - name: PLOS ONE (Computer Science)
     url: https://journals.plos.org/plosone/feed/atom?subject=Computer+and+information+sciences
     tier: 1
-  # AI/ML specialist journals
+  # AI/ML technical journals
   - name: Nature Machine Intelligence
     url: https://www.nature.com/natmachintell.rss
     tier: 1
+  - name: JMLR (Journal of Machine Learning Research)
+    url: https://www.jmlr.org/jmlr.xml
+    tier: 1
+  - name: JAIR (Journal of AI Research)
+    url: https://www.jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss2
+    tier: 1
+  - name: Patterns (Cell Press)
+    url: https://www.cell.com/patterns/current.rss
+    tier: 1
+  # AI ethics, society & policy journals
   - name: AI & Society (Springer)
     url: https://link.springer.com/search.rss?facet-journal-id=146&query=
     tier: 1
+  - name: AI and Ethics (Springer)
+    url: https://link.springer.com/search.rss?facet-journal-id=43681&query=
+    tier: 1
   - name: Ethics and Information Technology
     url: https://link.springer.com/search.rss?facet-journal-id=10676&query=
+    tier: 1
+  - name: Minds and Machines (Springer)
+    url: https://link.springer.com/search.rss?facet-journal-id=11023&query=
+    tier: 1
+  - name: Philosophy & Technology (Springer)
+    url: https://link.springer.com/search.rss?facet-journal-id=13347&query=
+    tier: 1
+  - name: Big Data & Society (Sage)
+    url: https://journals.sagepub.com/action/showFeed?type=etoc&feed=rss&jc=bdsa
     tier: 1
   # Think tanks (keyword-filtered)
   - name: RAND Corporation

@@ -36,6 +36,7 @@ export interface Config {
     categories: string[];
     keywords: string[];
   };
+  journal_keywords?: string[];
   rss_feeds: RssFeed[];
   websites: Website[];
   aisi_websites: AisiWebsite[];

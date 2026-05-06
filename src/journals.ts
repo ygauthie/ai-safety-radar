@@ -47,7 +47,7 @@ async function fetchJournalFeedXml(url: string, name: string): Promise<string | 
 export async function fetchJournals(): Promise<JournalArticle[]> {
   const config = loadConfig();
   const since = daysAgo(1);
-  const keywords = config.arxiv.keywords.map((k) => k.toLowerCase());
+  const keywords = (config.journal_keywords ?? config.arxiv.keywords).map((k) => k.toLowerCase());
   const allItems: JournalArticle[] = [];
 
   for (const feed of config.journal_feeds) {
